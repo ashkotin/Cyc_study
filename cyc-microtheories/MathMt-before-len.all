@@ -1,0 +1,443 @@
+﻿format: multilingual-knowledge-units-1
+microtheory: #$MathMt
+encoding: UTF-8 with BOM; CRLF
+source: MathMt.cycl
+fol-grammar: fol_lexer_min.g4 + fol_parser_min.g4
+languages: cycl, rus, eng, fol, isb (Isabelle/HOL)
+
+[conventions]
+rus:
+Единица знаний — одна выбранная CycL-формула, а не одна строка каждого из альтернативных восстановлений. Здесь 22 единицы: одно корректное исходное утверждение и 21 гипотеза восстановления в импликационной форме. cycl сохраняет именно эти формулы; никакая гипотеза не становится подтверждённым фактом.
+
+Принадлежность MathMt — метаданные единицы, не оператор ist в целевой формуле. Перечни предков и их содержимое не переводятся. Добавленная при прежнем экспорте внешняя оболочка ist снята с единственного исходного факта; его собственная формула не изменена.
+
+Все ?varN в выбранной формуле неявно универсальны; в rus/eng/fol/isb используются vN и явно записанные кванторы. Сорт Object — общий носитель значений. RealNumber, Integer, NonNegativeInteger, PositiveInteger — унарные предикаты, не отдельные пересекающиеся сорта. Zero и One обозначают исходные 0 и 1: в лексере нет токена числового литерала. Равенство = передаёт только equals; дизъюнкция не заменяется конъюнкцией. Ложь передаётся как Zero ≠ Zero.
+
+Для известных бинарных операций используется явно объявленная реляционная форма вычисления: PlusValue(x y z) означает ровно (#$evaluate z (#$PlusFn x y)); аналогично TimesValue, DifferenceValue, QuotientValue. Это графы вычисления частичных операций, не новые объекты-операции и не универсальный Apply. Такая смена сигнатуры объявлена явно; это не утверждение, что реляционная запись лексически совпадает с CycL. Ни существование результата для всех аргументов, ни тотальность операций не постулируются. Evaluate(z x) для атомарного/переменного выражения x сохраняется отдельным отношением и НЕ заменяется равенством z = x.
+
+FOL-формулы здесь — первопорядковое реляционное представление выбранных утверждений при указанных соответствиях сигнатуры. Формулы не снабжаются неявными арифметическими аксиомами. Грамматика сама не фиксирует интерпретацию сигнатуры. Классическое отношение графа вычисления не является моделью трёхзначного вычислителя: отсутствие пары в графе означает отсутствие данного результата, а не отождествление отсутствующего значения с булевым False.
+
+Запись 69975 содержит связанную переменную в позиции операции. В fol она не переводится через кодировку: прямо указана невыразимость ПРЯМОГО перевода в обычной первопорядковой семантике. Это не утверждение об абсолютной невозможности первопорядкового кодирования. Сам факт, что грамматика синтаксически принимает ID(...), не делает связанный ID функциональной переменной в FOL.
+
+Для каждой из 22 единиц добавлена формализация Isabelle/HOL с меткой isb. Общий блок isb-signature объявляет носитель cyc_value, константы и предикаты. Именам FOL соответствуют имена с префиксом Cyc: например, Integer → CycInteger, PlusValue → CycPlusValue, Zero → CycZero; ratioOfTo → CycRatioOfTo. Префикс отделяет переводимую сигнатуру от имён библиотек Isabelle. Числовые классы остаются предикатами общего носителя, а не встроенными типами int/real. Для 21 первопорядковой записи сохранено то же реляционное представление вычисления, что в fol; isb-status = signature-relative. Это перевод относительно объявленного соответствия сигнатур, не доказанная эквивалентность всей семантике Cyc.
+
+Для 69975 тип cyc_partial_binary = cyc_value ⇒ cyc_value ⇒ cyc_value option задаёт частичную бинарную операцию: Some v — полученное значение, None — отсутствие значения, не False. Вложенное вычисление развёрнуто через существование промежуточного значения. Это явно выбранная типизация и строгая композиционная семантика; из повреждённого CycL нельзя независимо доказать, что она полностью совпадает с исходной семантикой Cyc. Поэтому для этой единицы isb-status = interpretation-dependent, не verified-equivalent. Классификаторы CycAssociativeRelation/CycEvaluatableFunction оставлены параметрами сигнатуры; их определения не изобретены. Квантор по f действительно пробегает операции, поэтому эта запись является HOL-формализацией, а не объектной кодировкой функций.
+
+Не исправляются возможные содержательные странности источника. В частности, evaluate(v2, 0) не заменяется v2 = 0; ratioOfTo не переосмысливается как обычная дробь. Общая переменная не объявляется числом, если это явно не сказано в исходной формуле.
+
+Конечная алгебраическая система здесь не задана. Формулы могут исследоваться на конечных интерпретациях сигнатуры, но конечный носитель нельзя молча отождествлять со стандартными целыми/вещественными числами.
+
+.all — контейнер сопоставленных языковых записей, не вход целиком для fol_parser_min. Для разбора fol нужно извлечь fol-signature и строки fol с формулами; строку «не выразимо...» не передавать парсеру. Сигнатура и 21 формула проверены отдельным распознавателем используемого фрагмента грамматики. ANTLR4 и Isabelle не запускались: это не отчёт об их проверке. Каждый isb-блок содержит definition предложения как булевой константы; истинность предложения не утверждается аксиомой и не доказывается. Для получения единой теории MathMt_Translation.thy нужно последовательно соединить код из isb-signature, 22 блоков isb и isb-trailer, исключив контейнерные метки, isb-status и isb-variable-map. Сигнатура, арности, связанные переменные и структура переводов проверяются отдельно; это не заменяет проверку Isabelle.
+
+eng:
+A knowledge unit is one selected CycL formula, not a separate unit for each alternative reconstruction. There are 22 units here: one well-formed original assertion and 21 reconstruction hypotheses in implication form. cycl preserves precisely these formulas; no hypothesis becomes a confirmed fact.
+
+Membership in MathMt is metadata of the unit, not an ist operator in the target formula. Ancestor lists and their contents are not translated. The outer ist wrapper added during the previous export has been removed from the sole original assertion; its own formula is unchanged.
+
+All ?varN variables in a selected formula are implicitly universally quantified; rus/eng/fol/isb use vN and explicit quantifiers. The sort Object is the common domain of values. RealNumber, Integer, NonNegativeInteger, and PositiveInteger are unary predicates, not separate overlapping sorts. Zero and One denote the original 0 and 1: the lexer has no numeric-literal token. Equality = translates only equals; disjunction is not replaced with conjunction. Falsehood is rendered as Zero ≠ Zero.
+
+For known binary operations, an explicitly declared relational representation of evaluation is used: PlusValue(x y z) means exactly (#$evaluate z (#$PlusFn x y)); likewise for TimesValue, DifferenceValue, and QuotientValue. These are evaluation graphs of partial operations, not new operation objects or a universal Apply. This change of signature is stated explicitly; it is not a claim that the relational notation is lexically identical to CycL. Neither the existence of a result for every argument tuple nor totality of the operations is postulated. Evaluate(z x), for an atomic or variable expression x, is retained as a separate relation and is NOT replaced with the equality z = x.
+
+The FOL formulas here are first-order relational representations of the selected assertions under the stated signature correspondences. No implicit arithmetic axioms are added. The grammar itself does not determine the interpretation of the signature. A classical evaluation-graph relation is not a model of a three-valued evaluator: the absence of a pair from the graph means the absence of that result, not the identification of a missing value with Boolean False.
+
+Record 69975 contains a bound variable in operation position. It is not translated into fol by encoding: the impossibility of a DIRECT translation under ordinary first-order semantics is explicitly indicated. This is not a claim that first-order encoding is absolutely impossible. The mere fact that the grammar syntactically accepts ID(...) does not make a bound ID a function variable in FOL.
+
+An Isabelle/HOL formalization labelled isb has been added for each of the 22 units. The shared isb-signature block declares the domain cyc_value, constants, and predicates. FOL names correspond to names prefixed with Cyc: for example, Integer → CycInteger, PlusValue → CycPlusValue, Zero → CycZero; ratioOfTo → CycRatioOfTo. The prefix separates the translated signature from Isabelle library names. Numeric classes remain predicates over a common domain, not the built-in types int/real. For the 21 first-order records, the relational representation of evaluation is the same as in fol; isb-status = signature-relative. This is a translation relative to the declared signature correspondence, not a proved equivalence to the full Cyc semantics.
+
+For 69975, the type cyc_partial_binary = cyc_value ⇒ cyc_value ⇒ cyc_value option represents a partial binary operation: Some v is a returned value, while None is the absence of a value, not False. Nested evaluation is expanded using the existence of an intermediate value. This is an explicitly chosen typing and strict compositional semantics; the damaged CycL does not independently establish that it fully matches the original Cyc semantics. Therefore, for this unit, isb-status = interpretation-dependent, not verified-equivalent. The classifiers CycAssociativeRelation/CycEvaluatableFunction remain parameters of the signature; their definitions have not been invented. The quantifier over f genuinely ranges over operations, so this is a HOL formalization, not an object-level encoding of functions.
+
+Possible substantive oddities in the source are not corrected. In particular, evaluate(v2, 0) is not replaced with v2 = 0, and ratioOfTo is not reinterpreted as an ordinary fraction. A general variable is not declared to be a number unless the source formula explicitly says so.
+
+No finite algebraic system is specified here. The formulas may be studied over finite interpretations of the signature, but a finite domain must not be silently identified with the standard integers or real numbers.
+
+.all is a container of aligned language records, not an input to be passed as a whole to fol_parser_min. To parse fol, extract fol-signature and the fol lines containing formulas; do not pass the “не выразимо...” (“not expressible...”) entry to the parser. The signature and 21 formulas were checked with a separate recognizer for the grammar fragment used. ANTLR4 and Isabelle were not run: this is not a report of verification by those tools. Each isb block contains a definition of the proposition as a Boolean constant; the truth of the proposition is neither asserted as an axiom nor proved. To obtain a single theory MathMt_Translation.thy, concatenate the code from isb-signature, the 22 isb blocks, and isb-trailer, excluding container markers, isb-status, and isb-variable-map. The signature, arities, bound variables, and translation structure are checked separately; this does not replace verification by Isabelle.
+
+[fol-signature]
+type Object primary.
+pred RealNumber, Integer, NonNegativeInteger, PositiveInteger (Object) primary.
+pred GreaterThanOrEqualTo, GreaterThan, Evaluate (Object Object) primary.
+pred PlusValue, TimesValue, DifferenceValue, QuotientValue, ratioOfTo (Object Object Object) primary.
+const Zero, One Object primary.
+[/fol-signature]
+
+[isb-signature]
+theory MathMt_Translation
+  imports Main
+begin
+
+typedecl cyc_value
+
+type_synonym cyc_partial_binary = "cyc_value \<Rightarrow> cyc_value \<Rightarrow> cyc_value option"
+
+consts
+  CycRealNumber :: "cyc_value \<Rightarrow> bool"
+  CycInteger :: "cyc_value \<Rightarrow> bool"
+  CycNonNegativeInteger :: "cyc_value \<Rightarrow> bool"
+  CycPositiveInteger :: "cyc_value \<Rightarrow> bool"
+  CycGreaterThanOrEqualTo :: "cyc_value \<Rightarrow> cyc_value \<Rightarrow> bool"
+  CycGreaterThan :: "cyc_value \<Rightarrow> cyc_value \<Rightarrow> bool"
+  CycEvaluate :: "cyc_value \<Rightarrow> cyc_value \<Rightarrow> bool"
+  CycPlusValue :: "cyc_value \<Rightarrow> cyc_value \<Rightarrow> cyc_value \<Rightarrow> bool"
+  CycTimesValue :: "cyc_value \<Rightarrow> cyc_value \<Rightarrow> cyc_value \<Rightarrow> bool"
+  CycDifferenceValue :: "cyc_value \<Rightarrow> cyc_value \<Rightarrow> cyc_value \<Rightarrow> bool"
+  CycQuotientValue :: "cyc_value \<Rightarrow> cyc_value \<Rightarrow> cyc_value \<Rightarrow> bool"
+  CycRatioOfTo :: "cyc_value \<Rightarrow> cyc_value \<Rightarrow> cyc_value \<Rightarrow> bool"
+  CycZero :: cyc_value
+  CycOne :: cyc_value
+  CycAssociativeRelation :: "cyc_partial_binary \<Rightarrow> bool"
+  CycEvaluatableFunction :: "cyc_partial_binary \<Rightarrow> bool"
+[/isb-signature]
+
+
+[unit MathMt_L63625]
+source-line: 63625
+source-status: original
+cycl: (#$relationAllInstance #$greaterThanOrEqualTo #$PositiveInteger 1)
+rus: Для любого v0: если v0 — положительное целое число, то v0 больше или равно 1.
+eng: For every v0, if v0 is a positive integer, then v0 is greater than or equal to 1.
+fol: MathMt_L63625 (∀ v0 : Object (PositiveInteger(v0) → GreaterThanOrEqualTo(v0 One))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L63625 :: bool where
+  "MathMt_L63625 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value). (CycPositiveInteger v0) \<longrightarrow> (CycGreaterThanOrEqualTo v0 CycOne))"
+isb-end:
+[/unit MathMt_L63625]
+
+[unit MathMt_L56777]
+source-line: 56777
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) (#$or (#$greaterThanOrEqualTo ?var0 ?var1) (#$greaterThanOrEqualTo ?var1 ?var0)))
+rus: Для любых v0, v1: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел), то (v0 больше или равно v1 или v1 больше или равно v0).
+eng: For all v0, v1: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers), then (v0 is greater than or equal to v1 or v1 is greater than or equal to v0).
+fol: MathMt_L56777 (∀ v0, v1 : Object ((RealNumber(v0) ∧ RealNumber(v1)) → (GreaterThanOrEqualTo(v0 v1) ∨ GreaterThanOrEqualTo(v1 v0)))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L56777 :: bool where
+  "MathMt_L56777 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1)) \<longrightarrow> ((CycGreaterThanOrEqualTo v0 v1) \<or> (CycGreaterThanOrEqualTo v1 v0))))"
+isb-end:
+[/unit MathMt_L56777]
+
+[unit MathMt_L56778]
+source-line: 56778
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) (#$or (#$equals ?var0 ?var1) (#$greaterThan ?var0 ?var1) (#$greaterThan ?var1 ?var0)))
+rus: Для любых v0, v1: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел), то (v0 равно v1 или v0 больше v1 или v1 больше v0).
+eng: For all v0, v1: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers), then (v0 equals v1 or v0 is greater than v1 or v1 is greater than v0).
+fol: MathMt_L56778 (∀ v0, v1 : Object ((RealNumber(v0) ∧ RealNumber(v1)) → (((v0 = v1) ∨ GreaterThan(v0 v1)) ∨ GreaterThan(v1 v0)))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L56778 :: bool where
+  "MathMt_L56778 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1)) \<longrightarrow> ((v0 = v1) \<or> (CycGreaterThan v0 v1) \<or> (CycGreaterThan v1 v0))))"
+isb-end:
+[/unit MathMt_L56778]
+
+[unit MathMt_L56779]
+source-line: 56779
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$greaterThanOrEqualTo ?var0 0)) (#$isa ?var0 #$NonNegativeInteger))
+rus: Для любого v0: если (v0 принадлежит классу целых чисел и v0 больше или равно 0), то v0 принадлежит классу неотрицательных целых чисел.
+eng: For all v0: if (v0 belongs to the class of integers and v0 is greater than or equal to 0), then v0 belongs to the class of nonnegative integers.
+fol: MathMt_L56779 (∀ v0 : Object ((Integer(v0) ∧ GreaterThanOrEqualTo(v0 Zero)) → NonNegativeInteger(v0))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L56779 :: bool where
+  "MathMt_L56779 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value). (((CycInteger v0) \<and> (CycGreaterThanOrEqualTo v0 CycZero)) \<longrightarrow> (CycNonNegativeInteger v0)))"
+isb-end:
+[/unit MathMt_L56779]
+
+[unit MathMt_L56780]
+source-line: 56780
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$greaterThan ?var0 0)) (#$isa ?var0 #$PositiveInteger))
+rus: Для любого v0: если (v0 принадлежит классу целых чисел и v0 больше 0), то v0 принадлежит классу положительных целых чисел.
+eng: For all v0: if (v0 belongs to the class of integers and v0 is greater than 0), then v0 belongs to the class of positive integers.
+fol: MathMt_L56780 (∀ v0 : Object ((Integer(v0) ∧ GreaterThan(v0 Zero)) → PositiveInteger(v0))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L56780 :: bool where
+  "MathMt_L56780 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value). (((CycInteger v0) \<and> (CycGreaterThan v0 CycZero)) \<longrightarrow> (CycPositiveInteger v0)))"
+isb-end:
+[/unit MathMt_L56780]
+
+[unit MathMt_L56782]
+source-line: 56782
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$greaterThan 1 ?var0) (#$isa ?var0 #$PositiveInteger)) #$False)
+rus: Для любого v0: если (1 больше v0 и v0 принадлежит классу положительных целых чисел), то ложь (противоречие).
+eng: For all v0: if (1 is greater than v0 and v0 belongs to the class of positive integers), then falsehood (a contradiction).
+fol: MathMt_L56782 (∀ v0 : Object ((GreaterThan(One v0) ∧ PositiveInteger(v0)) → (Zero ≠ Zero))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L56782 :: bool where
+  "MathMt_L56782 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value). (((CycGreaterThan CycOne v0) \<and> (CycPositiveInteger v0)) \<longrightarrow> False))"
+isb-end:
+[/unit MathMt_L56782]
+
+[unit MathMt_L59083]
+source-line: 59083
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$evaluate 0 (#$PlusFn ?var0 ?var1))) (#$isa ?var1 #$Integer))
+rus: Для любых v0, v1: если (v0 принадлежит классу целых чисел и вычисление суммы с первым аргументом v0 и вторым аргументом v1 даёт 0), то v1 принадлежит классу целых чисел.
+eng: For all v0, v1: if (v0 belongs to the class of integers and evaluating the sum with first argument v0 and second argument v1 yields 0), then v1 belongs to the class of integers.
+fol: MathMt_L59083 (∀ v0, v1 : Object ((Integer(v0) ∧ PlusValue(v0 v1 Zero)) → Integer(v1))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59083 :: bool where
+  "MathMt_L59083 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value). (((CycInteger v0) \<and> (CycPlusValue v0 v1 CycZero)) \<longrightarrow> (CycInteger v1)))"
+isb-end:
+[/unit MathMt_L59083]
+
+[unit MathMt_L59085]
+source-line: 59085
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var6 ?var7)) (#$evaluate ?var6 (#$TimesFn ?var0 ?var1)) (#$evaluate ?var7 (#$TimesFn ?var0 ?var2))) (#$equals ?var5 ?var4))
+rus: Для любых v0, v1, v2, v3, v4, v5, v6, v7: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v3 и вычисление произведения с первым аргументом v0 и вторым аргументом v3 даёт v4 и вычисление суммы с первым аргументом v6 и вторым аргументом v7 даёт v5 и вычисление произведения с первым аргументом v0 и вторым аргументом v1 даёт v6 и вычисление произведения с первым аргументом v0 и вторым аргументом v2 даёт v7), то v5 равно v4.
+eng: For all v0, v1, v2, v3, v4, v5, v6, v7: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and evaluating the sum with first argument v1 and second argument v2 yields v3 and evaluating the product with first argument v0 and second argument v3 yields v4 and evaluating the sum with first argument v6 and second argument v7 yields v5 and evaluating the product with first argument v0 and second argument v1 yields v6 and evaluating the product with first argument v0 and second argument v2 yields v7), then v5 equals v4.
+fol: MathMt_L59085 (∀ v0, v1, v2, v3, v4, v5, v6, v7 : Object ((((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ PlusValue(v1 v2 v3)) ∧ TimesValue(v0 v3 v4)) ∧ PlusValue(v6 v7 v5)) ∧ TimesValue(v0 v1 v6)) ∧ TimesValue(v0 v2 v7)) → (v5 = v4))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59085 :: bool where
+  "MathMt_L59085 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value) (v4 :: cyc_value) (v5 :: cyc_value) (v6 :: cyc_value) (v7 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1) \<and> (CycRealNumber v2) \<and> (CycPlusValue v1 v2 v3) \<and> (CycTimesValue v0 v3 v4) \<and> (CycPlusValue v6 v7 v5) \<and> (CycTimesValue v0 v1 v6) \<and> (CycTimesValue v0 v2 v7)) \<longrightarrow> (v5 = v4)))"
+isb-end:
+[/unit MathMt_L59085]
+
+[unit MathMt_L59086]
+source-line: 59086
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var1 (#$TimesFn ?var2 ?var3))) (#$or (#$evaluate ?var2 0) (#$evaluate ?var3 ?var0)))
+rus: Для любых v0, v1, v2, v3: если (вычисление частного с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление произведения с первым аргументом v2 и вторым аргументом v3 даёт v1), то (вычисление выражения 0 даёт v2 или вычисление выражения v0 даёт v3).
+eng: For all v0, v1, v2, v3: if (evaluating the quotient with first argument v1 and second argument v2 yields v0 and evaluating the product with first argument v2 and second argument v3 yields v1), then (evaluating the expression 0 yields v2 or evaluating the expression v0 yields v3).
+fol: MathMt_L59086 (∀ v0, v1, v2, v3 : Object ((QuotientValue(v1 v2 v0) ∧ TimesValue(v2 v3 v1)) → (Evaluate(v2 Zero) ∨ Evaluate(v3 v0)))).
+note-rus: В заключении именно дизъюнкция двух Evaluate; ни один из них не заменён равенством.
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59086 :: bool where
+  "MathMt_L59086 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value). (((CycQuotientValue v1 v2 v0) \<and> (CycTimesValue v2 v3 v1)) \<longrightarrow> ((CycEvaluate v2 CycZero) \<or> (CycEvaluate v3 v0))))"
+isb-end:
+[/unit MathMt_L59086]
+
+[unit MathMt_L59087]
+source-line: 59087
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) (#$isa ?var2 #$RealNumber))
+rus: Для любых v0, v1, v2: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и вычисление суммы с первым аргументом v0 и вторым аргументом v1 даёт v2), то v2 принадлежит классу вещественных чисел.
+eng: For all v0, v1, v2: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and evaluating the sum with first argument v0 and second argument v1 yields v2), then v2 belongs to the class of real numbers.
+fol: MathMt_L59087 (∀ v0, v1, v2 : Object (((RealNumber(v0) ∧ RealNumber(v1)) ∧ PlusValue(v0 v1 v2)) → RealNumber(v2))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59087 :: bool where
+  "MathMt_L59087 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1) \<and> (CycPlusValue v0 v1 v2)) \<longrightarrow> (CycRealNumber v2)))"
+isb-end:
+[/unit MathMt_L59087]
+
+[unit MathMt_L59088]
+source-line: 59088
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$PlusFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var0 ?var1)) (#$evaluate ?var6 (#$PlusFn ?var5 ?var2))) (#$equals ?var4 ?var6))
+rus: Для любых v0, v1, v2, v3, v4, v5, v6: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v3 и вычисление суммы с первым аргументом v0 и вторым аргументом v3 даёт v4 и вычисление суммы с первым аргументом v0 и вторым аргументом v1 даёт v5 и вычисление суммы с первым аргументом v5 и вторым аргументом v2 даёт v6), то v4 равно v6.
+eng: For all v0, v1, v2, v3, v4, v5, v6: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and evaluating the sum with first argument v1 and second argument v2 yields v3 and evaluating the sum with first argument v0 and second argument v3 yields v4 and evaluating the sum with first argument v0 and second argument v1 yields v5 and evaluating the sum with first argument v5 and second argument v2 yields v6), then v4 equals v6.
+fol: MathMt_L59088 (∀ v0, v1, v2, v3, v4, v5, v6 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ PlusValue(v1 v2 v3)) ∧ PlusValue(v0 v3 v4)) ∧ PlusValue(v0 v1 v5)) ∧ PlusValue(v5 v2 v6)) → (v4 = v6))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59088 :: bool where
+  "MathMt_L59088 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value) (v4 :: cyc_value) (v5 :: cyc_value) (v6 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1) \<and> (CycRealNumber v2) \<and> (CycPlusValue v1 v2 v3) \<and> (CycPlusValue v0 v3 v4) \<and> (CycPlusValue v0 v1 v5) \<and> (CycPlusValue v5 v2 v6)) \<longrightarrow> (v4 = v6)))"
+isb-end:
+[/unit MathMt_L59088]
+
+[unit MathMt_L59090]
+source-line: 59090
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$TimesFn ?var0 ?var1))) (#$isa ?var2 #$Integer))
+rus: Для любых v0, v1, v2: если (v0 принадлежит классу целых чисел и v1 принадлежит классу целых чисел и вычисление произведения с первым аргументом v0 и вторым аргументом v1 даёт v2), то v2 принадлежит классу целых чисел.
+eng: For all v0, v1, v2: if (v0 belongs to the class of integers and v1 belongs to the class of integers and evaluating the product with first argument v0 and second argument v1 yields v2), then v2 belongs to the class of integers.
+fol: MathMt_L59090 (∀ v0, v1, v2 : Object (((Integer(v0) ∧ Integer(v1)) ∧ TimesValue(v0 v1 v2)) → Integer(v2))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59090 :: bool where
+  "MathMt_L59090 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value). (((CycInteger v0) \<and> (CycInteger v1) \<and> (CycTimesValue v0 v1 v2)) \<longrightarrow> (CycInteger v2)))"
+isb-end:
+[/unit MathMt_L59090]
+
+[unit MathMt_L59091]
+source-line: 59091
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var1 (#$DifferenceFn ?var3 ?var2))) (#$equals ?var3 ?var0))
+rus: Для любых v0, v1, v2, v3: если (вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление разности с первым аргументом v3 и вторым аргументом v2 даёт v1), то v3 равно v0.
+eng: For all v0, v1, v2, v3: if (evaluating the sum with first argument v1 and second argument v2 yields v0 and evaluating the difference with first argument v3 and second argument v2 yields v1), then v3 equals v0.
+fol: MathMt_L59091 (∀ v0, v1, v2, v3 : Object ((PlusValue(v1 v2 v0) ∧ DifferenceValue(v3 v2 v1)) → (v3 = v0))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59091 :: bool where
+  "MathMt_L59091 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value). (((CycPlusValue v1 v2 v0) \<and> (CycDifferenceValue v3 v2 v1)) \<longrightarrow> (v3 = v0)))"
+isb-end:
+[/unit MathMt_L59091]
+
+[unit MathMt_L59092]
+source-line: 59092
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var2 (#$QuotientFn ?var3 ?var1))) (#$equals ?var3 ?var0))
+rus: Для любых v0, v1, v2, v3: если (вычисление произведения с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление частного с первым аргументом v3 и вторым аргументом v1 даёт v2), то v3 равно v0.
+eng: For all v0, v1, v2, v3: if (evaluating the product with first argument v1 and second argument v2 yields v0 and evaluating the quotient with first argument v3 and second argument v1 yields v2), then v3 equals v0.
+fol: MathMt_L59092 (∀ v0, v1, v2, v3 : Object ((TimesValue(v1 v2 v0) ∧ QuotientValue(v3 v1 v2)) → (v3 = v0))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59092 :: bool where
+  "MathMt_L59092 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value). (((CycTimesValue v1 v2 v0) \<and> (CycQuotientValue v3 v1 v2)) \<longrightarrow> (v3 = v0)))"
+isb-end:
+[/unit MathMt_L59092]
+
+[unit MathMt_L59093]
+source-line: 59093
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var4 (#$QuotientFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) (#$equals ?var0 ?var4))
+rus: Для любых v0, v1, v2, v3, v4: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и v3 принадлежит классу вещественных чисел и вычисление произведения с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление частного с первым аргументом v1 и вторым аргументом v3 даёт v4 и вычисление произведения с первым аргументом v2 и вторым аргументом v3 даёт 1), то v0 равно v4.
+eng: For all v0, v1, v2, v3, v4: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and v3 belongs to the class of real numbers and evaluating the product with first argument v1 and second argument v2 yields v0 and evaluating the quotient with first argument v1 and second argument v3 yields v4 and evaluating the product with first argument v2 and second argument v3 yields 1), then v0 equals v4.
+fol: MathMt_L59093 (∀ v0, v1, v2, v3, v4 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ RealNumber(v3)) ∧ TimesValue(v1 v2 v0)) ∧ QuotientValue(v1 v3 v4)) ∧ TimesValue(v2 v3 One)) → (v0 = v4))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59093 :: bool where
+  "MathMt_L59093 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value) (v4 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1) \<and> (CycRealNumber v2) \<and> (CycRealNumber v3) \<and> (CycTimesValue v1 v2 v0) \<and> (CycQuotientValue v1 v3 v4) \<and> (CycTimesValue v2 v3 CycOne)) \<longrightarrow> (v0 = v4)))"
+isb-end:
+[/unit MathMt_L59093]
+
+[unit MathMt_L59094]
+source-line: 59094
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var4 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) (#$equals ?var0 ?var4))
+rus: Для любых v0, v1, v2, v3, v4: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и v3 принадлежит классу вещественных чисел и вычисление разности с первым аргументом v1 и вторым аргументом v3 даёт v0 и вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v4 и вычисление суммы с первым аргументом v3 и вторым аргументом v2 даёт 0), то v0 равно v4.
+eng: For all v0, v1, v2, v3, v4: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and v3 belongs to the class of real numbers and evaluating the difference with first argument v1 and second argument v3 yields v0 and evaluating the sum with first argument v1 and second argument v2 yields v4 and evaluating the sum with first argument v3 and second argument v2 yields 0), then v0 equals v4.
+fol: MathMt_L59094 (∀ v0, v1, v2, v3, v4 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ RealNumber(v3)) ∧ DifferenceValue(v1 v3 v0)) ∧ PlusValue(v1 v2 v4)) ∧ PlusValue(v3 v2 Zero)) → (v0 = v4))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59094 :: bool where
+  "MathMt_L59094 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value) (v4 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1) \<and> (CycRealNumber v2) \<and> (CycRealNumber v3) \<and> (CycDifferenceValue v1 v3 v0) \<and> (CycPlusValue v1 v2 v4) \<and> (CycPlusValue v3 v2 CycZero)) \<longrightarrow> (v0 = v4)))"
+isb-end:
+[/unit MathMt_L59094]
+
+[unit MathMt_L59095]
+source-line: 59095
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) (#$equals ?var0 ?var4))
+rus: Для любых v0, v1, v2, v3, v4: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и v3 принадлежит классу вещественных чисел и вычисление частного с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление произведения с первым аргументом v1 и вторым аргументом v3 даёт v4 и вычисление произведения с первым аргументом v2 и вторым аргументом v3 даёт 1), то v0 равно v4.
+eng: For all v0, v1, v2, v3, v4: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and v3 belongs to the class of real numbers and evaluating the quotient with first argument v1 and second argument v2 yields v0 and evaluating the product with first argument v1 and second argument v3 yields v4 and evaluating the product with first argument v2 and second argument v3 yields 1), then v0 equals v4.
+fol: MathMt_L59095 (∀ v0, v1, v2, v3, v4 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ RealNumber(v3)) ∧ QuotientValue(v1 v2 v0)) ∧ TimesValue(v1 v3 v4)) ∧ TimesValue(v2 v3 One)) → (v0 = v4))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59095 :: bool where
+  "MathMt_L59095 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value) (v4 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1) \<and> (CycRealNumber v2) \<and> (CycRealNumber v3) \<and> (CycQuotientValue v1 v2 v0) \<and> (CycTimesValue v1 v3 v4) \<and> (CycTimesValue v2 v3 CycOne)) \<longrightarrow> (v0 = v4)))"
+isb-end:
+[/unit MathMt_L59095]
+
+[unit MathMt_L59096]
+source-line: 59096
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var2)) (#$evaluate ?var1 (#$PlusFn ?var3 ?var2))) (#$equals ?var3 ?var0))
+rus: Для любых v0, v1, v2, v3: если (вычисление разности с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление суммы с первым аргументом v3 и вторым аргументом v2 даёт v1), то v3 равно v0.
+eng: For all v0, v1, v2, v3: if (evaluating the difference with first argument v1 and second argument v2 yields v0 and evaluating the sum with first argument v3 and second argument v2 yields v1), then v3 equals v0.
+fol: MathMt_L59096 (∀ v0, v1, v2, v3 : Object ((DifferenceValue(v1 v2 v0) ∧ PlusValue(v3 v2 v1)) → (v3 = v0))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59096 :: bool where
+  "MathMt_L59096 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value). (((CycDifferenceValue v1 v2 v0) \<and> (CycPlusValue v3 v2 v1)) \<longrightarrow> (v3 = v0)))"
+isb-end:
+[/unit MathMt_L59096]
+
+[unit MathMt_L59097]
+source-line: 59097
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var4 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) (#$equals ?var0 ?var4))
+rus: Для любых v0, v1, v2, v3, v4: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и v3 принадлежит классу вещественных чисел и вычисление разности с первым аргументом v1 и вторым аргументом v3 даёт v4 и вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление суммы с первым аргументом v3 и вторым аргументом v2 даёт 0), то v0 равно v4.
+eng: For all v0, v1, v2, v3, v4: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and v3 belongs to the class of real numbers and evaluating the difference with first argument v1 and second argument v3 yields v4 and evaluating the sum with first argument v1 and second argument v2 yields v0 and evaluating the sum with first argument v3 and second argument v2 yields 0), then v0 equals v4.
+fol: MathMt_L59097 (∀ v0, v1, v2, v3, v4 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ RealNumber(v3)) ∧ DifferenceValue(v1 v3 v4)) ∧ PlusValue(v1 v2 v0)) ∧ PlusValue(v3 v2 Zero)) → (v0 = v4))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59097 :: bool where
+  "MathMt_L59097 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value) (v3 :: cyc_value) (v4 :: cyc_value). (((CycRealNumber v0) \<and> (CycRealNumber v1) \<and> (CycRealNumber v2) \<and> (CycRealNumber v3) \<and> (CycDifferenceValue v1 v3 v4) \<and> (CycPlusValue v1 v2 v0) \<and> (CycPlusValue v3 v2 CycZero)) \<longrightarrow> (v0 = v4)))"
+isb-end:
+[/unit MathMt_L59097]
+
+[unit MathMt_L59098]
+source-line: 59098
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) (#$isa ?var2 #$Integer))
+rus: Для любых v0, v1, v2: если (v0 принадлежит классу целых чисел и v1 принадлежит классу целых чисел и вычисление суммы с первым аргументом v0 и вторым аргументом v1 даёт v2), то v2 принадлежит классу целых чисел.
+eng: For all v0, v1, v2: if (v0 belongs to the class of integers and v1 belongs to the class of integers and evaluating the sum with first argument v0 and second argument v1 yields v2), then v2 belongs to the class of integers.
+fol: MathMt_L59098 (∀ v0, v1, v2 : Object (((Integer(v0) ∧ Integer(v1)) ∧ PlusValue(v0 v1 v2)) → Integer(v2))).
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L59098 :: bool where
+  "MathMt_L59098 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value). (((CycInteger v0) \<and> (CycInteger v1) \<and> (CycPlusValue v0 v1 v2)) \<longrightarrow> (CycInteger v2)))"
+isb-end:
+[/unit MathMt_L59098]
+
+[unit MathMt_L69975]
+source-line: 69975
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$AssociativeRelation) (#$isa ?var0 #$EvaluatableFunction) (#$evaluate ?var1 (?var0 ?var2 (?var0 ?var3 ?var4)))) (#$evaluate ?var1 (?var0 (?var0 ?var2 ?var3) ?var4)))
+rus: Для любой операции v0 и любых значений v1, v2, v3, v4: если v0 относится к AssociativeRelation и EvaluatableFunction и вычисление v0(v2, v0(v3, v4)) даёт v1, то вычисление v0(v0(v2, v3), v4) тоже даёт v1. Общие типы и семантика вычисления в исходной записи полностью не заданы; в isb ниже принята частичная бинарная операция и строгое вычисление вложенных применений.
+eng: For every operation v0 and all values v1, v2, v3, v4: if v0 is classified as AssociativeRelation and EvaluatableFunction, and evaluating v0(v2, v0(v3, v4)) yields v1, then evaluating v0(v0(v2, v3), v4) also yields v1. The source does not fully specify the types and evaluation semantics; the isb rendering below uses a partial binary operation and strict evaluation of nested applications.
+fol: не выразимо на fol при прямом переводе с сохранением квантификации по операции: в обычной FOL связанная переменная не может занимать позицию функционального символа. Кодировка через объекты/Apply здесь намеренно не вводится.
+isb-status: interpretation-dependent; strict partial-operation semantics; not machine-checked; proposition-defined-not-proved
+isb-variable-map: ?var0 -> f; ?var1..4 -> v1..4; t,u are fresh intermediate values
+isb:
+definition MathMt_L69975 :: bool where
+  "MathMt_L69975 \<longleftrightarrow>
+    (\<forall>(f :: cyc_partial_binary) (v1 :: cyc_value)
+         (v2 :: cyc_value) (v3 :: cyc_value) (v4 :: cyc_value).
+       (CycAssociativeRelation f \<and> CycEvaluatableFunction f \<and>
+        (\<exists>t. f v3 v4 = Some t \<and> f v2 t = Some v1))
+       \<longrightarrow> (\<exists>u. f v2 v3 = Some u \<and> f u v4 = Some v1))"
+isb-end:
+[/unit MathMt_L69975]
+
+[unit MathMt_L1098561]
+source-line: 1098561
+source-status: reconstructed_candidate
+cycl: (#$implies (#$ratioOfTo ?var0 ?var1 ?var2) (#$ratioOfTo ?var0 ?var2 ?var1))
+rus: Для любых v0, v1, v2: если для упорядоченной тройки (v0, v1, v2) выполняется отношение ratioOfTo, то для упорядоченной тройки (v0, v2, v1) выполняется отношение ratioOfTo.
+eng: For all v0, v1, v2: if the relation ratioOfTo holds for the ordered triple (v0, v1, v2), then the relation ratioOfTo holds for the ordered triple (v0, v2, v1).
+fol: MathMt_L1098561 (∀ v0, v1, v2 : Object (ratioOfTo(v0 v1 v2) → ratioOfTo(v0 v2 v1))).
+note-rus: Симметрия последних аргументов ratioOfTo сохранена буквально. Это не обоснование симметрии обычного деления.
+isb-status: signature-relative; not machine-checked; proposition-defined-not-proved
+isb:
+definition MathMt_L1098561 :: bool where
+  "MathMt_L1098561 \<longleftrightarrow>
+    (\<forall>(v0 :: cyc_value) (v1 :: cyc_value) (v2 :: cyc_value). ((CycRatioOfTo v0 v1 v2) \<longrightarrow> (CycRatioOfTo v0 v2 v1)))"
+isb-end:
+[/unit MathMt_L1098561]
+
+[isb-trailer]
+end
+[/isb-trailer]
+
+[provenance]
+source-sha256: e89512053330bee77f008f67d7c1bfff8bc8285b829aebba0c03e8e0753d01d0
+fol_lexer_min.g4-sha256: 78022b11e7d934059d53c556beb11714467ef79eb72671d8d837077edaec0e37
+fol_parser_min.g4-sha256: d844f0860f602916e7c12562f7396f8ed727bf1a9f7cadd942a98f82b0b177d6
+units: 22
+original: 1
+reconstructed-candidates: 21
+fol-formulas: 21
+fol-not-directly-expressible: 1
+isb-renderings: 22
+[/provenance]

@@ -1,0 +1,29 @@
+﻿;; Own assertions with explicit source Mt; original formulas are unchanged.
+;; No Cyc engine or logical inference has been run.
+;; Ancestors below are computed from all closed genlMt edges, irrespective of assertion Mt.
+;; Ancestor assertions are NOT duplicated here; see notebook export_inherited().
+;; Selected Mt: #$SetTheoryMt
+;; Reachable ancestor targets excluding self; SCC peers included (9):
+;; ancestor: #$BaseKB
+;; ancestor: #$CoreCycLImplementationMt
+;; ancestor: #$CoreCycLMt
+;; ancestor: #$CycAgencyTheoryMt
+;; ancestor: #$CycHistoricalPossibilityTheoryMt
+;; ancestor: #$LogicalTruthImplementationMt
+;; ancestor: #$LogicalTruthMt
+;; ancestor: #$UniversalVocabularyImplementationMt
+;; ancestor: #$UniversalVocabularyMt
+;; source_line: 1889730
+(#$ist #$SetTheoryMt (#$salientAssertions #$Set-Mathematical (((#$isa ?var0 #$Set-Mathematical) (#$subsetOf ?var1 ?var0) (#$subsetOf ?var0 ?var1) (#$isa ?var1 #$Set-Mathematical)) ((#$equals ?var0 ?var1)))))
+;; source_line: 1889731
+(#$ist #$SetTheoryMt (#$salientAssertions #$subsetOf (((#$elementOf ?var0 ?var1) (#$subsetOf ?var1 ?var2)) ((#$elementOf ?var0 ?var2)))))
+;; MALFORMED source_line: 56264; hypothesis: add_two_parens_each_end
+;; RAW: (#$elementOf ?var0 ?var1) (#$subsetOf ?var1 ?var2)) ((#$elementOf ?var0 ?var2)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$elementOf ?var0 ?var1) (#$subsetOf ?var1 ?var2)) ((#$elementOf ?var0 ?var2)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$elementOf ?var0 ?var1) (#$subsetOf ?var1 ?var2)) (#$elementOf ?var0 ?var2))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889731, "mt": "#$SetTheoryMt", "predicate": "#$salientAssertions"}
+;; MALFORMED source_line: 56267; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$Set-Mathematical) (#$subsetOf ?var1 ?var0) (#$subsetOf ?var0 ?var1) (#$isa ?var1 #$Set-Mathematical)) ((#$equals ?var0 ?var1)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$Set-Mathematical) (#$subsetOf ?var1 ?var0) (#$subsetOf ?var0 ?var1) (#$isa ?var1 #$Set-Mathematical)) ((#$equals ?var0 ?var1)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$Set-Mathematical) (#$subsetOf ?var1 ?var0) (#$subsetOf ?var0 ?var1) (#$isa ?var1 #$Set-Mathematical)) (#$equals ?var0 ?var1))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889730, "mt": "#$SetTheoryMt", "predicate": "#$salientAssertions"}

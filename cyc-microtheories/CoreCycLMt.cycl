@@ -1,0 +1,1148 @@
+﻿;; Own assertions with explicit source Mt; original formulas are unchanged.
+;; No Cyc engine or logical inference has been run.
+;; Ancestors below are computed from all closed genlMt edges, irrespective of assertion Mt.
+;; Ancestor assertions are NOT duplicated here; see notebook export_inherited().
+;; Selected Mt: #$CoreCycLMt
+;; Reachable ancestor targets excluding self; SCC peers included (3):
+;; ancestor: #$CoreCycLImplementationMt
+;; ancestor: #$LogicalTruthImplementationMt
+;; ancestor: #$LogicalTruthMt
+;; source_line: 156487
+(#$ist #$CoreCycLMt (#$isa #$BinaryPredicate #$Collection))
+;; source_line: 156488
+(#$ist #$CoreCycLMt (#$genls #$BinaryPredicate #$FixedArityRelation))
+;; source_line: 156489
+(#$ist #$CoreCycLMt (#$genls #$BinaryPredicate #$Predicate))
+;; source_line: 156490
+(#$ist #$CoreCycLMt (#$isa #$TransitiveBinaryPredicate #$Collection))
+;; source_line: 156491
+(#$ist #$CoreCycLMt (#$isa #$SymmetricBinaryPredicate #$Collection))
+;; source_line: 156492
+(#$ist #$CoreCycLMt (#$genls #$TransitiveBinaryPredicate #$BinaryPredicate))
+;; source_line: 156493
+(#$ist #$CoreCycLMt (#$genls #$SymmetricBinaryPredicate #$BinaryPredicate))
+;; source_line: 156494
+(#$ist #$CoreCycLMt (#$genls #$QuaternaryPredicate #$QuaternaryRelation))
+;; source_line: 156495
+(#$ist #$CoreCycLMt (#$genls #$Quantifier #$ScopingRelation))
+;; source_line: 156496
+(#$ist #$CoreCycLMt (#$isa #$CycLSentence-Askable #$Collection))
+;; source_line: 156497
+(#$ist #$CoreCycLMt (#$isa #$CycLSentence-Assertible #$Collection))
+;; source_line: 156498
+(#$ist #$CoreCycLMt (#$isa #$IrreflexiveBinaryPredicate #$Collection))
+;; source_line: 156499
+(#$ist #$CoreCycLMt (#$isa #$CommutativeRelation #$Collection))
+;; source_line: 156500
+(#$ist #$CoreCycLMt (#$genls #$TernaryFunction #$TernaryRelation))
+;; source_line: 156501
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedNonAtomicTerm #$CycLClosedDenotationalTerm))
+;; source_line: 156502
+(#$ist #$CoreCycLMt (#$isa #$AsymmetricBinaryPredicate #$Collection))
+;; source_line: 156503
+(#$ist #$CoreCycLMt (#$isa #$List #$Collection))
+;; source_line: 156504
+(#$ist #$CoreCycLMt (#$genls #$QuintaryPredicate #$Predicate))
+;; source_line: 156505
+(#$ist #$CoreCycLMt (#$isa #$CycLClosedAtomicSentence #$Collection))
+;; source_line: 156506
+(#$ist #$CoreCycLMt (#$isa #$BinaryRelation #$Collection))
+;; source_line: 156507
+(#$ist #$CoreCycLMt (#$genls #$DirectedMultigraph #$Multigraph))
+;; source_line: 156508
+(#$ist #$CoreCycLMt (#$isa #$EvaluatableRelation #$Collection))
+;; source_line: 156509
+(#$ist #$CoreCycLMt (#$genls #$TernaryPredicate #$TernaryRelation))
+;; source_line: 156510
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedAtomicTerm #$CycLClosedDenotationalTerm))
+;; source_line: 156511
+(#$ist #$CoreCycLMt (#$isa #$CycLReifiableDenotationalTerm #$Collection))
+;; source_line: 156512
+(#$ist #$CoreCycLMt (#$genls #$ArgTypeTernaryPredicate #$ArgTypePredicate))
+;; source_line: 156513
+(#$ist #$CoreCycLMt (#$genls #$CycLReifiedDenotationalTerm #$CycLReifiableDenotationalTerm))
+;; source_line: 156514
+(#$ist #$CoreCycLMt (#$isa #$ExistentialQuantifier #$Collection))
+;; source_line: 156515
+(#$ist #$CoreCycLMt (#$genls #$BookkeepingPredicate #$Predicate))
+;; source_line: 156516
+(#$ist #$CoreCycLMt (#$isa #$CycLSentence #$Collection))
+;; source_line: 156517
+(#$ist #$CoreCycLMt (#$genls #$CycLAtomicAssertion #$CycLAtomicSentence))
+;; source_line: 156518
+(#$ist #$CoreCycLMt (#$isa #$CycLVariable #$Collection))
+;; source_line: 156519
+(#$ist #$CoreCycLMt (#$genls #$CycLExpression-Assertible #$CycLExpression-Askable))
+;; source_line: 156520
+(#$ist #$CoreCycLMt (#$genls #$CycLReifiableDenotationalTerm #$CycLClosedDenotationalTerm))
+;; source_line: 156521
+(#$ist #$CoreCycLMt (#$isa #$May #$Collection))
+;; source_line: 156522
+(#$ist #$CoreCycLMt (#$genls #$ArgTypeBinaryPredicate #$ArgTypePredicate))
+;; source_line: 156523
+(#$ist #$CoreCycLMt (#$isa #$CollectionDenotingFunction #$Collection))
+;; source_line: 156524
+(#$ist #$CoreCycLMt (#$genls #$QuintaryFunction #$Function-Denotational))
+;; source_line: 156525
+(#$ist #$CoreCycLMt (#$isa #$DocumentationConstant #$Collection))
+;; source_line: 156526
+(#$ist #$CoreCycLMt (#$isa #$CycLOpenNonAtomicTerm #$Collection))
+;; source_line: 156527
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedAtomicSentence #$CycLAtomicSentence))
+;; source_line: 156528
+(#$ist #$CoreCycLMt (#$isa #$Cyclist #$Collection))
+;; source_line: 156529
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicTerm-Askable #$CycLExpression-Askable))
+;; source_line: 156530
+(#$ist #$CoreCycLMt (#$genls #$PositiveInteger #$Integer))
+;; source_line: 156531
+(#$ist #$CoreCycLMt (#$genls #$CycLSentence-ClosedPredicate #$CycLSentence))
+;; source_line: 156532
+(#$ist #$CoreCycLMt (#$isa #$InterArgIsaPredicate #$Collection))
+;; source_line: 156533
+(#$ist #$CoreCycLMt (#$genls #$QuaternaryFunction #$Function-Denotational))
+;; source_line: 156534
+(#$ist #$CoreCycLMt (#$genls #$CycLDeducedAssertion #$CycLAssertion))
+;; source_line: 156535
+(#$ist #$CoreCycLMt (#$isa #$CycLAssertedAssertion #$Collection))
+;; source_line: 156536
+(#$ist #$CoreCycLMt (#$isa #$CycLOpenSentence #$Collection))
+;; source_line: 156537
+(#$ist #$CoreCycLMt (#$genls #$RealNumber #$ScalarPointValue))
+;; source_line: 156538
+(#$ist #$CoreCycLMt (#$isa #$AntiSymmetricBinaryPredicate #$Collection))
+;; source_line: 156539
+(#$ist #$CoreCycLMt (#$genls #$CycLSentence-Askable #$CycLExpression-Askable))
+;; source_line: 156540
+(#$ist #$CoreCycLMt (#$genls #$NonNegativeInteger #$Integer))
+;; source_line: 156541
+(#$ist #$CoreCycLMt (#$isa #$CycLNonAtomicReifiedTerm #$Collection))
+;; source_line: 156542
+(#$ist #$CoreCycLMt (#$genls #$CycLSentence-Askable #$CycLSentence))
+;; source_line: 156543
+(#$ist #$CoreCycLMt (#$isa #$CycLNonAtomicTerm-Assertible #$Collection))
+;; source_line: 156544
+(#$ist #$CoreCycLMt (#$genls #$TernaryFunction #$Function-Denotational))
+;; source_line: 156545
+(#$ist #$CoreCycLMt (#$isa #$AntiTransitiveBinaryPredicate #$Collection))
+;; source_line: 156546
+(#$ist #$CoreCycLMt (#$isa #$CycLReifiedDenotationalTerm #$Collection))
+;; source_line: 156547
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenNonAtomicTerm #$CycLOpenDenotationalTerm))
+;; source_line: 156548
+(#$ist #$CoreCycLMt (#$isa #$CycLOpenExpression #$Collection))
+;; source_line: 156549
+(#$ist #$CoreCycLMt (#$genls #$CycLGenericRelationFormula #$CycLFormula))
+;; source_line: 156550
+(#$ist #$CoreCycLMt (#$genls #$QuintaryFunction #$QuintaryRelation))
+;; source_line: 156551
+(#$ist #$CoreCycLMt (#$isa #$Format #$Collection))
+;; source_line: 156552
+(#$ist #$CoreCycLMt (#$isa #$DistributingMetaKnowledgePredicate #$Collection))
+;; source_line: 156553
+(#$ist #$CoreCycLMt (#$genls #$BinaryFunction #$Function-Denotational))
+;; source_line: 156554
+(#$ist #$CoreCycLMt (#$genls #$CycLAssertedAssertion #$CycLAssertion))
+;; source_line: 156555
+(#$ist #$CoreCycLMt (#$isa #$ScalarPointValue #$Collection))
+;; source_line: 156556
+(#$ist #$CoreCycLMt (#$isa #$CycLNonAtomicTerm-Askable #$Collection))
+;; source_line: 156557
+(#$ist #$CoreCycLMt (#$genls #$CycLVariable #$CycLOpenDenotationalTerm))
+;; source_line: 156558
+(#$ist #$CoreCycLMt (#$isa #$November #$Collection))
+;; source_line: 156559
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedFormula #$CycLFormula))
+;; source_line: 156560
+(#$ist #$CoreCycLMt (#$genls #$QuintaryPredicate #$QuintaryRelation))
+;; source_line: 156561
+(#$ist #$CoreCycLMt (#$isa #$CycLExpression-Assertible #$Collection))
+;; source_line: 156562
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenSentence #$CycLSentence))
+;; source_line: 156563
+(#$ist #$CoreCycLMt (#$isa #$CycLExpression-Askable #$Collection))
+;; source_line: 156564
+(#$ist #$CoreCycLMt (#$genls #$CollectionDenotingFunction #$Function-Denotational))
+;; source_line: 156565
+(#$ist #$CoreCycLMt (#$isa #$KnowledgeBase #$Collection))
+;; source_line: 156566
+(#$ist #$CoreCycLMt (#$isa #$Set-Mathematical #$Collection))
+;; source_line: 156567
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicTerm-Assertible #$CycLNonAtomicTerm-Askable))
+;; source_line: 156568
+(#$ist #$CoreCycLMt (#$isa #$ArgConstraintPredicate #$Collection))
+;; source_line: 156569
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenFormula #$CycLFormula))
+;; source_line: 156570
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicTerm #$CycLRepresentedTerm))
+;; source_line: 156571
+(#$ist #$CoreCycLMt (#$isa #$AssociativeRelation #$Collection))
+;; source_line: 156572
+(#$ist #$CoreCycLMt (#$genls #$CycLAtomicSentence #$CycLSentence))
+;; source_line: 156573
+(#$ist #$CoreCycLMt (#$genls #$CycLConstant #$CycLReifiableDenotationalTerm))
+;; source_line: 156574
+(#$ist #$CoreCycLMt (#$isa #$TernaryRelation #$Collection))
+;; source_line: 156575
+(#$ist #$CoreCycLMt (#$genls #$EvaluatableFunction #$Function-Denotational))
+;; source_line: 156576
+(#$ist #$CoreCycLMt (#$isa #$HypotheticalContext #$Collection))
+;; source_line: 156577
+(#$ist #$CoreCycLMt (#$genls #$SetOrCollection #$Thing))
+;; source_line: 156578
+(#$ist #$CoreCycLMt (#$isa #$CycLGenericRelationFormula #$Collection))
+;; source_line: 156579
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedAtomicTerm #$CycLAtomicTerm))
+;; source_line: 156580
+(#$ist #$CoreCycLMt (#$isa #$CycLNonAtomicTerm #$Collection))
+;; source_line: 156581
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicTerm #$CycLFormula))
+;; source_line: 156582
+(#$ist #$CoreCycLMt (#$genls #$CycLRepresentedAtomicTerm #$CycLRepresentedTerm))
+;; source_line: 156583
+(#$ist #$CoreCycLMt (#$isa #$DocumentationPredicate #$Collection))
+;; source_line: 156584
+(#$ist #$CoreCycLMt (#$genls #$BinaryFunction #$BinaryRelation))
+;; source_line: 156585
+(#$ist #$CoreCycLMt (#$isa #$April #$Collection))
+;; source_line: 156586
+(#$ist #$CoreCycLMt (#$genls #$UnaryFunction #$Function-Denotational))
+;; source_line: 156587
+(#$ist #$CoreCycLMt (#$genls #$DocumentationConstant #$CycLConstant))
+;; source_line: 156588
+(#$ist #$CoreCycLMt (#$isa #$BookkeepingPredicate #$Collection))
+;; source_line: 156589
+(#$ist #$CoreCycLMt (#$genls #$HypotheticalContext #$Microtheory))
+;; source_line: 156590
+(#$ist #$CoreCycLMt (#$isa #$CycLAtomicTerm #$Collection))
+;; source_line: 156591
+(#$ist #$CoreCycLMt (#$isa #$CycLAtomicSentence #$Collection))
+;; source_line: 156592
+(#$ist #$CoreCycLMt (#$genls #$ArgTypeBinaryPredicate #$BinaryPredicate))
+;; source_line: 156593
+(#$ist #$CoreCycLMt (#$genls #$BinaryPredicate #$BinaryRelation))
+;; source_line: 156594
+(#$ist #$CoreCycLMt (#$isa #$ArgTypePredicate #$Collection))
+;; source_line: 156595
+(#$ist #$CoreCycLMt (#$genls #$CycLExpression-Askable #$CycLExpression))
+;; source_line: 156596
+(#$ist #$CoreCycLMt (#$isa #$QuintaryFunction #$Collection))
+;; source_line: 156597
+(#$ist #$CoreCycLMt (#$genls #$ProblemSolvingCntxt #$Microtheory))
+;; source_line: 156598
+(#$ist #$CoreCycLMt (#$isa #$Multigraph #$Collection))
+;; source_line: 156599
+(#$ist #$CoreCycLMt (#$genls #$CycLVariable #$CycLAtomicTerm))
+;; source_line: 156600
+(#$ist #$CoreCycLMt (#$isa #$ArgIsaBinaryPredicate #$Collection))
+;; source_line: 156601
+(#$ist #$CoreCycLMt (#$genls #$ArgGenlQuantityTernaryPredicate #$ArgTypeTernaryPredicate))
+;; source_line: 156602
+(#$ist #$CoreCycLMt (#$genls #$AntiSymmetricBinaryPredicate #$BinaryPredicate))
+;; source_line: 156603
+(#$ist #$CoreCycLMt (#$isa #$ArgGenlQuantityTernaryPredicate #$Collection))
+;; source_line: 156604
+(#$ist #$CoreCycLMt (#$genls #$CycLVariable #$CycLRepresentedAtomicTerm))
+;; source_line: 156605
+(#$ist #$CoreCycLMt (#$isa #$QuaternaryFunction #$Collection))
+;; source_line: 156606
+(#$ist #$CoreCycLMt (#$genls #$CycLAtomicTerm #$CycLExpression))
+;; source_line: 156607
+(#$ist #$CoreCycLMt (#$isa #$ArgGenlTernaryPredicate #$Collection))
+;; source_line: 156608
+(#$ist #$CoreCycLMt (#$genls #$MicrotheoryDesignatingRelation #$Relation))
+;; source_line: 156609
+(#$ist #$CoreCycLMt (#$isa #$January #$Collection))
+;; source_line: 156610
+(#$ist #$CoreCycLMt (#$genls #$CycLRepresentedAtomicTerm #$CycLAtomicTerm))
+;; source_line: 156611
+(#$ist #$CoreCycLMt (#$isa #$CycLClosedFormula #$Collection))
+;; source_line: 156612
+(#$ist #$CoreCycLMt (#$genls #$ArgIsaTernaryPredicate #$ArgTypeTernaryPredicate))
+;; source_line: 156613
+(#$ist #$CoreCycLMt (#$genls #$IrreflexiveBinaryPredicate #$BinaryPredicate))
+;; source_line: 156614
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedFormula #$CycLClosedExpression))
+;; source_line: 156615
+(#$ist #$CoreCycLMt (#$genls #$CycLConstant #$CycLRepresentedAtomicTerm))
+;; source_line: 156616
+(#$ist #$CoreCycLMt (#$genls #$CycLDenotationalTerm #$CycLExpression))
+;; source_line: 156617
+(#$ist #$CoreCycLMt (#$isa #$CycLFormula #$Collection))
+;; source_line: 156618
+(#$ist #$CoreCycLMt (#$genls #$PartiallyCommutativeRelation #$Relation))
+;; source_line: 156619
+(#$ist #$CoreCycLMt (#$isa #$CycLConstant #$Collection))
+;; source_line: 156620
+(#$ist #$CoreCycLMt (#$genls #$ArgGenlQuantityBinaryPredicate #$ArgTypeBinaryPredicate))
+;; source_line: 156621
+(#$ist #$CoreCycLMt (#$isa #$CycLRepresentedAtomicTerm #$Collection))
+;; source_line: 156622
+(#$ist #$CoreCycLMt (#$genls #$ArgGenlTernaryPredicate #$ArgTypeTernaryPredicate))
+;; source_line: 156623
+(#$ist #$CoreCycLMt (#$genls #$ReflexiveBinaryPredicate #$BinaryPredicate))
+;; source_line: 156624
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedDenotationalTerm #$CycLClosedExpression))
+;; source_line: 156625
+(#$ist #$CoreCycLMt (#$genls #$HumanCyclist #$Cyclist))
+;; source_line: 156626
+(#$ist #$CoreCycLMt (#$isa #$CycLRepresentedTerm #$Collection))
+;; source_line: 156627
+(#$ist #$CoreCycLMt (#$genls #$CycLTerm #$CycLExpression))
+;; source_line: 156628
+(#$ist #$CoreCycLMt (#$isa #$ProblemSolvingCntxt #$Collection))
+;; source_line: 156629
+(#$ist #$CoreCycLMt (#$genls #$AssociativeRelation #$Relation))
+;; source_line: 156630
+(#$ist #$CoreCycLMt (#$isa #$QuaternaryRelation #$Collection))
+;; source_line: 156631
+(#$ist #$CoreCycLMt (#$genls #$ArgGenlBinaryPredicate #$ArgTypeBinaryPredicate))
+;; source_line: 156632
+(#$ist #$CoreCycLMt (#$isa #$CycLClosedDenotationalTerm #$Collection))
+;; source_line: 156633
+(#$ist #$CoreCycLMt (#$isa #$BinaryFunction #$Collection))
+;; source_line: 156634
+(#$ist #$CoreCycLMt (#$genls #$CycLGAFAssertion #$CycLClosedAtomicSentence))
+;; source_line: 156635
+(#$ist #$CoreCycLMt (#$genls #$CycLAtomicTerm #$CycLDenotationalTerm))
+;; source_line: 156636
+(#$ist #$CoreCycLMt (#$isa #$CycLPropositionalSentence #$Collection))
+;; source_line: 156637
+(#$ist #$CoreCycLMt (#$isa #$QuintaryPredicate #$Collection))
+;; source_line: 156638
+(#$ist #$CoreCycLMt (#$genls #$ScopingRelation #$Relation))
+;; source_line: 156639
+(#$ist #$CoreCycLMt (#$genls #$ArgIsaBinaryPredicate #$ArgTypeBinaryPredicate))
+;; source_line: 156640
+(#$ist #$CoreCycLMt (#$isa #$QuaternaryPredicate #$Collection))
+;; source_line: 156641
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenFormula #$CycLOpenExpression))
+;; source_line: 156642
+(#$ist #$CoreCycLMt (#$isa #$CycLTerm #$Collection))
+;; source_line: 156643
+(#$ist #$CoreCycLMt (#$genls #$AsymmetricBinaryPredicate #$AntiSymmetricBinaryPredicate))
+;; source_line: 156644
+(#$ist #$CoreCycLMt (#$genls #$CycLRepresentedTerm #$CycLDenotationalTerm))
+;; source_line: 156645
+(#$ist #$CoreCycLMt (#$genls #$CycLFormula #$CycLExpression))
+;; source_line: 156646
+(#$ist #$CoreCycLMt (#$isa #$PartiallyCommutativeRelation #$Collection))
+;; source_line: 156647
+(#$ist #$CoreCycLMt (#$genls #$EvaluatableRelation #$Relation))
+;; source_line: 156648
+(#$ist #$CoreCycLMt (#$isa #$CycLDenotationalTerm #$Collection))
+;; source_line: 156649
+(#$ist #$CoreCycLMt (#$isa #$DirectedMultigraph #$Collection))
+;; source_line: 156650
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenDenotationalTerm #$CycLOpenExpression))
+;; source_line: 156651
+(#$ist #$CoreCycLMt (#$isa #$ArgGenlQuantityBinaryPredicate #$Collection))
+;; source_line: 156652
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedDenotationalTerm #$CycLDenotationalTerm))
+;; source_line: 156653
+(#$ist #$CoreCycLMt (#$isa #$June #$Collection))
+;; source_line: 156654
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedExpression #$CycLExpression))
+;; source_line: 156655
+(#$ist #$CoreCycLMt (#$isa #$CycLNonAtomicTerm-ClosedFunctor #$Collection))
+;; source_line: 156656
+(#$ist #$CoreCycLMt (#$genls #$CommutativeRelation #$Relation))
+;; source_line: 156657
+(#$ist #$CoreCycLMt (#$genls #$CycLSentence-Assertible #$CycLExpression-Assertible))
+;; source_line: 156658
+(#$ist #$CoreCycLMt (#$isa #$TernaryFunction #$Collection))
+;; source_line: 156659
+(#$ist #$CoreCycLMt (#$genls #$CycLConstant #$CycLClosedAtomicTerm))
+;; source_line: 156660
+(#$ist #$CoreCycLMt (#$isa #$UnitOfMeasure #$Collection))
+;; source_line: 156661
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenDenotationalTerm #$CycLDenotationalTerm))
+;; source_line: 156662
+(#$ist #$CoreCycLMt (#$isa #$ScalarInterval #$Collection))
+;; source_line: 156663
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenExpression #$CycLExpression))
+;; source_line: 156664
+(#$ist #$CoreCycLMt (#$genls #$UnaryFunction #$UnaryRelation))
+;; source_line: 156665
+(#$ist #$CoreCycLMt (#$isa #$CycLClosedSentence #$Collection))
+;; source_line: 156666
+(#$ist #$CoreCycLMt (#$genls #$TernaryRelation #$FixedArityRelation))
+;; source_line: 156667
+(#$ist #$CoreCycLMt (#$isa #$CycLAtomicAssertion #$Collection))
+;; source_line: 156668
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicTerm-Assertible #$CycLExpression-Assertible))
+;; source_line: 156669
+(#$ist #$CoreCycLMt (#$isa #$ArgTypeBinaryPredicate #$Collection))
+;; source_line: 156670
+(#$ist #$CoreCycLMt (#$genls #$ArgTypeTernaryPredicate #$TernaryPredicate))
+;; source_line: 156671
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicTerm #$CycLDenotationalTerm))
+;; source_line: 156672
+(#$ist #$CoreCycLMt (#$isa #$December #$Collection))
+;; source_line: 156673
+(#$ist #$CoreCycLMt (#$genls #$ExistentialQuantifier #$Quantifier))
+;; source_line: 156674
+(#$ist #$CoreCycLMt (#$genls #$UnaryPredicate #$UnaryRelation))
+;; source_line: 156675
+(#$ist #$CoreCycLMt (#$isa #$ArgTypeTernaryPredicate #$Collection))
+;; source_line: 156676
+(#$ist #$CoreCycLMt (#$genls #$QuintaryRelation #$FixedArityRelation))
+;; source_line: 156677
+(#$ist #$CoreCycLMt (#$isa #$CycLClosedNonAtomicTerm #$Collection))
+;; source_line: 156678
+(#$ist #$CoreCycLMt (#$genls #$EvaluatableFunction #$EvaluatableRelation))
+;; source_line: 156679
+(#$ist #$CoreCycLMt (#$isa #$UnaryRelation #$Collection))
+;; source_line: 156680
+(#$ist #$CoreCycLMt (#$isa #$CycLOpenFormula #$Collection))
+;; source_line: 156681
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenSentence #$CycLOpenFormula))
+;; source_line: 156682
+(#$ist #$CoreCycLMt (#$isa #$February #$Collection))
+;; source_line: 156683
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicReifiedTerm #$CycLClosedNonAtomicTerm))
+;; source_line: 156684
+(#$ist #$CoreCycLMt (#$isa #$MicrotheoryDesignatingRelation #$Collection))
+;; source_line: 156685
+(#$ist #$CoreCycLMt (#$genls #$QuaternaryRelation #$FixedArityRelation))
+;; source_line: 156686
+(#$ist #$CoreCycLMt (#$isa #$September #$Collection))
+;; source_line: 156687
+(#$ist #$CoreCycLMt (#$genls #$CycLAtomicAssertion #$CycLAssertion))
+;; source_line: 156688
+(#$ist #$CoreCycLMt (#$isa #$UnaryFunction #$Collection))
+;; source_line: 156689
+(#$ist #$CoreCycLMt (#$isa #$ArgGenlBinaryPredicate #$Collection))
+;; source_line: 156690
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenNonAtomicTerm #$CycLOpenFormula))
+;; source_line: 156691
+(#$ist #$CoreCycLMt (#$genls #$CycLDenotationalTerm #$CycLTerm))
+;; source_line: 156692
+(#$ist #$CoreCycLMt (#$isa #$InterArgFormatPredicate #$Collection))
+;; source_line: 156693
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicTerm-ClosedFunctor #$CycLNonAtomicTerm))
+;; source_line: 156694
+(#$ist #$CoreCycLMt (#$isa #$MonthOfYearType #$Collection))
+;; source_line: 156695
+(#$ist #$CoreCycLMt (#$genls #$BinaryRelation #$FixedArityRelation))
+;; source_line: 156696
+(#$ist #$CoreCycLMt (#$isa #$ReflexiveBinaryPredicate #$Collection))
+;; source_line: 156697
+(#$ist #$CoreCycLMt (#$isa #$ArgIsaTernaryPredicate #$Collection))
+;; source_line: 156698
+(#$ist #$CoreCycLMt (#$genls #$InterArgFormatPredicate #$TernaryPredicate))
+;; source_line: 156699
+(#$ist #$CoreCycLMt (#$isa #$CycLDeducedAssertion #$Collection))
+;; source_line: 156700
+(#$ist #$CoreCycLMt (#$genls #$CycLPropositionalSentence #$CycLClosedSentence))
+;; source_line: 156701
+(#$ist #$CoreCycLMt (#$genls #$CycLExpression #$CycLTerm))
+;; source_line: 156702
+(#$ist #$CoreCycLMt (#$isa #$NonNegativeScalarInterval #$Collection))
+;; source_line: 156703
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedNonAtomicTerm #$CycLNonAtomicTerm-ClosedFunctor))
+;; source_line: 156704
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicTerm-Askable #$CycLNonAtomicTerm))
+;; source_line: 156705
+(#$ist #$CoreCycLMt (#$isa #$March #$Collection))
+;; source_line: 156706
+(#$ist #$CoreCycLMt (#$genls #$UnaryRelation #$FixedArityRelation))
+;; source_line: 156707
+(#$ist #$CoreCycLMt (#$isa #$EvaluatableFunction #$Collection))
+;; source_line: 156708
+(#$ist #$CoreCycLMt (#$isa #$CycLRuleAssertion #$Collection))
+;; source_line: 156709
+(#$ist #$CoreCycLMt (#$genls #$ScalarPointValue #$ScalarInterval))
+;; source_line: 156710
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenExpression #$CycLTerm))
+;; source_line: 156711
+(#$ist #$CoreCycLMt (#$isa #$ExceptionPredicate #$Collection))
+;; source_line: 156712
+(#$ist #$CoreCycLMt (#$genls #$Set-Mathematical #$SetOrCollection))
+;; source_line: 156713
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedNonAtomicTerm #$CycLNonAtomicTerm))
+;; source_line: 156714
+(#$ist #$CoreCycLMt (#$isa #$UnaryPredicate #$Collection))
+;; source_line: 156715
+(#$ist #$CoreCycLMt (#$isa #$CycLOpenDenotationalTerm #$Collection))
+;; source_line: 156716
+(#$ist #$CoreCycLMt (#$genls #$NonNegativeScalarInterval #$ScalarInterval))
+;; source_line: 156717
+(#$ist #$CoreCycLMt (#$isa #$QuintaryRelation #$Collection))
+;; source_line: 156718
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedExpression #$CycLTerm))
+;; source_line: 156719
+(#$ist #$CoreCycLMt (#$isa #$August #$Collection))
+;; source_line: 156720
+(#$ist #$CoreCycLMt (#$genls #$Collection #$SetOrCollection))
+;; source_line: 156721
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenNonAtomicTerm #$CycLNonAtomicTerm))
+;; source_line: 156722
+(#$ist #$CoreCycLMt (#$isa #$CycLGAFAssertion #$Collection))
+;; source_line: 156723
+(#$ist #$CoreCycLMt (#$genls #$UnaryPredicate #$Predicate))
+;; source_line: 156724
+(#$ist #$CoreCycLMt (#$isa #$HumanCyclist #$Collection))
+;; source_line: 156725
+(#$ist #$CoreCycLMt (#$isa #$SetOrCollection #$Collection))
+;; source_line: 156726
+(#$ist #$CoreCycLMt (#$genls #$CycLNonAtomicReifiedTerm #$CycLReifiedDenotationalTerm))
+;; source_line: 156727
+(#$ist #$CoreCycLMt (#$isa #$SiblingDisjointAttributeType #$Collection))
+;; source_line: 156728
+(#$ist #$CoreCycLMt (#$genls #$SymmetricBinaryPredicate #$CommutativeRelation))
+;; source_line: 156729
+(#$ist #$CoreCycLMt (#$genls #$CycLFormula #$CycLTerm))
+;; source_line: 156730
+(#$ist #$CoreCycLMt (#$isa #$CycLAssertion #$Collection))
+;; source_line: 156731
+(#$ist #$CoreCycLMt (#$genls #$ArgTypePredicate #$ArgConstraintPredicate))
+;; source_line: 156732
+(#$ist #$CoreCycLMt (#$genls #$AntiTransitiveBinaryPredicate #$IrreflexiveBinaryPredicate))
+;; source_line: 156733
+(#$ist #$CoreCycLMt (#$isa #$July #$Collection))
+;; source_line: 156734
+(#$ist #$CoreCycLMt (#$genls #$QuaternaryPredicate #$Predicate))
+;; source_line: 156735
+(#$ist #$CoreCycLMt (#$genls #$CycLRuleAssertion #$CycLAssertion))
+;; source_line: 156736
+(#$ist #$CoreCycLMt (#$isa #$CycLClosedExpression #$Collection))
+;; source_line: 156737
+(#$ist #$CoreCycLMt (#$isa #$Integer #$Collection))
+;; source_line: 156738
+(#$ist #$CoreCycLMt (#$isa #$ScopingRelation #$Collection))
+;; source_line: 156739
+(#$ist #$CoreCycLMt (#$genls #$QuaternaryFunction #$QuaternaryRelation))
+;; source_line: 156740
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedSentence #$CycLSentence-ClosedPredicate))
+;; source_line: 156741
+(#$ist #$CoreCycLMt (#$genls #$AsymmetricBinaryPredicate #$IrreflexiveBinaryPredicate))
+;; source_line: 156742
+(#$ist #$CoreCycLMt (#$isa #$CycLClosedAtomicTerm #$Collection))
+;; source_line: 156743
+(#$ist #$CoreCycLMt (#$genls #$TernaryPredicate #$Predicate))
+;; source_line: 156744
+(#$ist #$CoreCycLMt (#$isa #$TernaryPredicate #$Collection))
+;; source_line: 156745
+(#$ist #$CoreCycLMt (#$isa #$October #$Collection))
+;; source_line: 156746
+(#$ist #$CoreCycLMt (#$genls #$CycLGAFAssertion #$CycLAtomicAssertion))
+;; source_line: 156747
+(#$ist #$CoreCycLMt (#$isa #$CycLSentence-ClosedPredicate #$Collection))
+;; source_line: 156760
+(#$ist #$CoreCycLMt (#$relationAllInstance #$arity #$BinaryRelation 2))
+;; source_line: 156761
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg2Genl 2))
+;; source_line: 156762
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg6Genl 6))
+;; source_line: 156763
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg3Format 3))
+;; source_line: 156764
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa4-1 1))
+;; source_line: 156765
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg1Genl 1))
+;; source_line: 156766
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa1-5 5))
+;; source_line: 156767
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg3Genl 3))
+;; source_line: 156768
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa4-2 2))
+;; source_line: 156769
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg2Format 2))
+;; source_line: 156770
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg4Genl 4))
+;; source_line: 156771
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa4-3 3))
+;; source_line: 156772
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg1Format 1))
+;; source_line: 156773
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa2-3 3))
+;; source_line: 156774
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa2-5 5))
+;; source_line: 156775
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa4-5 5))
+;; source_line: 156776
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg3Isa 3))
+;; source_line: 156777
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa5-1 1))
+;; source_line: 156778
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa1-2 2))
+;; source_line: 156779
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg2Isa 2))
+;; source_line: 156781
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa1-4 4))
+;; source_line: 156782
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa5-2 2))
+;; source_line: 156783
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa2-1 1))
+;; source_line: 156784
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg1Isa 1))
+;; source_line: 156785
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa5-3 3))
+;; source_line: 156786
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa3-1 1))
+;; source_line: 156787
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg4Isa 4))
+;; source_line: 156788
+(#$ist #$CoreCycLMt (#$constrainsArg #$argsIsa 0))
+;; source_line: 156789
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa5-4 4))
+;; source_line: 156790
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa3-2 2))
+;; source_line: 156791
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa2-4 4))
+;; source_line: 156792
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg4Format 4))
+;; source_line: 156793
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgFormat1-2 2))
+;; source_line: 156794
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg5Format 5))
+;; source_line: 156795
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa3-4 4))
+;; source_line: 156796
+(#$ist #$CoreCycLMt (#$constrainsArg #$argsGenl 0))
+;; source_line: 156797
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg5Genl 5))
+;; source_line: 156798
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgGenl1-2 2))
+;; source_line: 156799
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg6Isa 6))
+;; source_line: 156800
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa3-5 5))
+;; source_line: 156801
+(#$ist #$CoreCycLMt (#$constrainsArg #$interArgIsa1-3 3))
+;; source_line: 156802
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg5Isa 5))
+;; source_line: 156803
+(#$ist #$CoreCycLMt (#$isa #$SiblingDisjointCollectionType #$Collection))
+;; source_line: 156804
+(#$ist #$CoreCycLMt (#$genlPreds #$completeExtentEnumerable #$minimizeExtent))
+;; source_line: 439614
+(#$ist #$CoreCycLMt (#$genls #$CollectionRelatingFunction #$Function-Denotational))
+;; source_line: 439621
+(#$ist #$CoreCycLMt (#$isa #$CollectionRelatingFunction #$Collection))
+;; source_line: 441358
+(#$ist #$CoreCycLMt (#$genlPreds #$completelyEnumerableCollection #$completelyDecidableCollection))
+;; source_line: 441361
+(#$ist #$CoreCycLMt (#$arg1Isa #$completelyDecidableCollection #$Collection))
+;; source_line: 441368
+(#$ist #$CoreCycLMt (#$arg2Isa #$completeExtentDecidableForValueInArg #$Thing))
+;; source_line: 441371
+(#$ist #$CoreCycLMt (#$arg3Isa #$completeExtentDecidableForValueInArg #$NonNegativeInteger))
+;; source_line: 441374
+(#$ist #$CoreCycLMt (#$comment #$completeExtentDecidableForValueInArg "(#$completeExtentDecidableForValueInArg PRED VALUE ARGNUM) means that when the #$CycInferenceEngine is asked a closed query of the form (PRED ... VALUE ...) where VALUE appears in the ARGNUMth position, either it can prove (PRED ... VALUE ...) without transformation, or (#$not (PRED ... VALUE ...)) is true."))
+;; source_line: 441377
+(#$ist #$CoreCycLMt (#$arg1Isa #$completeExtentDecidableForValueInArg #$Predicate))
+;; source_line: 441379
+(#$ist #$CoreCycLMt (#$genlPreds #$completeExtentEnumerableForValueInArg #$completeExtentDecidableForValueInArg))
+;; source_line: 441384
+(#$ist #$CoreCycLMt (#$arg1Isa #$completeExtentAsserted #$Predicate))
+;; source_line: 441387
+(#$ist #$CoreCycLMt (#$genlPreds #$completeExtentAsserted #$completeExtentEnumerable))
+;; source_line: 441392
+(#$ist #$CoreCycLMt (#$comment #$completeExtentEnumerableForArg "(#$completeExtentEnumerableForArg PRED ARGNUM) means that when the #$CycInferenceEngine is asked a query of the form (PRED ... ARG ...) where ARG is any closed term in the ARGNUMth position, it can completely enumerate all possible bindings for the other argument positions. This means that for any arguments (PRED ... NOT-ARGi ... ARG ... NOT-ARGj) for which the NOT-ARGs are not a member of the enumerated bindings, (#$not (PRED ... NOT-ARGi ... ARG ... NOT-ARGj)) is true."))
+;; source_line: 441395
+(#$ist #$CoreCycLMt (#$arg1Isa #$completeExtentEnumerableForArg #$Predicate))
+;; source_line: 441398
+(#$ist #$CoreCycLMt (#$arg2Isa #$completeExtentEnumerableForArg #$NonNegativeInteger))
+;; source_line: 441405
+(#$ist #$CoreCycLMt (#$comment #$completeExtentEnumerableForArg "A binary #$InferenceCompletenessPredicate (q.v.) that can apply to a predicate and a specified argument-place. (#$completeExtentEnumerableForArg PRED N) means that, for any given thing ARGN, the #$CycInferenceEngine can enumerate every sequence in the extent of PRED whose Nth item is ARGN (see #$relationExtension and #$relationHoldsAmong). In practical terms this means that, if asked a query of the form (PRED ... ARGN ...), where all of PRED's argument-places save the Nth are filled with variables, the Inference Engine can return an extensionally complete list of binding-sequences for the other (i.e. non-Nth) arguments. That is, for every sequence SEQ in PRED's extension whose Nth member is ARGN (and for nothing else), the returned list contains a sequence of bindings (i.e. CycL terms) whose members denote, pointwise, the members of SEQ excepting ARGN. <p> For example, (#$completeExtentEnumerableForArg #$cityInState 1) holds: given any city, Cyc can return a list of all the states (i.e. the one state, if any) in which it is located. <p> If PRED's extent is completely enumerable for the Nth argument and a given sequence of bindings <TERM1, ..., TERM(N-1), TERM(N+1), ...> (whose length matches the arity of PRED, if fixed) is not returned for the above query, that fact consitutes a strong argument for the truth of the negation (#$not (PRED TERM1 ... TERM(N-1) ARGN TERM(N+1) ...)). But note that it is not a conclusive argument: the normally-reliable \"unique name assumption\" might fail here, and a term TERMi could conceivably denote something that Cyc can prove a member of a sequence in the extent of PRED only under some _other_ CycL name it has. For suppose Pace resides in Texas, but nobody has told that to Cyc. Cyc can return the binding '#$Texas-State' for the query '(#$cityInState #$CityOfDallasTX ?X)'; but it might nevertheless fail to return the equally correct binding '(StateOfResidenceFn #$Pace)'. <p> See also #$completeExtentEnumerable and #$completeExtentEnumerableForValueInArg)."))
+;; source_line: 441406
+(#$ist #$CoreCycLMt (#$genlPreds #$completeExtentEnumerable #$completeExtentDecidable))
+;; source_line: 441409
+(#$ist #$CoreCycLMt (#$arg1Isa #$completeExtentDecidable #$Predicate))
+;; source_line: 441616
+(#$ist #$CoreCycLMt (#$arg1Isa #$completeExtentAssertedForValueInArg #$Predicate))
+;; source_line: 441619
+(#$ist #$CoreCycLMt (#$arg2Isa #$completeExtentAssertedForValueInArg #$Thing))
+;; source_line: 441622
+(#$ist #$CoreCycLMt (#$arg3Isa #$completeExtentAssertedForValueInArg #$NonNegativeInteger))
+;; source_line: 441625
+(#$ist #$CoreCycLMt (#$genlPreds #$completeExtentAssertedForValueInArg #$completeExtentEnumerableForValueInArg))
+;; source_line: 441626
+(#$ist #$CoreCycLMt (#$comment #$completeExtentAssertedForValueInArg "A ternary #$InferenceCompletenessPredicate and a specialization of #$completeExtentEnumerableForValueInArg (q.v.) that can apply to a predicate and a specified value for a specified argument-place. (#$completeExtentAssertedForValueInArg PRED VALUE N) means that for every sequence of arguments that PRED holds of and whose Nth member is VALUE, there is an explicit assertion to that effect in the Cyc Knowledge Base. Thus, if asked a query of the form (PRED ... VALUE ...), where VALUE appears in the Nth argument-position and all of the other positions (>= 1) are filled with variables, the Inference Engine -- simply via lookup of assertions in the KB -- can return an extensionally complete list of binding-sequences for those variables. That is, for every sequence SEQ in PRED's extension whose Nth member is VALUE (and for nothing else), the returned list contains a sequence of bindings (i.e. CycL terms) whose members denote, pointwise, the members of SEQ excepting VALUE. <p> For example, (#$completeExtentAssertedForValueInArg #$hasMembers #$InternationalMonetaryFund 1) holds, as all the members of the International Monetary Fund are asserted to be such in the KB. <p> If PRED's extent is completely asserted for VALUE in the Nth argument and a given sequence of bindings <TERM1, ..., TERM(N-1), TERM(N+1), ...> (whose length matches the arity of PRED, if fixed) is not returned for the above query, that fact consitutes a strong argument for the truth of the negation (#$not (PRED TERM1 ... TERM(N-1) VALUE TERM(N+1) ...)). But note that it is not a conclusive argument: the normally-reliable \"unique name assumption\" might fail here, and a term TERMi could conceivably denote something that Cyc can prove a member of something in the extent of PRED only under some _other_ CycL name it has. For suppose Pace resides in Texas, but nobody has told that to Cyc. The KB contains the assertion '(#$cityInState #$CityOfDallasTX #$Texas-State)'; but it might nevertheless fail to contain the equally true sentence '(#$cityInState #$CityOfDallasTX (StateOfResidenceFn #$Pace))'. <p> See also #$completeExtentAsserted."))
+;; source_line: 466229
+(#$ist #$CoreCycLMt (#$genlPreds #$completelyAssertedCollection #$completelyEnumerableCollection))
+;; source_line: 482435
+(#$ist #$CoreCycLMt (#$isa #$ScalarNullValue #$Collection))
+;; source_line: 484031
+(#$ist #$CoreCycLMt (#$isa #$OneDimensionalUnitOfMeasure #$Collection))
+;; source_line: 484038
+(#$ist #$CoreCycLMt (#$isa #$MultiDimensionalUnitOfMeasure #$Collection))
+;; source_line: 484048
+(#$ist #$CoreCycLMt (#$isa #$TwoDimensionalUnitOfMeasure #$Collection))
+;; source_line: 484054
+(#$ist #$CoreCycLMt (#$isa #$ThreeDimensionalUnitOfMeasure #$Collection))
+;; source_line: 486263
+(#$ist #$CoreCycLMt (#$isa #$UnitOfRatio #$Collection))
+;; source_line: 488769
+(#$ist #$CoreCycLMt (#$isa #$ZeroDimensionalUnitOfMeasure #$Collection))
+;; source_line: 505494
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg1QuotedIsa 1))
+;; source_line: 505507
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg2QuotedIsa 2))
+;; source_line: 505520
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg3QuotedIsa 3))
+;; source_line: 505533
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg4QuotedIsa 4))
+;; source_line: 505546
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg5QuotedIsa 5))
+;; source_line: 505559
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg6QuotedIsa 6))
+;; source_line: 511338
+(#$ist #$CoreCycLMt (#$isa #$ArgQuotedIsaTernaryPredicate #$Collection))
+;; source_line: 517135
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg7Isa 7))
+;; source_line: 519322
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg1SometimesIsa 1))
+;; source_line: 519343
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg2SometimesIsa 2))
+;; source_line: 519364
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg3SometimesIsa 3))
+;; source_line: 519385
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg4SometimesIsa 4))
+;; source_line: 519406
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg5SometimesIsa 5))
+;; source_line: 519427
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg6SometimesIsa 6))
+;; source_line: 520410
+(#$ist #$CoreCycLMt (#$genls #$CycLExpression #$SubLSExpression))
+;; source_line: 526646
+(#$ist #$CoreCycLMt (#$isa #$CBLParameterValuesList #$Collection))
+;; source_line: 526656
+(#$ist #$CoreCycLMt (#$isa #$CBLParametersList #$Collection))
+;; source_line: 526942
+(#$ist #$CoreCycLMt (#$genls #$CycLConstant #$CycLReifiedDenotationalTerm))
+;; source_line: 533650
+(#$ist #$CoreCycLMt (#$isa #$means #$Predicate))
+;; source_line: 533664
+(#$ist #$CoreCycLMt (#$isa #$expresses #$Predicate))
+;; source_line: 535827
+(#$ist #$CoreCycLMt (#$comment #$nonAbducibleWithValueInArg "A ternary predicate that is an instance of #$AbductionConstraintConstant (q.v.) and that can apply to a predicate and a specified value for a specified argument-place. <p> (#$nonAbducibleWithValueInArg PRED VALUE N) means that, if asked a query of the form (PRED ... VALUE ...), where VALUE appears in the Nth argument-position and all of the other positions (>= 1) are filled with variables, the Inference Engine cannot use abduction to hypothesize that any non-abduced terms are legitimate bindings for those variables. <p> For example, (#$nonAbducibleWithValueInArg #$hasMembers #$InternationalMonetaryFund 1) holds, so Cyc cannot use abduction to hypothesize that Sealand is a member of the IMF. (Note that this does not mean that Cyc cannot prove that some abduced term is a member of the IMF.)"))
+;; source_line: 535828
+(#$ist #$CoreCycLMt (#$genlPreds #$completeExtentEnumerableForValueInArg #$nonAbducibleWithValueInArg))
+;; source_line: 536388
+(#$ist #$CoreCycLMt (#$genls #$ArgQuotedIsaBinaryPredicate #$ArgTypeBinaryPredicate))
+;; source_line: 536389
+(#$ist #$CoreCycLMt (#$genls #$ArgQuotedIsaTernaryPredicate #$ArgTypeTernaryPredicate))
+;; source_line: 537347
+(#$ist #$CoreCycLMt (#$genls #$CycLPropositionalSentence #$CycLSentence-Askable))
+;; source_line: 541373
+(#$ist #$CoreCycLMt (#$isa #$CycLTruthValueSentence #$Collection))
+;; source_line: 541379
+(#$ist #$CoreCycLMt (#$isa #$CycLFormulaicSentence #$Collection))
+;; source_line: 541385
+(#$ist #$CoreCycLMt (#$genls #$CycLFormulaicSentence #$CycLSentence))
+;; source_line: 541386
+(#$ist #$CoreCycLMt (#$genls #$CycLFormulaicSentence #$CycLFormula))
+;; source_line: 541387
+(#$ist #$CoreCycLMt (#$quotedIsa #$True #$CycLTruthValueSentence))
+;; source_line: 541388
+(#$ist #$CoreCycLMt (#$quotedIsa #$False #$CycLTruthValueSentence))
+;; source_line: 541389
+(#$ist #$CoreCycLMt (#$genls #$CycLSentence #$CycLTerm))
+;; source_line: 541390
+(#$ist #$CoreCycLMt (#$genls #$CycLSentence #$CycLExpression))
+;; source_line: 543759
+(#$ist #$CoreCycLMt (#$genls-SpecDenotesGenlInstances #$DocumentationPredicate #$Predicate))
+;; source_line: 574260
+(#$ist #$CoreCycLMt (#$comment #$completeExtentEnumerableForValueInArg "A ternary #$InferenceCompletenessPredicate and a specialization of #$completeExtentDecidableForValueInArg (q.v.) that can apply to a predicate and a specified value for a specified argument-place. <code>(#$completeExtentEnumerableForValueInArg PRED VALUE N)</code> means that the #$CycInferenceEngine can enumerate every sequence in the extent of <code>PRED</code> whose <code>N</code>th item is <code>VALUE</code>. In practical terms this means that, if asked a query of the form <code>(PRED ... VALUE ...)</code>, where <code>VALUE</code> appears in the <code>N</code>th argument-position and all of the other positions (>= 1) are filled with variables, the Inference Engine can return an extensionally complete list of binding-sequences for those variables. That is, for every sequence <code>SEQ</code> in <code>PRED</code>'s extension whose <code>N</code>th member is <code>VALUE</code> (and for nothing else), the returned list contains a sequence of bindings (i.e. CycL terms) whose members denote, pointwise, the members of <code>SEQ</code> excepting <code>VALUE</code>. <p> For example, (#$completeExtentEnumerableForValueInArg #$hasMembers #$InternationalMonetaryFund 1) holds, as Cyc can enumerate all the members of the International Monetary Fund. <p> If PRED's extent is completely enumerable for <code>VALUE</code> in the <code>N</code>th argument and a given sequence of bindings <<code>TERM1</code>, ..., <code>TERM(N-1)</code>, <code>TERM(N+1)</code>, ...> (whose length matches the arity of <code>PRED</code>, if fixed) is <i>not</i> returned for the above query, that fact consitutes a strong argument for the truth of the negation (#$not <code>(PRED TERM1 ... TERM(N-1) VALUE TERM(N+1) ...))</code>. But note that it is not a conclusive argument: the normally-reliable \"unique name assumption\" might fail here, and a term <code>TERM</code>i could conceivably denote something that Cyc can prove a member of a sequence in the extent of <code>PRED</code> only under some <i>other</i> CycL name it has. For suppose Pace resides in Texas, but nobody has told that to Cyc. Cyc can return the binding '#$Texas-State' for the query '(#$cityInState #$CityOfDallasTX ?X)'; but it might nevertheless fail to return the equally correct binding '(StateOfResidenceFn #$Pace)'. <p> See also the specialization #$completeExtentAssertedForValueInArg and see #$completeExtentEnumerableForArg."))
+;; source_line: 593602
+(#$ist #$CoreCycLMt (#$genls #$CycLAtomicSentence #$CycLFormulaicSentence))
+;; source_line: 593603
+(#$ist #$CoreCycLMt (#$genls #$CycLOpenSentence #$CycLFormulaicSentence))
+;; source_line: 619516
+(#$ist #$CoreCycLMt (#$genls #$CycLAssertion #$CycLSentence-Assertible))
+;; source_line: 623511
+(#$ist #$CoreCycLMt (#$isa #$TheCollectionOf #$BinaryFunction))
+;; source_line: 623513
+(#$ist #$CoreCycLMt (#$isa #$TheCollectionOf #$CollectionDenotingFunction))
+;; source_line: 623517
+(#$ist #$CoreCycLMt (#$isa #$TheCollectionOf #$ReifiableFunction))
+;; source_line: 623522
+(#$ist #$CoreCycLMt (#$isa #$TheCollectionOf #$TotalFunction))
+;; source_line: 624470
+(#$ist #$CoreCycLMt (#$genls #$CycLSentence-Assertible #$CycLSentence-Askable))
+;; source_line: 629867
+(#$ist #$CoreCycLMt (#$comment #$completelyAssertedCollection "A unary #$InferenceCompletenessPredicate that is a specialization of #$completelyEnumerableCollection (qq.v.). <code>(#$completelyAssertedCollection COL)</code> means that, for every instance <code>INST</code> whatsoever of the collection <code>COL</code>, there is an assertion in the Cyc Knowledge Base of the form <code>(#$isa INST COL)</code>. This requires, of course, that for every instance of <code>COL</code> there be a reified CycL term that denotes it. <p> For example, <code>(#$completelyAssertedCollection #$DayOfWeekType)</code> holds because there are seven assertions of the form <code>(#$isa INST #$DayOfWeekType)</code> in the KB, one for each day of the week (viz. #$Monday, #$Tuesday, etc.). <p> Note, however, that if one reified a specialization of #$DayOfWeekType called <i>DayOfWeekendType</i>, and edited the #$isa assertions on #$Saturday and #$Sunday so that they referenced the latter collection instead of the former, then #$DayOfWeekType would no longer be a #$completelyAssertedCollection (though it would still be a completely-enumerable one)."))
+;; source_line: 629874
+(#$ist #$CoreCycLMt (#$comment #$completelyEnumerableCollection "A unary #$InferenceCompletenessPredicate that is a specialization of #$completelyDecidableCollection (qq.v.). <code>(#$completelyEnumerableCollection COL)</code> means that the #$CycInferenceEngine can generate a list of all of (and only) the instances of <code>COL</code>. More precisely: given a query of the form <code>(#$isa VAR COL)</code>, the Inference Engine can (without using transformations) return a list of terms -- bindings for the variable <code>VAR</code> -- such that every instance (and no non-instance) of the collection <code>COL</code> is denoted by some binding on the list. <p> For example, #$SkolemFunction is a completely enumerable collection. (But note that #$SkolemFunction does <i>not</i> satisfy the more specialized #$completelyAssertedCollection (q.v.), as most of its instances are only asserted to be instances of one of its specializations, such as #$FixedAritySkolemFunction.) <p> See also #$completeExtentEnumerable, which applies to #$Predicates."))
+;; source_line: 629881
+(#$ist #$CoreCycLMt (#$comment #$completelyDecidableCollection "A unary #$InferenceCompletenessPredicate (q.v.) that applies to collections. <code>(#$completelyDecidableCollection COL)</code> means that the #$CycInferenceEngine can determine if any given thing is an instance of <code>COL</code>. More precisely: for any given instance <code>INST</code> whatsoever (and for no non-instances) of <code>COL</code>, there is a CycL term <code>INST-TERM</code> that denotes <code>INST</code> such that (without using transformations) the Inference Engine, given a query of the form <code>(#$isa INST-TERM COL)</code>, will return the answer <code>#$True</code>. <p> For example, the collection #$Integer is completely decidable. Given any integer <code>INT</code>, the Cyc query <code>(#$isa INT #$Integer)</code> -- wherein <code>INT</code> is given its standard base-10 arabic numeral representation -- will come back <code>#$True</code>. <p> If <code>COL</code> is completely decidable and Cyc fails to return <code>#$True</code> for some query <code>(#$isa TERM COL)</code>, that fact consitutes a strong argument for the truth of its negation <code>(#$not (#$isa TERM COL))</code>. But note that it is not a conclusive argument: the normally-reliable \"unique name assumption\" might fail here, and the term <code>TERM</code> could conceivably denote something that Cyc can prove to be an instance of <code>COL</code> only under some <i>other</i> CycL name it has. For suppose #$Pace's favorite number happens to be 3, but nobody has told that to Cyc. Cyc can prove the sentence <code>(#$isa 3 #$Integer)</code>; but it might nevertheless fail to prove the equally true sentence <pre> (#$isa (<b>FavoriteNumberOfFn</b> #$Pace) #$Integer) . </pre> See also the more specific predicates #$completelyEnumerableCollection and #$completelyAssertedCollection. And see #$completeExtentDecidable, which applies to #$Predicates."))
+;; source_line: 629883
+(#$ist #$CoreCycLMt (#$comment #$completeExtentEnumerable "A unary #$InferenceCompletenessPredicate and a specialization of #$completeExtentDecidable and #$minimizeExtent (qq.v.) that applies to predicates whose entire extents can be enumerated by the #$CycInferenceEngine. <code>(#$completeExtentEnumerable PRED)</code> means that the Inference Engine can, without using transformations, generate a list of all of (and only) the sequences of things among which <code>PRED</code> holds (see #$relationExtension and #$relationHoldsAmong). <p> For example, (#$completeExtentEnumerable #$assertedSentence) holds, as the Inference Engine could, if asked, list all of the assertions in the Knowledge Base. Conversely, although the Inference engine could correctly determine if any given CycL sentence is in the extent of #$knownSentence (i.e #$completeExtentDecidable holds of #$knownSentence), it could not generate a list of all CycL sentences in the extent of #$knownSentence. <p> The practical import of #$completeExtentEnumerable can be stated more precisely as follows. Let's say that an N-length sequence of terms \"pointwise-denotes\" an N-length sequence of things just in case each term in the former denotes the corresponding item in the latter. Suppose <code>(#$completeExtentEnumerable PRED)</code> holds. If <code>PRED</code> is a #$FixedArityRelation of arity N and <code>VAR1...VARN</code> are N distinct #$CycLVariables, then, given a query of the form <code>(PRED VAR1 ... VARN)</code>, the Inference Engine can, without the use of Transformation Modules, return a list of N-length sequences of terms -- each sequence consisting of bindings for the respective variables <code>VAR1-VARN</code> -- such that every sequence in <code>PRED</code>'s extent (and nothing else) is pointwise-denoted by some term-sequence on the list. If <code>PRED</code> is a #$VariableArityRelation, it is the same, except the given query should then have the form <code>(PRED . VARS)</code>, and there might be no constant length N shared by all of the term-sequences in the returned list. <p> If <code>PRED</code>'s extent is completely enumerable and a given term-sequence <code><TERM-1, ..., TERM-N></code> is <i>not</i> in the list returned for the above query, that fact consitutes a <i>strong argument</i> for the truth of the negation <code>(#$not (PRED TERM-1 ... TERM-N))</code>, assuming that it's semantically well-formed. But note that it is <i>not a conclusive argument</i>: the normally-reliable \"unique name assumption\" might fail here, and some term <code>TERM-I</code> could conceivably denote something that Cyc can prove to be a member of something in the extent of <code>PRED</code> only under some <i>other</i> CycL name it has. For suppose #$Pace was also denoted by the (imaginary) CycL term <code>ErasmusCAnderson</code>, but Cyc did not know that #$Pace and Erasmus C. Anderson are the same person. Cyc will return the term-sequence <<code>#$Pace, #$GeneralCycKE</code>> for the query <code>(#$cyclistPrimaryProject ?X ?Y)</code>; but it might nevertheless <i>fail</i> to return the sequence <<code>ErasmusCAnderson, #$GeneralCycKE</code>>, even though the sentence <pre> (#$cyclistPrimaryProject ErasmusCAnderson #$GeneralCycKE) </pre> was in fact true."))
+;; source_line: 629893
+(#$ist #$CoreCycLMt (#$comment #$completeExtentAsserted "A unary #$InferenceCompletenessPredicate and a specialization of #$completeExtentEnumerable (q.v.) that applies to predicates whose entire extents are explicitly asserted in the Cyc Knowledge Base. <code>(#$completeExtentAsserted PRED)</code> means that, for every sequence <code><THING1,..., THING<sub>N</sub>></code> that satisfies <code>PRED</code>, <code>(PRED THING1 ... THING<sub>N</sub>)</code> is asserted in the Knowledge Base. That is, for each such sequence, there are reified CycL terms <code>PRED-NAME</code>, <code>TERM1</code>, ..., <code>TERM<sub>N</sub></code> -- which denote <code>PRED</code>, <code>THING1</code>, ..., <code>THING<sub>N</sub></code>, respectively -- such that the sentence <code>(PRED-NAME TERM1 ... TERM<sub>N</sub>)</code> built from those terms is an assertion in the KB. <p> If #$completeExtentAsserted is true of <code>PRED</code>, then the #$CycInferenceEngine, when asked a query of the form <code>(PRED <b>. VARS</b>)</code>, can return a complete set of bindings for the variables in <code>VARS</code> simply via a lookup of assertions in the KB. By a \"complete set of bindings\" is meant a set of sequences of terms such that, for each sequence <code><THING1, ..., THING<sub>N</sub>></code> in the extent of <code>PRED</code>, there is a corresponding sequence of terms <code><TERM1, ..., TERM<sub>N</sub>></code> returned wherein each <code>TERM<sub>I</sub></code> denotes <code>THING<sub>I</sub></code> (for 1 <= <code>I</code> <= <code>N</code>). <p> For example, (#$completeExtentAsserted #$hourOfDayIndex-24Hour) holds. Thus, the sentence <code>(#$hourOfDayIndex-24Hour #$TimeOfDay-1AM 1)</code> is one of twenty-four similar ground-atomic sentences asserted in the KB. Conversely, (#$completeExtentAsserted #$argN) does <i>not</i> hold. Thus, while the Inference Engine could generate the set of all true <code>#$argN</code> based ground-atomic sentences (i.e. #$completeExtentEnumerable holds of #$argN), the members of this set are not all asserted in the KB. <p> See also #$completelyAssertedCollection, which applies to collections rather than predicates."))
+;; source_line: 630069
+(#$ist #$CoreCycLMt (#$comment #$completeExtentDecidable "A unary #$InferenceCompletenessPredicate (q.v.) that applies to predicates. <code>(#$completeExtentDecidable PRED)</code> means that the #$CycInferenceEngine can determine if any given sequence of things is in the extent of <code>PRED</code> (see #$relationExtension and #$relationHoldsAmong). More precisely: for any given n-length sequence <code>SEQ</code> among which <code>PRED</code> holds (and for nothing else), there are CycL terms <code>TERM<sub>1</sub></code>, ..., <code>TERM<sub>N</sub></code> that denote the respective items in <code>SEQ</code> such that (without using transformations) the Inference Engine, given a query of the form <code>(PRED TERM<sub>1</sub> ... TERM<sub>N</sub>)</code>, will return the answer <code>#$True<code>. <p> For example, <code>(#$completeExtentDecidable #$integerBetween)</code> holds, as the Inference engine can correctly determine if any given triple of integers is such that the second member is numerically between the first and third. Conversely, the extent of #$likesAsFriend is not decidable, as many of the friendships in the world are beyond Cyc's ken. <p> If <code>PRED</code>'s extent is completely decidable and there are CycL terms <code>TERM<sub>1</sub>, ..., TERM<sub>N</sub></code> such that the sentence <code>(PRED TERM<sub>1</sub> ... TERM<sub>N</sub>)</code> is semantically well-formed but <i>not</i> provable by the Inference Engine, that fact consitutes a strong argument for the truth of its negation <code>(#$not (PRED TERM<sub>1</sub> ... TERM<sub>1</sub>))</code>. But note that it is not a conclusive argument: the normally-reliable \"unique name assumption\" might fail here, and some <code>TERM<sub>I</sub></code> could conceivably denote something that Cyc can prove to be a member of a sequence in the extent of <code>PRED</code> only under some <i>other</i> CycL name it has. For suppose #$Pace's favorite number happens to be 3, but nobody has told that to Cyc. Cyc can prove the sentence <code>(#$integerBetween 1 2 3)</code>; but it might nevertheless fail to prove the equally true sentence <pre> (#$integerBetween 1 2 (FavoriteNumberOfFn #$Pace)) . </pre> See also the more specific predicates #$completeExtentEnumerable and #$completeExtentAsserted. And see #$completelyDecidableCollection."))
+;; source_line: 631180
+(#$ist #$CoreCycLMt (#$genls #$CycLTruthValueSentence #$CycLClosedSentence))
+;; source_line: 631193
+(#$ist #$CoreCycLMt (#$genls #$CycLClosedAtomicSentence #$CycLClosedFormulaicSentence))
+;; source_line: 634307
+(#$ist #$CoreCycLMt (#$genls #$QuasiTransitiveBinaryPredicate #$BinaryPredicate))
+;; source_line: 639423
+(#$ist #$CoreCycLMt (#$isa #$ConceptNodesForTaskTypeFn #$UnaryFunction))
+;; source_line: 639431
+(#$ist #$CoreCycLMt (#$isa #$ConceptNodesForTaskTypeFn #$ReifiableFunction))
+;; source_line: 639432
+(#$ist #$CoreCycLMt (#$isa #$ConceptNodesForTaskTypeFn #$CollectionDenotingFunction))
+;; source_line: 639453
+(#$ist #$CoreCycLMt (#$isa #$interestingSpecForTaskType #$TernaryPredicate))
+;; source_line: 656978
+(#$ist #$CoreCycLMt (#$isa #$ConceptFilterSpecificationFn #$ReifiableFunction))
+;; source_line: 656979
+(#$ist #$CoreCycLMt (#$isa #$ConceptFilterSpecificationFn #$TernaryFunction))
+;; source_line: 656982
+(#$ist #$CoreCycLMt (#$isa #$ConceptFilterSpecificationFn #$IndividualDenotingFunction))
+;; source_line: 657021
+(#$ist #$CoreCycLMt (#$isa #$specificationForConceptFilter #$QuaternaryPredicate))
+;; source_line: 657026
+(#$ist #$CoreCycLMt (#$functionalInArgs #$specificationForConceptFilter 4))
+;; source_line: 676334
+(#$ist #$CoreCycLMt (#$isa #$RealNumber #$ObjectType))
+;; source_line: 681082
+(#$ist #$CoreCycLMt (#$isa #$conceptFilterSpecifications #$StrictlyFunctionalPredicate))
+;; source_line: 681083
+(#$ist #$CoreCycLMt (#$isa #$specificationForConceptFilter #$StrictlyFunctionalPredicate))
+;; source_line: 704795
+(#$ist #$CoreCycLMt (#$isa #$ConceptFilterSpecificationWithMtFn #$IndividualDenotingFunction))
+;; source_line: 704796
+(#$ist #$CoreCycLMt (#$isa #$ConceptFilterSpecificationWithMtFn #$ReifiableFunction))
+;; source_line: 704805
+(#$ist #$CoreCycLMt (#$isa #$ConceptFilterSpecificationWithMtFn #$QuaternaryFunction))
+;; source_line: 704809
+(#$ist #$CoreCycLMt (#$isa #$specificationForConceptFilterWithMt #$StrictlyFunctionalPredicate))
+;; source_line: 704816
+(#$ist #$CoreCycLMt (#$isa #$specificationForConceptFilterWithMt #$QuintaryPredicate))
+;; source_line: 704822
+(#$ist #$CoreCycLMt (#$functionalInArgs #$specificationForConceptFilterWithMt 5))
+;; source_line: 710816
+(#$ist #$CoreCycLMt (#$comment #$completeByNature "An instance of #$CompletenessGroundsPredicate (q.v.) that is used to state, about a collection or predicate whose extent is inferentiallly complete (see #$InferenceCompletenessPredicate), that the completeness derives mainly from the nature of the collection or predicate itself (or the nature of the items in its extent), rather than from any conventional stipulation. For example, (#$completelyDecidableCollection #$Integer) holds, and so does (#$completeByNature #$Integer). In contrast, #$completeByNature does <i>not</i> hold of the completely-asserted collection #$DayOfWeekType. Cf. #$completeByConvention."))
+;; source_line: 712018
+(#$ist #$CoreCycLMt (#$genlPreds #$completeExtentEnumerableViaBackchain #$minimizeExtent))
+;; source_line: 712029
+(#$ist #$CoreCycLMt (#$comment #$collectionCompletelyEnumerableViaBackchain "A unary #$InferenceCompletenessPredicate. <code>(#$collectionCompletelyEnumerableViaBackchain COL)</code> means that the #$CycInferenceEngine can generate a list of all of (and only) the instances of <code>COL</code> by appeal to isa consequent rules. For example, in certain medical domain microtheories, #$MazeProcedure-SurgicalProcedure is collectionCompletelyEnumerableViaBackchain because backchaining on its single rule is sufficient to generate all the relevant instances in those microtheories."))
+;; source_line: 839250
+(#$ist #$CoreCycLMt (#$isa #$NonHumanCyclist #$Collection))
+;; source_line: 857938
+(#$ist #$CoreCycLMt (#$isa #$QueryModificationStrategyPredicate #$Collection))
+;; source_line: 857941
+(#$ist #$CoreCycLMt (#$genls #$QueryModificationStrategyPredicate #$Predicate))
+;; source_line: 869914
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa1-2 #$WFFConstraintPredicate))
+;; source_line: 869916
+(#$ist #$CoreCycLMt (#$isa #$arg6SometimesIsa #$WFFConstraintPredicate))
+;; source_line: 869918
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa2-1 #$WFFConstraintPredicate))
+;; source_line: 869920
+(#$ist #$CoreCycLMt (#$isa #$resultIsa #$WFFConstraintPredicate))
+;; source_line: 869922
+(#$ist #$CoreCycLMt (#$isa #$argAndRestGenl #$WFFConstraintPredicate))
+;; source_line: 869924
+(#$ist #$CoreCycLMt (#$isa #$arg3QuotedIsa #$WFFConstraintPredicate))
+;; source_line: 869926
+(#$ist #$CoreCycLMt (#$isa #$arg3Genl #$WFFConstraintPredicate))
+;; source_line: 869928
+(#$ist #$CoreCycLMt (#$isa #$interArgResultGenlPred #$WFFConstraintPredicate))
+;; source_line: 869930
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa2-4 #$WFFConstraintPredicate))
+;; source_line: 869932
+(#$ist #$CoreCycLMt (#$isa #$argFormat #$WFFConstraintPredicate))
+;; source_line: 869934
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa2-3 #$WFFConstraintPredicate))
+;; source_line: 869936
+(#$ist #$CoreCycLMt (#$isa #$arg4QuotedIsa #$WFFConstraintPredicate))
+;; source_line: 869938
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa2-5 #$WFFConstraintPredicate))
+;; source_line: 869940
+(#$ist #$CoreCycLMt (#$isa #$resultGenl #$WFFConstraintPredicate))
+;; source_line: 869942
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa1-4 #$WFFConstraintPredicate))
+;; source_line: 869944
+(#$ist #$CoreCycLMt (#$isa #$argAndRestIsa #$WFFConstraintPredicate))
+;; source_line: 869946
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa1-3 #$WFFConstraintPredicate))
+;; source_line: 869948
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat5-4 #$WFFConstraintPredicate))
+;; source_line: 869950
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa1-5 #$WFFConstraintPredicate))
+;; source_line: 869952
+(#$ist #$CoreCycLMt (#$isa #$arg2Isa #$WFFConstraintPredicate))
+;; source_line: 869954
+(#$ist #$CoreCycLMt (#$isa #$arg4Genl #$WFFConstraintPredicate))
+;; source_line: 869956
+(#$ist #$CoreCycLMt (#$isa #$arg1Isa #$WFFConstraintPredicate))
+;; source_line: 869958
+(#$ist #$CoreCycLMt (#$isa #$arg3Isa #$WFFConstraintPredicate))
+;; source_line: 869960
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat5-2 #$WFFConstraintPredicate))
+;; source_line: 869962
+(#$ist #$CoreCycLMt (#$isa #$arg2Genl #$WFFConstraintPredicate))
+;; source_line: 869964
+(#$ist #$CoreCycLMt (#$isa #$interArgGenl1-2 #$WFFConstraintPredicate))
+;; source_line: 869966
+(#$ist #$CoreCycLMt (#$isa #$arg5Genl #$WFFConstraintPredicate))
+;; source_line: 869968
+(#$ist #$CoreCycLMt (#$isa #$arg1Genl #$WFFConstraintPredicate))
+;; source_line: 869970
+(#$ist #$CoreCycLMt (#$isa #$arg5Format #$WFFConstraintPredicate))
+;; source_line: 869972
+(#$ist #$CoreCycLMt (#$isa #$argQuotedIsa #$WFFConstraintPredicate))
+;; source_line: 869974
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa3-1 #$WFFConstraintPredicate))
+;; source_line: 869976
+(#$ist #$CoreCycLMt (#$isa #$arg1SometimesIsa #$WFFConstraintPredicate))
+;; source_line: 869978
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa3-2 #$WFFConstraintPredicate))
+;; source_line: 869980
+(#$ist #$CoreCycLMt (#$isa #$arg1QuotedIsa #$WFFConstraintPredicate))
+;; source_line: 869982
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa5-3 #$WFFConstraintPredicate))
+;; source_line: 869984
+(#$ist #$CoreCycLMt (#$isa #$arg4Format #$WFFConstraintPredicate))
+;; source_line: 869986
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa4-1 #$WFFConstraintPredicate))
+;; source_line: 869988
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat3-1 #$WFFConstraintPredicate))
+;; source_line: 869990
+(#$ist #$CoreCycLMt (#$isa #$argSometimesIsa #$WFFConstraintPredicate))
+;; source_line: 869992
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa3-5 #$WFFConstraintPredicate))
+;; source_line: 869994
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa5-4 #$WFFConstraintPredicate))
+;; source_line: 869996
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat1-3 #$WFFConstraintPredicate))
+;; source_line: 869998
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa5-1 #$WFFConstraintPredicate))
+;; source_line: 870000
+(#$ist #$CoreCycLMt (#$isa #$interArgDifferent #$WFFConstraintPredicate))
+;; source_line: 870002
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa4-3 #$WFFConstraintPredicate))
+;; source_line: 870004
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat4-3 #$WFFConstraintPredicate))
+;; source_line: 870006
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa5-2 #$WFFConstraintPredicate))
+;; source_line: 870008
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat2-4 #$WFFConstraintPredicate))
+;; source_line: 870010
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa4-5 #$WFFConstraintPredicate))
+;; source_line: 870012
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat4-1 #$WFFConstraintPredicate))
+;; source_line: 870014
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa3-4 #$WFFConstraintPredicate))
+;; source_line: 870016
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat3-5 #$WFFConstraintPredicate))
+;; source_line: 870018
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa4-2 #$WFFConstraintPredicate))
+;; source_line: 870020
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat1-5 #$WFFConstraintPredicate))
+;; source_line: 870022
+(#$ist #$CoreCycLMt (#$isa #$arg2QuotedIsa #$WFFConstraintPredicate))
+;; source_line: 870024
+(#$ist #$CoreCycLMt (#$isa #$interArgResultIsaReln #$WFFConstraintPredicate))
+;; source_line: 870026
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat1-4 #$WFFConstraintPredicate))
+;; source_line: 870028
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat2-5 #$WFFConstraintPredicate))
+;; source_line: 870030
+(#$ist #$CoreCycLMt (#$isa #$interArgResultGenlReln #$WFFConstraintPredicate))
+;; source_line: 870032
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat3-2 #$WFFConstraintPredicate))
+;; source_line: 870034
+(#$ist #$CoreCycLMt (#$isa #$arg5QuotedIsa #$WFFConstraintPredicate))
+;; source_line: 870036
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat2-3 #$WFFConstraintPredicate))
+;; source_line: 870038
+(#$ist #$CoreCycLMt (#$isa #$arg6QuotedIsa #$WFFConstraintPredicate))
+;; source_line: 870040
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat3-4 #$WFFConstraintPredicate))
+;; source_line: 870042
+(#$ist #$CoreCycLMt (#$isa #$interArgGenl2-1 #$WFFConstraintPredicate))
+;; source_line: 870044
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat4-5 #$WFFConstraintPredicate))
+;; source_line: 870046
+(#$ist #$CoreCycLMt (#$isa #$arg4Isa #$WFFConstraintPredicate))
+;; source_line: 870048
+(#$ist #$CoreCycLMt (#$isa #$argIsa #$WFFConstraintPredicate))
+;; source_line: 870050
+(#$ist #$CoreCycLMt (#$isa #$argGenl #$WFFConstraintPredicate))
+;; source_line: 870052
+(#$ist #$CoreCycLMt (#$isa #$argIsaArg #$WFFConstraintPredicate))
+;; source_line: 870054
+(#$ist #$CoreCycLMt (#$isa #$arg2Format #$WFFConstraintPredicate))
+;; source_line: 870056
+(#$ist #$CoreCycLMt (#$isa #$arg3Format #$WFFConstraintPredicate))
+;; source_line: 870058
+(#$ist #$CoreCycLMt (#$isa #$arg5Isa #$WFFConstraintPredicate))
+;; source_line: 870060
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat5-1 #$WFFConstraintPredicate))
+;; source_line: 870062
+(#$ist #$CoreCycLMt (#$isa #$interArgResultIsa #$WFFConstraintPredicate))
+;; source_line: 870064
+(#$ist #$CoreCycLMt (#$isa #$arg1Format #$WFFConstraintPredicate))
+;; source_line: 870066
+(#$ist #$CoreCycLMt (#$isa #$interArgResultGenl #$WFFConstraintPredicate))
+;; source_line: 870068
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat5-3 #$WFFConstraintPredicate))
+;; source_line: 870070
+(#$ist #$CoreCycLMt (#$isa #$interArgIsa #$WFFConstraintPredicate))
+;; source_line: 870072
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat1-2 #$WFFConstraintPredicate))
+;; source_line: 870074
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat2-1 #$WFFConstraintPredicate))
+;; source_line: 870076
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat4-2 #$WFFConstraintPredicate))
+;; source_line: 870078
+(#$ist #$CoreCycLMt (#$isa #$disjointWith #$WFFConstraintPredicate))
+;; source_line: 870080
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat2-2 #$WFFConstraintPredicate))
+;; source_line: 870082
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat1-1 #$WFFConstraintPredicate))
+;; source_line: 870084
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat4-4 #$WFFConstraintPredicate))
+;; source_line: 870086
+(#$ist #$CoreCycLMt (#$isa #$arg5SometimesIsa #$WFFConstraintPredicate))
+;; source_line: 870088
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat3-3 #$WFFConstraintPredicate))
+;; source_line: 870090
+(#$ist #$CoreCycLMt (#$isa #$arg4SometimesIsa #$WFFConstraintPredicate))
+;; source_line: 870092
+(#$ist #$CoreCycLMt (#$isa #$interArgFormat5-5 #$WFFConstraintPredicate))
+;; source_line: 870094
+(#$ist #$CoreCycLMt (#$isa #$arg3SometimesIsa #$WFFConstraintPredicate))
+;; source_line: 870096
+(#$ist #$CoreCycLMt (#$isa #$arg2SometimesIsa #$WFFConstraintPredicate))
+;; source_line: 922154
+(#$ist #$CoreCycLMt (#$isa #$ExemptFromFactsInFictionalWorldCollector #$Collection))
+;; source_line: 922159
+(#$ist #$CoreCycLMt (#$genls #$ExemptFromFactsInFictionalWorldCollector #$FictionalContext))
+;; source_line: 960645
+(#$ist #$CoreCycLMt (#$isa #$FactSheetGenerationHeuristicsPredicate #$Collection))
+;; source_line: 1090646
+(#$ist #$CoreCycLMt (#$comment #$constraintsComplete "(#$constraintsComplete QBF) means that all relevant constraints regarding QBF have been asserted into the knowledge base."))
+;; source_line: 1103214
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg8Isa 8))
+;; source_line: 1103237
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg9Isa 9))
+;; source_line: 1106495
+(#$ist #$CoreCycLMt (#$comment #$completeExtentEnumerableViaBackchain "A unary #$InferenceCompletenessPredicate and a specialization of #$minimizeExtent (qq.v.) that applies to predicates whose entire extents can be enumerated by reference to the transformation rules currently asserted on it. For example, #$occursDuringHospitalization is #$completeExtentEnumerableViaBackchain in the context of certain medical domain microtheories because the rules on it are sufficient to completely generate its entire extent within those microtheories."))
+;; source_line: 1116757
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg7Genl 7))
+;; source_line: 1116789
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg8Genl 8))
+;; source_line: 1116791
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg10Isa 10))
+;; source_line: 1116810
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg11Isa 11))
+;; source_line: 1116834
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg12Isa 12))
+;; source_line: 1117361
+(#$ist #$CoreCycLMt (#$constrainsArg #$arg13Isa 13))
+;; source_line: 1140207
+(#$ist #$CoreCycLMt (#$isa #$DocumentationPageExternalURLPredicate #$Collection))
+;; source_line: 1184982
+(#$ist #$CoreCycLMt (#$genls #$NonArbitarilyGeneratedCycLDenotationalTerm #$CycLReifiableDenotationalTerm))
+;; source_line: 1184983
+(#$ist #$CoreCycLMt (#$genls #$NonArbitarilyGeneratedCycLDenotationalTerm #$CycLClosedAtomicTerm))
+;; source_line: 1184984
+(#$ist #$CoreCycLMt (#$genls #$NonArbitarilyGeneratedCycLDenotationalTerm #$CycLReifiedDenotationalTerm))
+;; source_line: 1184986
+(#$ist #$CoreCycLMt (#$isa #$NonArbitarilyGeneratedCycLDenotationalTerm #$Collection))
+;; source_line: 1889601
+(#$ist #$CoreCycLMt (#$salientAssertions #$BinaryRelation (((#$isa ?var0 #$BinaryRelation)) ((#$arity ?var0 2)))))
+;; source_line: 1889602
+(#$ist #$CoreCycLMt (#$salientAssertions #$UnaryRelation (((#$isa ?var0 #$UnaryRelation)) ((#$arity ?var0 1)))))
+;; source_line: 1889603
+(#$ist #$CoreCycLMt (#$salientAssertions #$TernaryRelation (((#$isa ?var0 #$TernaryRelation)) ((#$arity ?var0 3)))))
+;; source_line: 1889604
+(#$ist #$CoreCycLMt (#$salientAssertions #$QuaternaryRelation (((#$isa ?var0 #$QuaternaryRelation)) ((#$arity ?var0 4)))))
+;; source_line: 1889605
+(#$ist #$CoreCycLMt (#$salientAssertions #$QuintaryRelation (((#$isa ?var0 #$QuintaryRelation)) ((#$arity ?var0 5)))))
+;; MALFORMED source_line: 156750; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$QuintaryRelation)) ((#$arity ?var0 5)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$QuintaryRelation)) ((#$arity ?var0 5)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$isa ?var0 #$QuintaryRelation) (#$arity ?var0 5))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889605, "mt": "#$CoreCycLMt", "predicate": "#$salientAssertions"}
+;; MALFORMED source_line: 156751; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$QuaternaryRelation)) ((#$arity ?var0 4)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$QuaternaryRelation)) ((#$arity ?var0 4)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$isa ?var0 #$QuaternaryRelation) (#$arity ?var0 4))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889604, "mt": "#$CoreCycLMt", "predicate": "#$salientAssertions"}
+;; MALFORMED source_line: 156752; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$TernaryRelation)) ((#$arity ?var0 3)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$TernaryRelation)) ((#$arity ?var0 3)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$isa ?var0 #$TernaryRelation) (#$arity ?var0 3))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889603, "mt": "#$CoreCycLMt", "predicate": "#$salientAssertions"}
+;; MALFORMED source_line: 156753; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$BinaryRelation)) ((#$arity ?var0 2)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$BinaryRelation)) ((#$arity ?var0 2)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$isa ?var0 #$BinaryRelation) (#$arity ?var0 2))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889601, "mt": "#$CoreCycLMt", "predicate": "#$salientAssertions"}
+;; MALFORMED source_line: 156754; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$UnaryRelation)) ((#$arity ?var0 1)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$UnaryRelation)) ((#$arity ?var0 1)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$isa ?var0 #$UnaryRelation) (#$arity ?var0 1))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889602, "mt": "#$CoreCycLMt", "predicate": "#$salientAssertions"}
+;; MALFORMED source_line: 156755; hypothesis: add_two_parens_each_end
+;; RAW: (#$natFunction ?var0 ?var1) (#$resultIsa ?var1 ?var2)) ((#$isa ?var0 ?var2)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$natFunction ?var0 ?var1) (#$resultIsa ?var1 ?var2)) ((#$isa ?var0 ?var2)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$natFunction ?var0 ?var1) (#$resultIsa ?var1 ?var2)) (#$isa ?var0 ?var2))
+;; MALFORMED source_line: 156756; hypothesis: add_two_parens_each_end
+;; RAW: (#$natFunction ?var0 ?var1) (#$resultGenl ?var1 ?var2)) ((#$genls ?var0 ?var2)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$natFunction ?var0 ?var1) (#$resultGenl ?var1 ?var2)) ((#$genls ?var0 ?var2)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$natFunction ?var0 ?var1) (#$resultGenl ?var1 ?var2)) (#$genls ?var0 ?var2))
+;; MALFORMED source_line: 156757; hypothesis: add_two_parens_each_end
+;; RAW: (#$natFunction ?var0 ?var1) (#$resultGenlArg ?var1 ?var2) (#$natArgument ?var0 ?var2 ?var3)) ((#$genls ?var0 ?var3)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$natFunction ?var0 ?var1) (#$resultGenlArg ?var1 ?var2) (#$natArgument ?var0 ?var2 ?var3)) ((#$genls ?var0 ?var3)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$natFunction ?var0 ?var1) (#$resultGenlArg ?var1 ?var2) (#$natArgument ?var0 ?var2 ?var3)) (#$genls ?var0 ?var3))
+;; MALFORMED source_line: 156758; hypothesis: add_two_parens_each_end
+;; RAW: (#$natFunction ?var0 ?var1) (#$resultIsaArg ?var1 ?var2) (#$natArgument ?var0 ?var2 ?var3)) ((#$isa ?var0 ?var3)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$natFunction ?var0 ?var1) (#$resultIsaArg ?var1 ?var2) (#$natArgument ?var0 ?var2 ?var3)) ((#$isa ?var0 ?var3)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$natFunction ?var0 ?var1) (#$resultIsaArg ?var1 ?var2) (#$natArgument ?var0 ?var2 ?var3)) (#$isa ?var0 ?var3))
+;; MALFORMED source_line: 156759; hypothesis: add_two_parens_each_end
+;; RAW: (#$natFunction ?var0 ?var1) (#$isa ?var2 ?var3) (#$natArgument ?var0 ?var4 ?var2) (#$interArgResultIsa ?var1 ?var4 ?var3 ?var5)) ((#$isa ?var0 ?var5)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$natFunction ?var0 ?var1) (#$isa ?var2 ?var3) (#$natArgument ?var0 ?var4 ?var2) (#$interArgResultIsa ?var1 ?var4 ?var3 ?var5)) ((#$isa ?var0 ?var5)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$natFunction ?var0 ?var1) (#$isa ?var2 ?var3) (#$natArgument ?var0 ?var4 ?var2) (#$interArgResultIsa ?var1 ?var4 ?var3 ?var5)) (#$isa ?var0 ?var5))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889654, "mt": "#$BaseKB", "predicate": "#$salientAssertions"}
+;; MALFORMED source_line: 156780; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$ArgIsaBinaryPredicate) (#$constrainsArg ?var0 ?var1)) ((#$trueRule (#$CollectionRuleTemplateFn #$ArgIsaPredicate) (#$and (#$implies (?var0 ?RELN ?COL) (#$argIsa ?RELN ?var1 ?COL)) (#$implies (#$argIsa ?RELN ?var1 ?COL) (?var0 ?RELN ?COL))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$ArgIsaBinaryPredicate) (#$constrainsArg ?var0 ?var1)) ((#$trueRule (#$CollectionRuleTemplateFn #$ArgIsaPredicate) (#$and (#$implies (?var0 ?RELN ?COL) (#$argIsa ?RELN ?var1 ?COL)) (#$implies (#$argIsa ?RELN ?var1 ?COL) (?var0 ?RELN ?COL))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$ArgIsaBinaryPredicate) (#$constrainsArg ?var0 ?var1)) (#$trueRule (#$CollectionRuleTemplateFn #$ArgIsaPredicate) (#$and (#$implies (?var0 ?RELN ?COL) (#$argIsa ?RELN ?var1 ?COL)) (#$implies (#$argIsa ?RELN ?var1 ?COL) (?var0 ?RELN ?COL)))))
+;; MALFORMED source_line: 156805; hypothesis: add_two_parens_each_end
+;; RAW: (#$completeExtentEnumerableForValueInArg #$isa ?var0 2)) ((#$completelyEnumerableCollection ?var0)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$completeExtentEnumerableForValueInArg #$isa ?var0 2)) ((#$completelyEnumerableCollection ?var0)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$completeExtentEnumerableForValueInArg #$isa ?var0 2) (#$completelyEnumerableCollection ?var0))
+;; MALFORMED source_line: 156806; hypothesis: add_two_parens_each_end
+;; RAW: (#$completelyEnumerableCollection ?var0)) ((#$completeExtentEnumerableForValueInArg #$isa ?var0 2)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$completelyEnumerableCollection ?var0)) ((#$completeExtentEnumerableForValueInArg #$isa ?var0 2)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$completelyEnumerableCollection ?var0) (#$completeExtentEnumerableForValueInArg #$isa ?var0 2))
+;; INTACT QUOTED STRUCTURE: {"source_line": 1889707, "mt": "#$UniversalVocabularyMt", "predicate": "#$salientAssertions"}
+;; MALFORMED source_line: 441380; hypothesis: add_two_parens_each_end
+;; RAW: (#$completelyDecidableCollection ?var0)) ((#$completeExtentDecidableForValueInArg #$isa ?var0 2)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$completelyDecidableCollection ?var0)) ((#$completeExtentDecidableForValueInArg #$isa ?var0 2)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$completelyDecidableCollection ?var0) (#$completeExtentDecidableForValueInArg #$isa ?var0 2))
+;; MALFORMED source_line: 441381; hypothesis: add_two_parens_each_end
+;; RAW: (#$completeExtentDecidableForValueInArg #$isa ?var0 2)) ((#$completelyDecidableCollection ?var0)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$completeExtentDecidableForValueInArg #$isa ?var0 2)) ((#$completelyDecidableCollection ?var0)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$completeExtentDecidableForValueInArg #$isa ?var0 2) (#$completelyDecidableCollection ?var0))
+;; MALFORMED source_line: 534927; hypothesis: add_two_parens_each_end
+;; RAW: (#$natFunction ?var0 ?var1) (#$resultQuotedIsa ?var1 ?var2)) ((#$quotedIsa ?var0 ?var2)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$natFunction ?var0 ?var1) (#$resultQuotedIsa ?var1 ?var2)) ((#$quotedIsa ?var0 ?var2)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$natFunction ?var0 ?var1) (#$resultQuotedIsa ?var1 ?var2)) (#$quotedIsa ?var0 ?var2))
+;; MALFORMED source_line: 1889672; hypothesis: add_two_parens_each_end
+;; RAW: (#$different ?var2 ?var0)) ((#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2) (((#$natFunction ?var0 ?var1) (#$resultGenl ?var1 ?var2)) ((#$genls ?var0 ?var2))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$different ?var2 ?var0)) ((#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2) (((#$natFunction ?var0 ?var1) (#$resultGenl ?var1 ?var2)) ((#$genls ?var0 ?var2))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$different ?var2 ?var0) (#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2) (((#$natFunction ?var0 ?var1) (#$resultGenl ?var1 ?var2)) ((#$genls ?var0 ?var2)))))
+;; MALFORMED source_line: 1889752; hypothesis: unresolved
+;; RAW: (#$assertedMoreSpecifically (#$isa ?var0 ?var3)) (#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2 ?var3) (((#$natFunction ?var0 ?var1) (#$resultIsaArg ?var1 ?var2) (#$natArgument ?var0 ?var2 ?var3)) ((#$isa ?var0 ?var3))))
+;; MALFORMED source_line: 1889753; hypothesis: unresolved
+;; RAW: (#$assertedMoreSpecifically (#$genls ?var0 ?var3)) (#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2 ?var3) (((#$natFunction ?var0 ?var1) (#$resultGenlArg ?var1 ?var2) (#$natArgument ?var0 ?var2 ?var3)) ((#$genls ?var0 ?var3))))
+;; MALFORMED source_line: 1889758; hypothesis: unresolved
+;; RAW: (#$assertedMoreSpecifically (#$isa ?var0 ?var2)) (#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2) (((#$natFunction ?var0 ?var1) (#$resultIsa ?var1 ?var2)) ((#$isa ?var0 ?var2))))
+;; MALFORMED source_line: 1889759; hypothesis: unresolved
+;; RAW: (#$assertedMoreSpecifically (#$genls ?var0 ?var2)) (#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2) (((#$natFunction ?var0 ?var1) (#$resultGenl ?var1 ?var2)) ((#$genls ?var0 ?var2))))
+;; MALFORMED source_line: 1889817; hypothesis: add_two_parens_each_end
+;; RAW: (#$different #$CycLNonAtomicTerm ?var2)) ((#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2) (((#$natFunction ?var0 ?var1) (#$resultQuotedIsa ?var1 ?var2)) ((#$quotedIsa ?var0 ?var2))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$different #$CycLNonAtomicTerm ?var2)) ((#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2) (((#$natFunction ?var0 ?var1) (#$resultQuotedIsa ?var1 ?var2)) ((#$quotedIsa ?var0 ?var2))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$different #$CycLNonAtomicTerm ?var2) (#$meetsPragmaticRequirement (#$TheList ?var0 ?var1 ?var2) (((#$natFunction ?var0 ?var1) (#$resultQuotedIsa ?var1 ?var2)) ((#$quotedIsa ?var0 ?var2)))))

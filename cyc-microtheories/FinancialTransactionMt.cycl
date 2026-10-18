@@ -1,0 +1,484 @@
+﻿;; Own assertions with explicit source Mt; original formulas are unchanged.
+;; No Cyc engine or logical inference has been run.
+;; Ancestors below are computed from all closed genlMt edges, irrespective of assertion Mt.
+;; Ancestor assertions are NOT duplicated here; see notebook export_inherited().
+;; Selected Mt: #$FinancialTransactionMt
+;; Reachable ancestor targets excluding self; SCC peers included (162):
+;; ancestor: #$AcademicOrganizationMt
+;; ancestor: #$AcademicOrganizationVocabularyMt
+;; ancestor: #$AffectMt
+;; ancestor: #$AffectVocabularyMt
+;; ancestor: #$AgentGMt
+;; ancestor: #$AgentGVocabularyMt
+;; ancestor: #$AilmentMt
+;; ancestor: #$AilmentVocabularyMt
+;; ancestor: #$AmbientConditionsMt
+;; ancestor: #$AmbientConditionsVocabularyMt
+;; ancestor: #$AnimalActivitiesMt
+;; ancestor: #$AnimalActivitiesVocabularyMt
+;; ancestor: #$AnimalMovementMt
+;; ancestor: #$AnimalPhysiologyMt
+;; ancestor: #$AnimalPhysiologyVocabularyMt
+;; ancestor: #$ArtifactGMt
+;; ancestor: #$ArtifactGVocabularyMt
+;; ancestor: #$ArtifactsInNormalConditionMt
+;; ancestor: #$BaseKB
+;; ancestor: #$BiologicalSocialMt
+;; ancestor: #$BiologicalSocialVocabularyMt
+;; ancestor: #$BiologyMt
+;; ancestor: #$BiologyVocabularyMt
+;; ancestor: #$BordersMt
+;; ancestor: #$BordersVocabularyMt
+;; ancestor: #$BotanyMt
+;; ancestor: #$BotanyVocabularyMt
+;; ancestor: #$BuildingMt
+;; ancestor: #$BuildingVocabularyMt
+;; ancestor: #$CapabilitiesMt
+;; ancestor: #$CapabilitiesVocabularyMt
+;; ancestor: #$ChemicalThermodynamicsMt
+;; ancestor: #$ChemistryMt
+;; ancestor: #$ChemistryVocabularyMt
+;; ancestor: #$ChronologyMt
+;; ancestor: #$ChronologyVocabularyMt
+;; ancestor: #$ClothingGMt
+;; ancestor: #$ClothingGVocabularyMt
+;; ancestor: #$ContainerGMt
+;; ancestor: #$ContainerGVocabularyMt
+;; ancestor: #$CoreCycLImplementationMt
+;; ancestor: #$CoreCycLMt
+;; ancestor: #$CultureGMt
+;; ancestor: #$CultureGVocabularyMt
+;; ancestor: #$CycAgencyTheoryMt
+;; ancestor: #$CycHistoricalPossibilityTheoryMt
+;; ancestor: #$DirectionsMt
+;; ancestor: #$EcologyMt
+;; ancestor: #$EcologyVocabularyMt
+;; ancestor: #$ElectricalSystemsMt
+;; ancestor: #$ElectricalSystemsVocabularyMt
+;; ancestor: #$EqualityReasoningMt
+;; ancestor: #$EqualityReasoningVocabularyMt
+;; ancestor: #$EuclideanGeometryMt
+;; ancestor: #$FixedStructureMt
+;; ancestor: #$FixedStructureVocabularyMt
+;; ancestor: #$GenericTemporalMt
+;; ancestor: #$GenericTemporalVocabularyMt
+;; ancestor: #$GeographicalRegionGMt
+;; ancestor: #$GeographicalRegionGVocabularyMt
+;; ancestor: #$GeographyMt
+;; ancestor: #$GeographyVocabularyMt
+;; ancestor: #$GeometryGMt
+;; ancestor: #$GeometryGVocabularyMt
+;; ancestor: #$GeopoliticalBordersMt
+;; ancestor: #$GeopoliticalBordersVocabularyMt
+;; ancestor: #$GeopoliticalEntityMt
+;; ancestor: #$GeopoliticalEntityVocabularyMt
+;; ancestor: #$HumanActivitiesMt
+;; ancestor: #$HumanAilmentMt
+;; ancestor: #$HumanAilmentVocabularyMt
+;; ancestor: #$HumanFoodGMt
+;; ancestor: #$HumanFoodGVocabularyMt
+;; ancestor: #$HumanPerceptionMt
+;; ancestor: #$HumanPerceptionVocabularyMt
+;; ancestor: #$HumanPhysiologyMt
+;; ancestor: #$HumanPhysiologyVocabularyMt
+;; ancestor: #$HumanSocialLifeMt
+;; ancestor: #$IEEERadarBandsMt
+;; ancestor: #$InformationGMt
+;; ancestor: #$InformationGVocabularyMt
+;; ancestor: #$InformationTerminologyMt
+;; ancestor: #$InformationTerminologyVocabularyMt
+;; ancestor: #$InterAgentArtifactMt
+;; ancestor: #$InterAgentArtifactVocabularyMt
+;; ancestor: #$LawOfConservationOfMechanicalEnergyMt
+;; ancestor: #$LogicalTruthImplementationMt
+;; ancestor: #$LogicalTruthMt
+;; ancestor: #$MathMt
+;; ancestor: #$MathVocabularyMt
+;; ancestor: #$MicrobiologyMt
+;; ancestor: #$MicrobiologyVocabularyMt
+;; ancestor: #$MineralogyMt
+;; ancestor: #$MineralogyVocabularyMt
+;; ancestor: #$ModelingAndSimulationTheoryMt
+;; ancestor: #$ModernFluidMosaicModel
+;; ancestor: #$MovementMt
+;; ancestor: #$MovementVocabularyMt
+;; ancestor: #$NaiveDeviceBehaviorMt
+;; ancestor: #$NaiveDeviceBehaviorVocabularyMt
+;; ancestor: #$NaivePhysicsMt
+;; ancestor: #$NaivePhysicsVocabularyMt
+;; ancestor: #$NaiveSpatialMt
+;; ancestor: #$NaiveSpatialVocabularyMt
+;; ancestor: #$NaturalGeographyMt
+;; ancestor: #$NaturalGeographyVocabularyMt
+;; ancestor: #$NearEarthsSurfaceMt
+;; ancestor: #$NearEarthsSurfaceVocabularyMt
+;; ancestor: #$ObjectPhysicalCharacteristicsMt
+;; ancestor: #$ObjectPhysicalCharacteristicsVocabularyMt
+;; ancestor: #$OrganizationBuildingMt
+;; ancestor: #$OrganizationBuildingVocabularyMt
+;; ancestor: #$OrganizationGMt
+;; ancestor: #$OrganizationGVocabularyMt
+;; ancestor: #$OrganizationMt
+;; ancestor: #$OrganizationProductMt
+;; ancestor: #$OrganizationProductVocabularyMt
+;; ancestor: #$PathSystemsMt
+;; ancestor: #$PathSystemsVocabularyMt
+;; ancestor: #$PerceptionMt
+;; ancestor: #$PerceptionVocabularyMt
+;; ancestor: #$PharmaceuticalGMt
+;; ancestor: #$PharmaceuticalGVocabularyMt
+;; ancestor: #$PhysicalAgentMt
+;; ancestor: #$PhysicalAgentVocabularyMt
+;; ancestor: #$PoliticalGeographyMt
+;; ancestor: #$PoliticalGeographyVocabularyMt
+;; ancestor: #$ProblemSolvingVocabularyMt
+;; ancestor: #$ProductGMt
+;; ancestor: #$ProductGVocabularyMt
+;; ancestor: #$ProductPhysicalCharacteristicsMt
+;; ancestor: #$ProductPhysicalCharacteristicsVocabularyMt
+;; ancestor: #$ProductUsageMt
+;; ancestor: #$ProductUsageVocabularyMt
+;; ancestor: #$QuantityChangeMt
+;; ancestor: #$QuantityChangeVocabularyMt
+;; ancestor: #$SecondLawOfThermodynamicsMt
+;; ancestor: #$SizeCalculationMt
+;; ancestor: #$SizeCalculationVocabularyMt
+;; ancestor: #$SpatialGMt
+;; ancestor: #$SpatialGVocabularyMt
+;; ancestor: #$SportsProductsMt
+;; ancestor: #$SportsProductsVocabularyMt
+;; ancestor: #$SubjunctiveReasoningMt
+;; ancestor: #$TerrestrialFrameOfReferenceMt
+;; ancestor: #$TerrestrialFrameOfReferenceVocabularyMt
+;; ancestor: #$TerrestrialTransportationMt
+;; ancestor: #$TerrestrialTransportationVocabularyMt
+;; ancestor: #$TheFluidMosaicModelOfCellMembranes
+;; ancestor: #$TheoryOfActionMt
+;; ancestor: #$TheoryOfActionVocabularyMt
+;; ancestor: #$ThermodynamicsMt
+;; ancestor: #$TimeZoneMt
+;; ancestor: #$TimeZoneVocabularyMt
+;; ancestor: #$TransportationMt
+;; ancestor: #$TransportationVocabularyMt
+;; ancestor: #$UniversalVocabularyImplementationMt
+;; ancestor: #$UniversalVocabularyMt
+;; ancestor: #$VertebratePhysiologyMt
+;; ancestor: #$VertebratePhysiologyVocabularyMt
+;; ancestor: #$WeatherMt
+;; ancestor: #$WeatherVocabularyMt
+;; source_line: 48239
+(#$ist #$FinancialTransactionMt (#$comment #$accountOfTenderObject "(#$accountOfTenderObject TENDER ACCOUNT) holds just in case the use of TENDER results in funds being taken from ACCOUNT (i.e. just in case TENDER is \"linked\" to the financial account ACCOUNT). An example might be a particular check's being linked to the bank account the check draws upon."))
+;; source_line: 48675
+(#$ist #$FinancialTransactionMt (#$comment #$PerUnit "A billing scheme in which charges are computed per unit sold/serviced."))
+;; source_line: 48676
+(#$ist #$FinancialTransactionMt (#$comment #$PerOccurrence "A billing scheme in which charges are computed per occurrence of some event."))
+;; source_line: 48979
+(#$ist #$FinancialTransactionMt (#$functionalInArgs #$objectBasicPrice 2))
+;; source_line: 48988
+(#$ist #$FinancialTransactionMt (#$functionalInArgs #$costRate 2))
+;; source_line: 49566
+(#$ist #$FinancialTransactionMt (#$isa #$PerUnit #$BillingScheme))
+;; source_line: 49665
+(#$ist #$FinancialTransactionMt (#$isa #$PerOccurrence #$BillingScheme))
+;; source_line: 51313
+(#$ist #$FinancialTransactionMt (#$arg2Format #$schemeForBilling #$SingleEntry))
+;; source_line: 51318
+(#$ist #$FinancialTransactionMt (#$arg2Format #$serviceBasicPrice #$SingleEntry))
+;; source_line: 51333
+(#$ist #$FinancialTransactionMt (#$arg2Format #$hasIssuedTo #$SetTheFormat))
+;; source_line: 51339
+(#$ist #$FinancialTransactionMt (#$arg2Format #$accountHolder #$SetTheFormat))
+;; source_line: 51658
+(#$ist #$FinancialTransactionMt (#$arg2Format #$objectBasicPrice #$IntervalEntry))
+;; source_line: 51660
+(#$ist #$FinancialTransactionMt (#$arg2Format #$costRate #$IntervalEntry))
+;; source_line: 52687
+(#$ist #$FinancialTransactionMt (#$comment #$StockTrading "A specialization of #$Investing and #$FinancialInstrumentTrading. Each instance of #$StockTrading is an event in which someone buys or sells #$Stocks."))
+;; source_line: 53009
+(#$ist #$FinancialTransactionMt (#$arg1Format #$cost #$SetTheFormat))
+;; source_line: 64959
+(#$ist #$FinancialTransactionMt (#$arg2Format #$payer #$SetTheFormat))
+;; source_line: 71974
+(#$ist #$FinancialTransactionMt (#$comment #$annualPercentageRate "A #$ScalarIntervalSlot that relates a #$LoanAgreement to an #$IntervalOnNumberLine. <code>(#$annualPercentageRate LOAN NUM)</code> means that the annual percentage rate (APR) on <code>LOAN</code> is <code>NUM</code> (or (<code>NUM</code> * 100) percent). For example, <code>(#$annualPercentageRate Loan001 (#$Percent 9.9))</code> is equivalent to <code>(#$annualPercentageRate Loan001 .099)</code>, and means that Loan001 has an annual percentage rate of 9.9. The annual percentage rate on a loan is not necessarily the same as the yearly interest rate; it is calculated using a number of factors. (Cf. #$CalculatingTheAPROnALoan.)"))
+;; source_line: 97046
+(#$ist #$FinancialTransactionMt (#$argFormat #$schemeForBilling 2 #$SingleEntry))
+;; source_line: 97070
+(#$ist #$FinancialTransactionMt (#$argFormat #$serviceBasicPrice 2 #$SingleEntry))
+;; source_line: 97092
+(#$ist #$FinancialTransactionMt (#$argFormat #$accountHolder 2 #$SetTheFormat))
+;; source_line: 97115
+(#$ist #$FinancialTransactionMt (#$argFormat #$objectBasicPrice 2 #$IntervalEntry))
+;; source_line: 97138
+(#$ist #$FinancialTransactionMt (#$argFormat #$costRate 2 #$IntervalEntry))
+;; source_line: 97164
+(#$ist #$FinancialTransactionMt (#$argFormat #$payer 2 #$SetTheFormat))
+;; source_line: 97200
+(#$ist #$FinancialTransactionMt (#$argFormat #$hasIssuedTo 2 #$SetTheFormat))
+;; source_line: 97284
+(#$ist #$FinancialTransactionMt (#$argFormat #$cost 1 #$SetTheFormat))
+;; source_line: 388056
+(#$ist #$FinancialTransactionMt (#$requiredArg1Pred #$SecuredLoan #$collateral))
+;; source_line: 394379
+(#$ist #$FinancialTransactionMt (#$arg3Isa #$monetaryValueOfThingTo #$SocialBeing))
+;; source_line: 394380
+(#$ist #$FinancialTransactionMt (#$argIsa #$monetaryValueOfThingTo 3 #$SocialBeing))
+;; source_line: 403267
+(#$ist #$FinancialTransactionMt (#$isa (#$ComplexActionFn (#$NonDavidsonianPredFn #$OfferingForSale (#$TheList #$objectMadeAvailable))) #$ComplexActionPredicate))
+;; source_line: 403989
+(#$ist #$FinancialTransactionMt (#$strictlyFunctionalInArgs #$schemeForBilling 2))
+;; source_line: 404000
+(#$ist #$FinancialTransactionMt (#$strictlyFunctionalInArgs #$serviceBasicPrice 2))
+;; source_line: 412854
+(#$ist #$FinancialTransactionMt (#$isa (#$NonDavidsonianPredFn #$OfferingForSale (#$TheList #$objectMadeAvailable)) #$SituationPredicate))
+;; source_line: 412877
+(#$ist #$FinancialTransactionMt (#$isa (#$NonDavidsonianPredFn #$OfferingForSale (#$TheList #$performedBy (#$BinaryRoleTypePredFn #$objectMadeAvailable))) #$SituationPredicate))
+;; source_line: 440544
+(#$ist #$FinancialTransactionMt (#$comment #$CashTransaction "The collection of all instances of #$MonetaryExchangeOfUserRights in which the #$objectTendered is either an instance of #$Currency or a lot (a 'mob') of instances of #$Currency."))
+;; source_line: 440545
+(#$ist #$FinancialTransactionMt (#$rewriteOf #$CashTransaction (#$SubcollectionOfWithRelationToTypeFn #$MonetaryExchangeOfUserRights #$objectTendered (#$CollectionUnionFn (#$TheSet #$Currency (#$MobFn #$Currency))))))
+;; source_line: 440546
+(#$ist #$FinancialTransactionMt (#$genls #$CashSale #$CashTransaction))
+;; source_line: 497080
+(#$ist #$FinancialTransactionMt (#$requiredArg1Pred #$RepaymentPlan #$repaymentPlanForLoan))
+;; source_line: 504933
+(#$ist #$FinancialTransactionMt (#$genls (#$FollowingScheduleTypeFn #$AmortizationSchedule) (#$RepayingLoanOfTypeFn #$AmortizedLoan)))
+;; source_line: 504936
+(#$ist #$FinancialTransactionMt (#$genls (#$FollowingScheduleTypeFn #$GraduatedPaymentPlan) (#$RepayingLoanOfTypeFn #$GraduatedPaymentLoan)))
+;; source_line: 504977
+(#$ist #$FinancialTransactionMt (#$genls (#$FollowingScheduleTypeFn #$BiweeklyRepaymentPlan) (#$RepayingLoanOfTypeFn #$BiweeklyLoan)))
+;; source_line: 505164
+(#$ist #$FinancialTransactionMt (#$genls (#$FollowingScheduleTypeFn #$InterestOnlyRepaymentPlan) (#$RepayingLoanOfTypeFn #$InterestOnlyLoan)))
+;; source_line: 505197
+(#$ist #$FinancialTransactionMt (#$genls (#$FollowingScheduleTypeFn #$PaymentPlanWithSinglePayment) (#$RepayingLoanOfTypeFn #$SinglePaymentLoan)))
+;; source_line: 505227
+(#$ist #$FinancialTransactionMt (#$genls (#$FollowingScheduleTypeFn #$PaymentPlanWithEqualValueInstallments) (#$RepayingLoanOfTypeFn #$InstallmentLoan)))
+;; source_line: 510995
+(#$ist #$FinancialTransactionMt (#$genls #$VISACard #$CreditCard-RevolvingAccount))
+;; source_line: 510996
+(#$ist #$FinancialTransactionMt (#$genls #$MasterCard #$CreditCard-RevolvingAccount))
+;; source_line: 510997
+(#$ist #$FinancialTransactionMt (#$genls #$DiscoverCard #$CreditCard-RevolvingAccount))
+;; source_line: 511018
+(#$ist #$FinancialTransactionMt (#$genls #$AmExCard #$CreditCard-NonRevolvingAccount))
+;; source_line: 511957
+(#$ist #$FinancialTransactionMt (#$comment #$SaleByAmericanExpressCard "The subcollection of #$SaleByCreditCard in which the item(s) bought are paid for with an American Express card (#$AmExCard)."))
+;; source_line: 511960
+(#$ist #$FinancialTransactionMt (#$comment #$SaleByVisa "The subcollection of #$SaleByCreditCard in which the item(s) bought are paid for with a Visa card (#$VISACard)."))
+;; source_line: 511963
+(#$ist #$FinancialTransactionMt (#$comment #$SaleByDiscoverCard "The subcollection of #$SaleByCreditCard in which the item(s) bought are paid for with a Discover card (#$DiscoverCard)."))
+;; source_line: 511966
+(#$ist #$FinancialTransactionMt (#$comment #$SaleByMasterCard "The subcollection of #$SaleByCreditCard in which the item(s) bought are paid for with a Master Card (#$MasterCard)."))
+;; source_line: 511978
+(#$ist #$FinancialTransactionMt (#$comment #$interestPaid "<code>(#$interestPaid LOAN-PAYMENT VALUE)</code> holds just in case in the loan payment, <code>LOAN-PAYMENT</code>, the amount <code>VALUE</code> applied towards the interest on the loan. For example, to say that 45 dollars out of my last loan payment of 900 dollars went towards paying off the interest I would assert: <pre> (#$and (#$moneyTransferred MY-LOAN-PAYMENT (#$Dollar-UnitedStates 900)) (#$interestPaid MY-LOAN-PAYMENT (#$Dollar-UnitedStates 45))) </pre>."))
+;; source_line: 512807
+(#$ist #$FinancialTransactionMt (#$comment #$lenderOffersAgreementTypeAtAPR "A #$TernaryPredicate that relates a #$FinancialOrganization to a specialization of #$LoanAgreement to an #$IntervalOnNumberLine. (#$lenderOffersAgreementTypeAtAPR LENDER AGR-TYPE NUM) means that LENDER offers instances of AGR-TYPE at the #$annualPercentageRate of NUM. <p> For example, (#$lenderOffersAgreementTypeAtAPR #$ChaseManhattanBank #$CreditCardAgreement (#$Percent 12.9)) means that Chase Manhattan offers a credit card with an APR of 12.9%."))
+;; source_line: 512842
+(#$ist #$FinancialTransactionMt (#$comment #$legalFee "A #$MeasurableQuantitySlot and specialization of #$fee that relates an #$Individual to a #$MonetaryValue that is charged as a legal fee for that indiviudal."))
+;; source_line: 513853
+(#$ist #$FinancialTransactionMt (#$genls #$TechStock #$Stock))
+;; source_line: 516237
+(#$ist #$FinancialTransactionMt (#$isa #$CREST-FinancialSettlementSystem #$FinancialSettlementSystem))
+;; source_line: 516238
+(#$ist #$FinancialTransactionMt (#$comment #$CREST-FinancialSettlementSystem "A settlement system that allows you to hold share certificates in an electronic form. This particular system is implemented by CRESTCo Ltd."))
+;; source_line: 516276
+(#$ist #$FinancialTransactionMt (#$rewriteOf #$TechStock (#$SubcollectionOfWithRelationToTypeFn #$Stock #$stockIssuedBy #$TechnologyCompany)))
+;; source_line: 518316
+(#$ist #$FinancialTransactionMt (#$disjointWith #$CreditCardAgreementWithAnnualFee #$CreditCardAgreementWithNoAnnualFee))
+;; source_line: 520399
+(#$ist #$FinancialTransactionMt (#$comment #$taxDeferredIncome "A #$QuantitySlot that relates a #$SocialBeing to a #$MonetaryRate. (#$taxDeferredIncome BEING RATE) means that RATE is BEING's tax-deferred income rate."))
+;; source_line: 520407
+(#$ist #$FinancialTransactionMt (#$comment #$minimumPayment "A #$MeasurableQuantitySlot that relates a #$Bill-PaymentRequest to a #$MonetaryValue. (#$minimumPayment BILL AMOUNT) means that the minimum payment requested in BILL is AMOUNT."))
+;; source_line: 526185
+(#$ist #$FinancialTransactionMt (#$comment #$salesObjectStatus "A #$BinaryPredicate that relates a #$Buying to a #$BuyingTypeBySalesStatus. (#$salesObjectStatus BUYING STATUS) means that BUYING has the sales status STATUS."))
+;; source_line: 526466
+(#$ist #$FinancialTransactionMt (#$comment #$hasLienAgainst "A #$BinaryPredicate that relates an #$Agent-Generic to a #$Property. (#$hasLienAgainst AGT PROPERTY) means that AGT has a lien against PROPERTY."))
+;; source_line: 526467
+(#$ist #$FinancialTransactionMt (#$comment #$dilutionLevy "A #$MeasurableQuantitySlot that relates an #$ExchangeOfUserRights to a #$MonetaryValue. (#$dilutionLevy EXCHANGE AMOUNT) means that the dilution levy on EXCHANGE is AMOUNT. A dilution levy is a fee that OEICs (see #$OpenEndedInvestmentCompany) often charge on large deals that may be disadvantageous to earnings."))
+;; source_line: 526468
+(#$ist #$FinancialTransactionMt (#$comment #$creditLimit "A #$MeasurableQuantitySlot that relates a #$CreditAccount to a #$MonetaryValue. (#$creditLimit ACCOUNT AMOUNT) means that the credit limit on ACCOUNT is AMOUNT."))
+;; source_line: 526620
+(#$ist #$FinancialTransactionMt (#$comment #$guarantor "A #$BinaryPredicate that relates a #$LoanAgreement to an #$IntelligentAgent. (#$guarantor LOAN AGENT) means that AGENT is a guarantor for loan, i.e., AGENT has a legal obligation to ensure that LOAN is repaid."))
+;; source_line: 526627
+(#$ist #$FinancialTransactionMt (#$comment #$loanToValueRatio "A #$BinaryPredicate that relates a #$SecuredLoan to a #$RealNumber. (#$loanToValueRatio LOAN NUM) means that the loan-to-value ratio on LOAN is NUM. The loan-to-value ratio on a loan is calculated by dividing the loan amount by the appraised value of the property that secures the loan."))
+;; source_line: 526630
+(#$ist #$FinancialTransactionMt (#$comment #$loanTermDuration "A #$BinaryPredicate that relates a #$LoanAgreement to a #$Time-Quantity. (#$loanTermDuration LOAN TIME) means that the duration of LOAN is TIME."))
+;; source_line: 549511
+(#$ist #$FinancialTransactionMt (#$comment #$Charging-DocumentingResponsibilityForPayment "A #$TemporalObjectType and specialization of #$AttributingResponsibility and #$IBTGeneration. Each instance of #$Charging-DocumentingResponsibilityForPayment is an #$Event in which an agent documents another agent's responsibility to pay for certain goods or services provided. Examples: a phone company documenting the charge for a long-distance call made by one of its customers, a waiter entering into a computerized register the (fixed-price) items ordered by a restaurant patron. For a different (but closely related) sense of \"charging someone for something,\" see #$RequestingPayment."))
+;; source_line: 624298
+(#$ist #$FinancialTransactionMt (#$isa #$CreditCardAgreementTypeByAnnualFeeFeature #$NonAbducibleCollection))
+;; source_line: 661189
+(#$ist #$FinancialTransactionMt (#$isa #$RiskFreeArbitrage #$ConventionalClassificationType))
+;; source_line: 661196
+(#$ist #$FinancialTransactionMt (#$isa #$RiskArbitrage #$ConventionalClassificationType))
+;; source_line: 669431
+(#$ist #$FinancialTransactionMt (#$comment #$corpSharePercentPriceRiseSinceLastClose "A #$NumericIntervalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$RealNumber. <code>(#$percentChangeInSharePriceSinceLastClose CORP N)</code> means that the price of a share in CORP has changed by N% since the last close of the relevant market. <p> For example, <code>(#$percentChangeInSharePriceSinceLastClose #$GoogleInc -0.94)</code> means that the price of a share in Google, Inc. has dropped by 0.94% since the last close of the relevant market (viz. NASDAQ)."))
+;; source_line: 669466
+(#$ist #$FinancialTransactionMt (#$comment #$corpPriceToEarningsRatio "A #$NumericIntervalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$RealNumber. <code>(#$corpPriceToEarningsRatio CORP N)</code> means that the (trailing twelve month) price to earnings ratio of stock in CORP is N."))
+;; source_line: 669478
+(#$ist #$FinancialTransactionMt (#$comment #$corpSharePriceAtLastClose "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpSharePriceAtLastClose CORP PRICE)</code> means that the price of a share of stock in <code>CORP</code> was <code>PRICE</code> at the most recent close of the relevant market."))
+;; source_line: 669590
+(#$ist #$FinancialTransactionMt (#$comment #$taxableEquivalentRevenueForPeriodByAccountingCOC "(#$taxableEquivalentRevenueForPeriodByAccountingCOC ORG MONEY TIME COC) means MONEY is the taxable-equivalent revenue of ORG during TIME based on the accounting principles allowed by the #$AccountingCOC COC. Taxable-equivalent revenue is total revenue modulo a taxable-equivalency adjustment for tax-exempt income and investment credits."))
+;; source_line: 669591
+(#$ist #$FinancialTransactionMt (#$comment #$taxableEquivalentRevenueForPeriod "(#$taxableEquivalentRevenueForPeriod ORG MONEY TIME) means that ORG's taxable-equivalent revenue during TIME is MONEY. Taxable-equivalent revenue is total revenue modulo a taxable-equivalency adjustment for tax-exempt income and investment credits."))
+;; source_line: 669599
+(#$ist #$FinancialTransactionMt (#$comment #$taxableEquivalentRevenue "An instance of #$TemporallyQualifiableRelation. (#$taxableEquivalentRevenue ORG MONEY)<T> means MONEY is the taxable-equivalent revenue of ORG during the time interval T, but not necessarily any time interval subsumed by T. Taxable-equivalent revenue is total revenue modulo a taxable-equivalency adjustment for tax-exempt income and investment credits."))
+;; source_line: 669771
+(#$ist #$FinancialTransactionMt (#$comment #$consolidatedNetRevenueForPeriodByAccountingCOC "(#$consolidatedNetRevenueForPeriodByAccountingCOC ORG MONEY TIME COC) means MONEY is the consolidated net revenue of ORG during TIME based on the accounting principles allowed by the #$AccountingCOC COC. Consolidated net revenue is the combined net revenue (i.e. total revenue minus expenses) of an organization and all of its #$subordinateOrganizations."))
+;; source_line: 669780
+(#$ist #$FinancialTransactionMt (#$comment #$consolidatedNetRevenueForPeriod "(#$consolidatedNetRevenueForPeriod ORG MONEY TIME) means that ORG's consolidated net revenue during TIME is MONEY. Consolidated net revenue is the combined net revenue (i.e. total revenue minus expenses) of an organization and all of its #$subordinateOrganizations."))
+;; source_line: 669788
+(#$ist #$FinancialTransactionMt (#$comment #$consolidatedNetRevenue "An instance of #$TemporallyQualifiableRelation. (#$consolidatedNetRevenue ORG MONEY)<T> means MONEY is the consolidated net revenue of ORG during the time interval T, but not necessarily any time interval subsumed by T. Consolidated net revenue is the combined net revenue (i.e. total revenue minus expenses) of an organization and all of its #$subordinateOrganizations."))
+;; source_line: 669872
+(#$ist #$FinancialTransactionMt (#$comment #$corpSharePriceAtLastOpen "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpSharePriceAtLastOpen CORP PRICE)</code> means that the price of a share of stock in <code>CORP</code> was <code>PRICE</code> at the most recent open of the relevant market."))
+;; source_line: 669896
+(#$ist #$FinancialTransactionMt (#$comment #$corpSharePriceRiseSinceLastClose "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$changeInSharePriceSinceLastClose CORP AMOUNT)</code> means that the price of a share of stock in <code>CORP</code> has risen by <code>AMOUNT</code> since the most recent close of the relevant market."))
+;; source_line: 669929
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareAskPrice "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpShareAskPrice CORP PRICE)</code> means that the current asking price for a share of stock in <code>CORP</code> is <code>PRICE</code>."))
+;; source_line: 669950
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareOneYearTargetPriceEstimate "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpShareOneYearTargetPriceEstimate CORP PRICE)</code> means that the median target price for shares of stock in CORP, as forecast by analysts covering the stock, is PRICE."))
+;; source_line: 674338
+(#$ist #$FinancialTransactionMt (#$genls #$DerivativeSecurity #$UnlistedSecurity))
+;; source_line: 674343
+(#$ist #$FinancialTransactionMt (#$genls #$DebtSecurity #$UnlistedSecurity))
+;; source_line: 674412
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareDaysRange "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpShareDaysRange CORP RANGE)</code> means that RANGE is the range of prices at which shares of CORP have traded during the current or most recent trading day."))
+;; source_line: 674425
+(#$ist #$FinancialTransactionMt (#$comment #$corpShare52WeekRange "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpShare52WeekRange CORP RANGE)</code> means that RANGE is the range of prices at which shares of CORP have traded over the past 52 weeks."))
+;; source_line: 674434
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareDailyVolume "A #$ScalarIntervalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$NonNegativeInteger. <code>(#$corpShareDailyVolume CORP NUM)</code> means that NUM shares in CORP have been traded during the current (or most recent) trading day."))
+;; source_line: 674443
+(#$ist #$FinancialTransactionMt (#$comment #$corpShare3MonthAverageDailyVolume "A #$ScalarIntervalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$NonNegativeInteger. <code>(#$corpShare3MonthAverageDailyVolume CORP NUM)</code> means that NUM is the average daily number of shares in CORP that have been traded over the past 3 months."))
+;; source_line: 674450
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareTrailing12MonthDividend "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$#$corpShareTrailing12MonthDividend CORP MONEY)</code> means that MONEY is the amount of dividends per share for stock in CORP over the past 12 months."))
+;; source_line: 674459
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareTrailing12MonthYield "A #$NumericIntervalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$RealNumber. <code>(#$corpShareTrailing12MonthYield CORP N)</code> means that N is the trailing twelve month dividend per share (see #$corpShareTrailing12MonthDividend) divided by the previous closing price of a share in CORP (see #$corpSharePriceAtLastClose), as a percentage (multiplied by 100)."))
+;; source_line: 675465
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareBidPrice "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpShareBidPrice CORP PRICE)</code> means that the bid price for a share of stock in <code>CORP</code> is <code>PRICE</code> on the relevant market."))
+;; source_line: 676561
+(#$ist #$FinancialTransactionMt (#$comment #$discount "A #$MeasurableQuantitySlot that relates a #$MoneyTransaction to a #$MonetaryValue. (#$discount TRANSACTION MONEY) means that MONEY is the amount of money that was discounted in TRANSACTION."))
+;; source_line: 676618
+(#$ist #$FinancialTransactionMt (#$comment #$RepurchaseProgram "A #$TemporalObjectType. Each instance of #$RepurchaseProgram is a #$Project in which a #$PubliclyHeldCorporation aims to buy back a certain portion of its #$Stock."))
+;; source_line: 677170
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$revenue #$SocialBeing) #$EarningsFigure))
+;; source_line: 677211
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$corpDilutedLossPerShare #$LegalCorporation) #$EarningsFigure))
+;; source_line: 677212
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$corpDilutedEarningsPerShare #$LegalCorporation) #$EarningsFigure))
+;; source_line: 677268
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$adjustedEPS #$LegalCorporation) #$EarningsFigure))
+;; source_line: 677285
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$corpDilutedAdjustedEPS #$LegalCorporation) #$EarningsFigure))
+;; source_line: 677321
+(#$ist #$FinancialTransactionMt (#$genls (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION (#$FollowingScheduleTypeFn #$AmortizationSchedule) ?AMOUNT))) #$ExpenseFigure))
+;; source_line: 677325
+(#$ist #$FinancialTransactionMt (#$genls (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) #$ExpenseFigure))
+;; source_line: 677643
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$companyEarnings #$Business) #$EarningsFigure))
+;; source_line: 677648
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$basicPrice #$TradeableSecurity) (#$CollectionIntersection2Fn #$InvestmentRelatedThing #$MonetaryValue)))
+;; source_line: 677654
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$basicPrice #$Stock) (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$basicPrice #$TradeableSecurity)))
+;; source_line: 677660
+(#$ist #$FinancialTransactionMt (#$genls (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$basicPrice #$Bond-Agreement) (#$SubcollectionOfWithRelationFromTypeFn #$MonetaryValue #$basicPrice #$TradeableSecurity)))
+;; source_line: 678465
+(#$ist #$FinancialTransactionMt (#$genls #$DegreeOfLiquidity #$InvestmentRelatedThing))
+;; source_line: 678630
+(#$ist #$FinancialTransactionMt (#$genls #$Tax-COC (#$CollectionIntersection2Fn #$InvestmentRelatedThing #$FormalCOC)))
+;; source_line: 678631
+(#$ist #$FinancialTransactionMt (#$genls #$AccountingCOC (#$CollectionIntersection2Fn #$InvestmentRelatedThing #$CodeOfConduct)))
+;; source_line: 678643
+(#$ist #$FinancialTransactionMt (#$genls (#$LawsAboutTypeFn #$Banking) (#$CollectionIntersection2Fn #$InvestmentRelatedThing #$Law)))
+;; source_line: 678648
+(#$ist #$FinancialTransactionMt (#$genls (#$LawsAboutTypeFn #$FinancialInstrumentTrading) (#$CollectionIntersection2Fn #$InvestmentRelatedThing #$Law)))
+;; source_line: 685043
+(#$ist #$FinancialTransactionMt (#$comment #$corpEarningsPerShare "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpEarningsPerShare CORP EARNINGS)</code> means that the (trailing twelve month) earnings per share for stock in <code>CORP</code> is <code>EARNINGS</code>."))
+;; source_line: 765137
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareAskSize "A #$ScalarIntervalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$PositiveInteger. <code>(#$corpShareBidSize CORP NUM)</code> means that the current bidding price (see #$corpShareBidPrice) for shares of stock in CORP is applicable to a lot of NUM shares."))
+;; source_line: 765138
+(#$ist #$FinancialTransactionMt (#$comment #$corpShareBidSize "A #$ScalarIntervalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$PositiveInteger. <code>(#$corpShareBidSize CORP NUM)</code> means that the current bidding price (see #$corpShareBidPrice) for shares of stock in CORP is applicable to a lot of NUM shares."))
+;; source_line: 765139
+(#$ist #$FinancialTransactionMt (#$comment #$corpSharesLastTradedAtTime "A #$FunctionalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$TimeInterval. <code>(#$corpSharesLastTradedAtTime CORP PRICE)</code> means that the most recent time at which a share of stock in <code>CORP</code> has been traded is <code>TIME</code>."))
+;; source_line: 765140
+(#$ist #$FinancialTransactionMt (#$comment #$corpSharesLastTradedAtPrice "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpSharesLastTradedAtPrice CORP PRICE)</code> means that the most recent price at which a share of stock in <code>CORP</code> has been traded is <code>PRICE</code>."))
+;; source_line: 831442
+(#$ist #$FinancialTransactionMt (#$interArgIsa1-2 #$greaterThanOrEqualTo (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831443
+(#$ist #$FinancialTransactionMt (#$interArgIsa1-2 #$lessThanOrEqualTo (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831444
+(#$ist #$FinancialTransactionMt (#$interArgIsa1-2 #$greaterThan (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831445
+(#$ist #$FinancialTransactionMt (#$interArgIsa1-2 #$lessThan (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831446
+(#$ist #$FinancialTransactionMt (#$interArgIsa1-2 #$numericallyEquals (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831447
+(#$ist #$FinancialTransactionMt (#$interArgIsa1-2 #$pointQuantValue (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831454
+(#$ist #$FinancialTransactionMt (#$interArgIsa2-1 #$greaterThanOrEqualTo (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831455
+(#$ist #$FinancialTransactionMt (#$interArgIsa2-1 #$lessThanOrEqualTo (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831456
+(#$ist #$FinancialTransactionMt (#$interArgIsa2-1 #$greaterThan (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831457
+(#$ist #$FinancialTransactionMt (#$interArgIsa2-1 #$lessThan (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831458
+(#$ist #$FinancialTransactionMt (#$interArgIsa2-1 #$numericallyEquals (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 831459
+(#$ist #$FinancialTransactionMt (#$interArgIsa2-1 #$pointQuantValue (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 890149
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$greaterThanOrEqualTo 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 890150
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$lessThanOrEqualTo 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 890151
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$greaterThan 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 890152
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$lessThan 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 890153
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$numericallyEquals 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 890154
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$pointQuantValue 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 891846
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$greaterThanOrEqualTo 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 891847
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$lessThanOrEqualTo 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 891848
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$greaterThan 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 891849
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$lessThan 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 891850
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$numericallyEquals 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 891851
+(#$ist #$FinancialTransactionMt (#$interArgIsa #$pointQuantValue 2 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))) 1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; source_line: 916617
+(#$ist #$FinancialTransactionMt (#$singleEntryFormatInArgs #$serviceBasicPrice 2))
+;; source_line: 918133
+(#$ist #$FinancialTransactionMt (#$singleEntryFormatInArgs #$schemeForBilling 2))
+;; source_line: 1102434
+(#$ist #$FinancialTransactionMt (#$comment #$corpSharesLastTradedAtPrice-Generic "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpSharesLastTradedAtPrice-Generic CORP PRICE)</code> means that the most recent price at which a share of stock in <code>CORP</code> has been traded is <code>PRICE</code>. This predicate should be used for querying this information as it is ambivalent to whether the data is stored in the KB or looked up via an external source."))
+;; source_line: 1102435
+(#$ist #$FinancialTransactionMt (#$comment #$corpSharesLastTradedAtPrice-KB "A #$MeasurableQuantitySlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$MonetaryValue. <code>(#$corpSharesLastTradedAtPrice-KB CORP PRICE)</code> means that the most recent price at which a share of stock in <code>CORP</code> has been traded is <code>PRICE</code> and this information is computable from assertions stored internally in the KB. See #$corpSharesLastTradedAtPrice for a version that only pulls that information from the Yahoo finance page."))
+;; source_line: 1105226
+(#$ist #$FinancialTransactionMt (#$comment #$corpPriceToEarningsRatio-Generic "A #$NumericIntervalSlot and #$TimeDependentRelation that relates a #$LegalCorporation to a #$RealNumber. <code>(#$corpPriceToEarningsRatio-Generic CORP N)</code> means that the (trailing twelve month) price to earnings ratio of stock in CORP is N. This predicate is agnostic as to the data source of the returned figures. See #$corpPriceToEarningsRatio for a more specific version that hits Yahoo Finance."))
+;; MALFORMED source_line: 903502; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThanOrEqualTo ?var1 ?var0)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThanOrEqualTo ?var1 ?var0)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThanOrEqualTo ?var1 ?var0)) (#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; MALFORMED source_line: 903503; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThanOrEqualTo ?var0 ?var1)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThanOrEqualTo ?var0 ?var1)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThanOrEqualTo ?var0 ?var1)) (#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; MALFORMED source_line: 903504; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThan ?var1 ?var0)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThan ?var1 ?var0)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThan ?var1 ?var0)) (#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; MALFORMED source_line: 903505; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThan ?var0 ?var1)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThan ?var0 ?var1)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$greaterThan ?var0 ?var1)) (#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; MALFORMED source_line: 903517; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$numericallyEquals ?var0 ?var1)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$numericallyEquals ?var0 ?var1)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$numericallyEquals ?var0 ?var1)) (#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))
+;; MALFORMED source_line: 903518; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$pointQuantValue ?var0 ?var1)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$pointQuantValue ?var0 ?var1)) ((#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT))))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))) (#$pointQuantValue ?var0 ?var1)) (#$isa ?var1 (#$TheCollectionOf ?AMOUNT (#$thereExists ?CORPORATION (#$expenseForType ?CORPORATION #$AppliedResearchAndDevelopment ?AMOUNT)))))

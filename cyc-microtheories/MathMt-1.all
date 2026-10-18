@@ -1,0 +1,264 @@
+﻿format: multilingual-knowledge-units-1
+microtheory: #$MathMt
+encoding: UTF-8 with BOM; CRLF
+source: MathMt.cycl
+fol-grammar: fol_lexer_min.g4 + fol_parser_min.g4
+languages: cycl, rus, eng, fol; hol (Isabelle/HOL) where needed
+
+[conventions]
+rus: Единица знаний — одна выбранная CycL-формула, а не одна строка каждого из альтернативных восстановлений. Здесь 22 единицы: одно корректное исходное утверждение и 21 гипотеза восстановления в импликационной форме. cycl сохраняет именно эти формулы; никакая гипотеза не становится подтверждённым фактом.
+rus: Принадлежность MathMt — метаданные единицы, не оператор ist в целевой формуле. Перечни предков и их содержимое не переводятся. Добавленная при прежнем экспорте внешняя оболочка ist снята с единственного исходного факта; его собственная формула не изменена.
+rus: Все ?varN в выбранной формуле неявно универсальны; в rus/eng/fol используются vN и явно записанные кванторы. Сорт Object — общий носитель значений. RealNumber, Integer, NonNegativeInteger, PositiveInteger — унарные предикаты, не отдельные пересекающиеся сорта. Zero и One обозначают исходные 0 и 1: в лексере нет токена числового литерала. Равенство = передаёт только equals; дизъюнкция не заменяется конъюнкцией. Ложь передаётся как Zero ≠ Zero.
+rus: Для известных бинарных операций используется явно объявленная реляционная форма вычисления: PlusValue(x y z) означает ровно (#$evaluate z (#$PlusFn x y)); аналогично TimesValue, DifferenceValue, QuotientValue. Это графы вычисления частичных операций, не новые объекты-операции и не универсальный Apply. Такая смена сигнатуры объявлена явно; это не утверждение, что реляционная запись лексически совпадает с CycL. Ни существование результата для всех аргументов, ни тотальность операций не постулируются. Evaluate(z x) для атомарного/переменного выражения x сохраняется отдельным отношением и НЕ заменяется равенством z = x.
+rus: FOL-формулы здесь — первопорядковое реляционное представление выбранных утверждений при указанных соответствиях сигнатуры. Формулы не снабжаются неявными арифметическими аксиомами. Грамматика сама не фиксирует интерпретацию сигнатуры. Классическое отношение графа вычисления не является моделью трёхзначного вычислителя: отсутствие пары в графе означает отсутствие данного результата, а не отождествление отсутствующего значения с булевым False.
+rus: Запись 69975 содержит связанную переменную в позиции операции. В fol она не переводится через кодировку: прямо указана невыразимость ПРЯМОГО перевода в обычной первопорядковой семантике. Это не утверждение об абсолютной невозможности первопорядкового кодирования. Сам факт, что грамматика синтаксически принимает ID(...), не делает связанный ID функциональной переменной в FOL.
+rus: Для 69975 добавлен hol. Тип partial_binary = value ⇒ value ⇒ value option задаёт частичную бинарную операцию: Some v — полученное значение, None — отсутствие значения, не False. Вложенное вычисление развёрнуто через существование промежуточного значения. Это явно выбранная типизация и строгая композиционная семантика; из повреждённого CycL нельзя независимо доказать, что она полностью совпадает с исходной семантикой Cyc. Поэтому hol-status = interpretation-dependent, не verified-equivalent. Классификаторы AssociativeRelation/EvaluatableFunction оставлены параметрами сигнатуры; их определения не изобретены. Квантор по f действительно пробегает операции, поэтому эта запись является HOL-формализацией, а не объектной кодировкой функций.
+rus: Не исправляются возможные содержательные странности источника. В частности, evaluate(v2, 0) не заменяется v2 = 0; ratioOfTo не переосмысливается как обычная дробь. Общая переменная не объявляется числом, если это явно не сказано в исходной формуле.
+rus: Конечная алгебраическая система здесь не задана. Формулы могут исследоваться на конечных интерпретациях сигнатуры, но конечный носитель нельзя молча отождествлять со стандартными целыми/вещественными числами.
+rus: .all — контейнер сопоставленных языковых записей, не вход целиком для fol_parser_min. Для разбора fol нужно извлечь fol-signature и строки fol с формулами; строку «не выразимо...» не передавать парсеру. Сигнатура и 21 формула проверены отдельным распознавателем используемого фрагмента грамматики. ANTLR4 и Isabelle не запускались: это не отчёт об их проверке. HOL definition задаёт предложение как булеву константу; истинность предложения не утверждается аксиомой и не доказывается.
+
+[fol-signature]
+type Object primary.
+pred RealNumber, Integer, NonNegativeInteger, PositiveInteger (Object) primary.
+pred GreaterThanOrEqualTo, GreaterThan, Evaluate (Object Object) primary.
+pred PlusValue, TimesValue, DifferenceValue, QuotientValue, ratioOfTo (Object Object Object) primary.
+const Zero, One Object primary.
+[/fol-signature]
+
+
+[unit MathMt_L63625]
+source-line: 63625
+source-status: original
+cycl: (#$relationAllInstance #$greaterThanOrEqualTo #$PositiveInteger 1)
+rus: Для любого v0: если v0 — положительное целое число, то v0 больше или равно 1.
+eng: For every v0, if v0 is a positive integer, then v0 is greater than or equal to 1.
+fol: MathMt_L63625 (∀ v0 : Object (PositiveInteger(v0) → GreaterThanOrEqualTo(v0 One))).
+[/unit MathMt_L63625]
+
+[unit MathMt_L56777]
+source-line: 56777
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) (#$or (#$greaterThanOrEqualTo ?var0 ?var1) (#$greaterThanOrEqualTo ?var1 ?var0)))
+rus: Для любых v0, v1: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел), то (v0 больше или равно v1 или v1 больше или равно v0).
+eng: For all v0, v1: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers), then (v0 is greater than or equal to v1 or v1 is greater than or equal to v0).
+fol: MathMt_L56777 (∀ v0, v1 : Object ((RealNumber(v0) ∧ RealNumber(v1)) → (GreaterThanOrEqualTo(v0 v1) ∨ GreaterThanOrEqualTo(v1 v0)))).
+[/unit MathMt_L56777]
+
+[unit MathMt_L56778]
+source-line: 56778
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) (#$or (#$equals ?var0 ?var1) (#$greaterThan ?var0 ?var1) (#$greaterThan ?var1 ?var0)))
+rus: Для любых v0, v1: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел), то (v0 равно v1 или v0 больше v1 или v1 больше v0).
+eng: For all v0, v1: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers), then (v0 equals v1 or v0 is greater than v1 or v1 is greater than v0).
+fol: MathMt_L56778 (∀ v0, v1 : Object ((RealNumber(v0) ∧ RealNumber(v1)) → (((v0 = v1) ∨ GreaterThan(v0 v1)) ∨ GreaterThan(v1 v0)))).
+[/unit MathMt_L56778]
+
+[unit MathMt_L56779]
+source-line: 56779
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$greaterThanOrEqualTo ?var0 0)) (#$isa ?var0 #$NonNegativeInteger))
+rus: Для любого v0: если (v0 принадлежит классу целых чисел и v0 больше или равно 0), то v0 принадлежит классу неотрицательных целых чисел.
+eng: For all v0: if (v0 belongs to the class of integers and v0 is greater than or equal to 0), then v0 belongs to the class of nonnegative integers.
+fol: MathMt_L56779 (∀ v0 : Object ((Integer(v0) ∧ GreaterThanOrEqualTo(v0 Zero)) → NonNegativeInteger(v0))).
+[/unit MathMt_L56779]
+
+[unit MathMt_L56780]
+source-line: 56780
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$greaterThan ?var0 0)) (#$isa ?var0 #$PositiveInteger))
+rus: Для любого v0: если (v0 принадлежит классу целых чисел и v0 больше 0), то v0 принадлежит классу положительных целых чисел.
+eng: For all v0: if (v0 belongs to the class of integers and v0 is greater than 0), then v0 belongs to the class of positive integers.
+fol: MathMt_L56780 (∀ v0 : Object ((Integer(v0) ∧ GreaterThan(v0 Zero)) → PositiveInteger(v0))).
+[/unit MathMt_L56780]
+
+[unit MathMt_L56782]
+source-line: 56782
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$greaterThan 1 ?var0) (#$isa ?var0 #$PositiveInteger)) #$False)
+rus: Для любого v0: если (1 больше v0 и v0 принадлежит классу положительных целых чисел), то ложь (противоречие).
+eng: For all v0: if (1 is greater than v0 and v0 belongs to the class of positive integers), then falsehood (a contradiction).
+fol: MathMt_L56782 (∀ v0 : Object ((GreaterThan(One v0) ∧ PositiveInteger(v0)) → (Zero ≠ Zero))).
+[/unit MathMt_L56782]
+
+[unit MathMt_L59083]
+source-line: 59083
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$evaluate 0 (#$PlusFn ?var0 ?var1))) (#$isa ?var1 #$Integer))
+rus: Для любых v0, v1: если (v0 принадлежит классу целых чисел и вычисление суммы с первым аргументом v0 и вторым аргументом v1 даёт 0), то v1 принадлежит классу целых чисел.
+eng: For all v0, v1: if (v0 belongs to the class of integers and evaluating the sum with first argument v0 and second argument v1 yields 0), then v1 belongs to the class of integers.
+fol: MathMt_L59083 (∀ v0, v1 : Object ((Integer(v0) ∧ PlusValue(v0 v1 Zero)) → Integer(v1))).
+[/unit MathMt_L59083]
+
+[unit MathMt_L59085]
+source-line: 59085
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var6 ?var7)) (#$evaluate ?var6 (#$TimesFn ?var0 ?var1)) (#$evaluate ?var7 (#$TimesFn ?var0 ?var2))) (#$equals ?var5 ?var4))
+rus: Для любых v0, v1, v2, v3, v4, v5, v6, v7: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v3 и вычисление произведения с первым аргументом v0 и вторым аргументом v3 даёт v4 и вычисление суммы с первым аргументом v6 и вторым аргументом v7 даёт v5 и вычисление произведения с первым аргументом v0 и вторым аргументом v1 даёт v6 и вычисление произведения с первым аргументом v0 и вторым аргументом v2 даёт v7), то v5 равно v4.
+eng: For all v0, v1, v2, v3, v4, v5, v6, v7: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and evaluating the sum with first argument v1 and second argument v2 yields v3 and evaluating the product with first argument v0 and second argument v3 yields v4 and evaluating the sum with first argument v6 and second argument v7 yields v5 and evaluating the product with first argument v0 and second argument v1 yields v6 and evaluating the product with first argument v0 and second argument v2 yields v7), then v5 equals v4.
+fol: MathMt_L59085 (∀ v0, v1, v2, v3, v4, v5, v6, v7 : Object ((((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ PlusValue(v1 v2 v3)) ∧ TimesValue(v0 v3 v4)) ∧ PlusValue(v6 v7 v5)) ∧ TimesValue(v0 v1 v6)) ∧ TimesValue(v0 v2 v7)) → (v5 = v4))).
+[/unit MathMt_L59085]
+
+[unit MathMt_L59086]
+source-line: 59086
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var1 (#$TimesFn ?var2 ?var3))) (#$or (#$evaluate ?var2 0) (#$evaluate ?var3 ?var0)))
+rus: Для любых v0, v1, v2, v3: если (вычисление частного с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление произведения с первым аргументом v2 и вторым аргументом v3 даёт v1), то (вычисление выражения 0 даёт v2 или вычисление выражения v0 даёт v3).
+eng: For all v0, v1, v2, v3: if (evaluating the quotient with first argument v1 and second argument v2 yields v0 and evaluating the product with first argument v2 and second argument v3 yields v1), then (evaluating the expression 0 yields v2 or evaluating the expression v0 yields v3).
+fol: MathMt_L59086 (∀ v0, v1, v2, v3 : Object ((QuotientValue(v1 v2 v0) ∧ TimesValue(v2 v3 v1)) → (Evaluate(v2 Zero) ∨ Evaluate(v3 v0)))).
+note-rus: В заключении именно дизъюнкция двух Evaluate; ни один из них не заменён равенством.
+[/unit MathMt_L59086]
+
+[unit MathMt_L59087]
+source-line: 59087
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) (#$isa ?var2 #$RealNumber))
+rus: Для любых v0, v1, v2: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и вычисление суммы с первым аргументом v0 и вторым аргументом v1 даёт v2), то v2 принадлежит классу вещественных чисел.
+eng: For all v0, v1, v2: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and evaluating the sum with first argument v0 and second argument v1 yields v2), then v2 belongs to the class of real numbers.
+fol: MathMt_L59087 (∀ v0, v1, v2 : Object (((RealNumber(v0) ∧ RealNumber(v1)) ∧ PlusValue(v0 v1 v2)) → RealNumber(v2))).
+[/unit MathMt_L59087]
+
+[unit MathMt_L59088]
+source-line: 59088
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$PlusFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var0 ?var1)) (#$evaluate ?var6 (#$PlusFn ?var5 ?var2))) (#$equals ?var4 ?var6))
+rus: Для любых v0, v1, v2, v3, v4, v5, v6: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v3 и вычисление суммы с первым аргументом v0 и вторым аргументом v3 даёт v4 и вычисление суммы с первым аргументом v0 и вторым аргументом v1 даёт v5 и вычисление суммы с первым аргументом v5 и вторым аргументом v2 даёт v6), то v4 равно v6.
+eng: For all v0, v1, v2, v3, v4, v5, v6: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and evaluating the sum with first argument v1 and second argument v2 yields v3 and evaluating the sum with first argument v0 and second argument v3 yields v4 and evaluating the sum with first argument v0 and second argument v1 yields v5 and evaluating the sum with first argument v5 and second argument v2 yields v6), then v4 equals v6.
+fol: MathMt_L59088 (∀ v0, v1, v2, v3, v4, v5, v6 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ PlusValue(v1 v2 v3)) ∧ PlusValue(v0 v3 v4)) ∧ PlusValue(v0 v1 v5)) ∧ PlusValue(v5 v2 v6)) → (v4 = v6))).
+[/unit MathMt_L59088]
+
+[unit MathMt_L59090]
+source-line: 59090
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$TimesFn ?var0 ?var1))) (#$isa ?var2 #$Integer))
+rus: Для любых v0, v1, v2: если (v0 принадлежит классу целых чисел и v1 принадлежит классу целых чисел и вычисление произведения с первым аргументом v0 и вторым аргументом v1 даёт v2), то v2 принадлежит классу целых чисел.
+eng: For all v0, v1, v2: if (v0 belongs to the class of integers and v1 belongs to the class of integers and evaluating the product with first argument v0 and second argument v1 yields v2), then v2 belongs to the class of integers.
+fol: MathMt_L59090 (∀ v0, v1, v2 : Object (((Integer(v0) ∧ Integer(v1)) ∧ TimesValue(v0 v1 v2)) → Integer(v2))).
+[/unit MathMt_L59090]
+
+[unit MathMt_L59091]
+source-line: 59091
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var1 (#$DifferenceFn ?var3 ?var2))) (#$equals ?var3 ?var0))
+rus: Для любых v0, v1, v2, v3: если (вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление разности с первым аргументом v3 и вторым аргументом v2 даёт v1), то v3 равно v0.
+eng: For all v0, v1, v2, v3: if (evaluating the sum with first argument v1 and second argument v2 yields v0 and evaluating the difference with first argument v3 and second argument v2 yields v1), then v3 equals v0.
+fol: MathMt_L59091 (∀ v0, v1, v2, v3 : Object ((PlusValue(v1 v2 v0) ∧ DifferenceValue(v3 v2 v1)) → (v3 = v0))).
+[/unit MathMt_L59091]
+
+[unit MathMt_L59092]
+source-line: 59092
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var2 (#$QuotientFn ?var3 ?var1))) (#$equals ?var3 ?var0))
+rus: Для любых v0, v1, v2, v3: если (вычисление произведения с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление частного с первым аргументом v3 и вторым аргументом v1 даёт v2), то v3 равно v0.
+eng: For all v0, v1, v2, v3: if (evaluating the product with first argument v1 and second argument v2 yields v0 and evaluating the quotient with first argument v3 and second argument v1 yields v2), then v3 equals v0.
+fol: MathMt_L59092 (∀ v0, v1, v2, v3 : Object ((TimesValue(v1 v2 v0) ∧ QuotientValue(v3 v1 v2)) → (v3 = v0))).
+[/unit MathMt_L59092]
+
+[unit MathMt_L59093]
+source-line: 59093
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var4 (#$QuotientFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) (#$equals ?var0 ?var4))
+rus: Для любых v0, v1, v2, v3, v4: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и v3 принадлежит классу вещественных чисел и вычисление произведения с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление частного с первым аргументом v1 и вторым аргументом v3 даёт v4 и вычисление произведения с первым аргументом v2 и вторым аргументом v3 даёт 1), то v0 равно v4.
+eng: For all v0, v1, v2, v3, v4: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and v3 belongs to the class of real numbers and evaluating the product with first argument v1 and second argument v2 yields v0 and evaluating the quotient with first argument v1 and second argument v3 yields v4 and evaluating the product with first argument v2 and second argument v3 yields 1), then v0 equals v4.
+fol: MathMt_L59093 (∀ v0, v1, v2, v3, v4 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ RealNumber(v3)) ∧ TimesValue(v1 v2 v0)) ∧ QuotientValue(v1 v3 v4)) ∧ TimesValue(v2 v3 One)) → (v0 = v4))).
+[/unit MathMt_L59093]
+
+[unit MathMt_L59094]
+source-line: 59094
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var4 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) (#$equals ?var0 ?var4))
+rus: Для любых v0, v1, v2, v3, v4: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и v3 принадлежит классу вещественных чисел и вычисление разности с первым аргументом v1 и вторым аргументом v3 даёт v0 и вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v4 и вычисление суммы с первым аргументом v3 и вторым аргументом v2 даёт 0), то v0 равно v4.
+eng: For all v0, v1, v2, v3, v4: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and v3 belongs to the class of real numbers and evaluating the difference with first argument v1 and second argument v3 yields v0 and evaluating the sum with first argument v1 and second argument v2 yields v4 and evaluating the sum with first argument v3 and second argument v2 yields 0), then v0 equals v4.
+fol: MathMt_L59094 (∀ v0, v1, v2, v3, v4 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ RealNumber(v3)) ∧ DifferenceValue(v1 v3 v0)) ∧ PlusValue(v1 v2 v4)) ∧ PlusValue(v3 v2 Zero)) → (v0 = v4))).
+[/unit MathMt_L59094]
+
+[unit MathMt_L59095]
+source-line: 59095
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) (#$equals ?var0 ?var4))
+rus: Для любых v0, v1, v2, v3, v4: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и v3 принадлежит классу вещественных чисел и вычисление частного с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление произведения с первым аргументом v1 и вторым аргументом v3 даёт v4 и вычисление произведения с первым аргументом v2 и вторым аргументом v3 даёт 1), то v0 равно v4.
+eng: For all v0, v1, v2, v3, v4: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and v3 belongs to the class of real numbers and evaluating the quotient with first argument v1 and second argument v2 yields v0 and evaluating the product with first argument v1 and second argument v3 yields v4 and evaluating the product with first argument v2 and second argument v3 yields 1), then v0 equals v4.
+fol: MathMt_L59095 (∀ v0, v1, v2, v3, v4 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ RealNumber(v3)) ∧ QuotientValue(v1 v2 v0)) ∧ TimesValue(v1 v3 v4)) ∧ TimesValue(v2 v3 One)) → (v0 = v4))).
+[/unit MathMt_L59095]
+
+[unit MathMt_L59096]
+source-line: 59096
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var2)) (#$evaluate ?var1 (#$PlusFn ?var3 ?var2))) (#$equals ?var3 ?var0))
+rus: Для любых v0, v1, v2, v3: если (вычисление разности с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление суммы с первым аргументом v3 и вторым аргументом v2 даёт v1), то v3 равно v0.
+eng: For all v0, v1, v2, v3: if (evaluating the difference with first argument v1 and second argument v2 yields v0 and evaluating the sum with first argument v3 and second argument v2 yields v1), then v3 equals v0.
+fol: MathMt_L59096 (∀ v0, v1, v2, v3 : Object ((DifferenceValue(v1 v2 v0) ∧ PlusValue(v3 v2 v1)) → (v3 = v0))).
+[/unit MathMt_L59096]
+
+[unit MathMt_L59097]
+source-line: 59097
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var4 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) (#$equals ?var0 ?var4))
+rus: Для любых v0, v1, v2, v3, v4: если (v0 принадлежит классу вещественных чисел и v1 принадлежит классу вещественных чисел и v2 принадлежит классу вещественных чисел и v3 принадлежит классу вещественных чисел и вычисление разности с первым аргументом v1 и вторым аргументом v3 даёт v4 и вычисление суммы с первым аргументом v1 и вторым аргументом v2 даёт v0 и вычисление суммы с первым аргументом v3 и вторым аргументом v2 даёт 0), то v0 равно v4.
+eng: For all v0, v1, v2, v3, v4: if (v0 belongs to the class of real numbers and v1 belongs to the class of real numbers and v2 belongs to the class of real numbers and v3 belongs to the class of real numbers and evaluating the difference with first argument v1 and second argument v3 yields v4 and evaluating the sum with first argument v1 and second argument v2 yields v0 and evaluating the sum with first argument v3 and second argument v2 yields 0), then v0 equals v4.
+fol: MathMt_L59097 (∀ v0, v1, v2, v3, v4 : Object (((((((RealNumber(v0) ∧ RealNumber(v1)) ∧ RealNumber(v2)) ∧ RealNumber(v3)) ∧ DifferenceValue(v1 v3 v4)) ∧ PlusValue(v1 v2 v0)) ∧ PlusValue(v3 v2 Zero)) → (v0 = v4))).
+[/unit MathMt_L59097]
+
+[unit MathMt_L59098]
+source-line: 59098
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) (#$isa ?var2 #$Integer))
+rus: Для любых v0, v1, v2: если (v0 принадлежит классу целых чисел и v1 принадлежит классу целых чисел и вычисление суммы с первым аргументом v0 и вторым аргументом v1 даёт v2), то v2 принадлежит классу целых чисел.
+eng: For all v0, v1, v2: if (v0 belongs to the class of integers and v1 belongs to the class of integers and evaluating the sum with first argument v0 and second argument v1 yields v2), then v2 belongs to the class of integers.
+fol: MathMt_L59098 (∀ v0, v1, v2 : Object (((Integer(v0) ∧ Integer(v1)) ∧ PlusValue(v0 v1 v2)) → Integer(v2))).
+[/unit MathMt_L59098]
+
+[unit MathMt_L69975]
+source-line: 69975
+source-status: reconstructed_candidate
+cycl: (#$implies (#$and (#$isa ?var0 #$AssociativeRelation) (#$isa ?var0 #$EvaluatableFunction) (#$evaluate ?var1 (?var0 ?var2 (?var0 ?var3 ?var4)))) (#$evaluate ?var1 (?var0 (?var0 ?var2 ?var3) ?var4)))
+rus: Для любой операции v0 и любых значений v1, v2, v3, v4: если v0 относится к AssociativeRelation и EvaluatableFunction и вычисление v0(v2, v0(v3, v4)) даёт v1, то вычисление v0(v0(v2, v3), v4) тоже даёт v1. Общие типы и семантика вычисления в исходной записи полностью не заданы; в hol ниже принята частичная бинарная операция и строгое вычисление вложенных применений.
+eng: For every operation v0 and all values v1, v2, v3, v4: if v0 is classified as AssociativeRelation and EvaluatableFunction, and evaluating v0(v2, v0(v3, v4)) yields v1, then evaluating v0(v0(v2, v3), v4) also yields v1. The source does not fully specify the types and evaluation semantics; the HOL rendering below uses a partial binary operation and strict evaluation of nested applications.
+fol: не выразимо на fol при прямом переводе с сохранением квантификации по операции: в обычной FOL связанная переменная не может занимать позицию функционального символа. Кодировка через объекты/Apply здесь намеренно не вводится.
+hol-language: Isabelle/HOL
+hol-status: interpretation-dependent; reconstructed source; not machine-checked; not a proved theorem
+hol-variable-map: ?var0 -> f; ?var1..4 -> v1..4; t,u are fresh intermediate values
+hol:
+theory MathMt_69975
+  imports Main
+begin
+
+typedecl value
+
+type_synonym partial_binary = "value \<Rightarrow> value \<Rightarrow> value option"
+
+consts
+  AssociativeRelation :: "partial_binary \<Rightarrow> bool"
+  EvaluatableFunction :: "partial_binary \<Rightarrow> bool"
+
+definition MathMt_L69975 :: bool where
+  "MathMt_L69975 \<longleftrightarrow>
+    (\<forall>(f :: partial_binary) v1 v2 v3 v4.
+       (AssociativeRelation f \<and> EvaluatableFunction f \<and>
+        (\<exists>t. f v3 v4 = Some t \<and> f v2 t = Some v1))
+       \<longrightarrow> (\<exists>u. f v2 v3 = Some u \<and> f u v4 = Some v1))"
+
+end
+hol-end:
+[/unit MathMt_L69975]
+
+[unit MathMt_L1098561]
+source-line: 1098561
+source-status: reconstructed_candidate
+cycl: (#$implies (#$ratioOfTo ?var0 ?var1 ?var2) (#$ratioOfTo ?var0 ?var2 ?var1))
+rus: Для любых v0, v1, v2: если для упорядоченной тройки (v0, v1, v2) выполняется отношение ratioOfTo, то для упорядоченной тройки (v0, v2, v1) выполняется отношение ratioOfTo.
+eng: For all v0, v1, v2: if the relation ratioOfTo holds for the ordered triple (v0, v1, v2), then the relation ratioOfTo holds for the ordered triple (v0, v2, v1).
+fol: MathMt_L1098561 (∀ v0, v1, v2 : Object (ratioOfTo(v0 v1 v2) → ratioOfTo(v0 v2 v1))).
+note-rus: Симметрия последних аргументов ratioOfTo сохранена буквально. Это не обоснование симметрии обычного деления.
+[/unit MathMt_L1098561]
+
+[provenance]
+source-sha256: e89512053330bee77f008f67d7c1bfff8bc8285b829aebba0c03e8e0753d01d0
+fol_lexer_min.g4-sha256: 78022b11e7d934059d53c556beb11714467ef79eb72671d8d837077edaec0e37
+fol_parser_min.g4-sha256: d844f0860f602916e7c12562f7396f8ed727bf1a9f7cadd942a98f82b0b177d6
+units: 22
+original: 1
+reconstructed-candidates: 21
+fol-formulas: 21
+fol-not-directly-expressible: 1
+hol-renderings: 1
+[/provenance]

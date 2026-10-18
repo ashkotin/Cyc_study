@@ -1,0 +1,102 @@
+﻿;; Own assertions with explicit source Mt; original formulas are unchanged.
+;; No Cyc engine or logical inference has been run.
+;; Ancestors below are computed from all closed genlMt edges, irrespective of assertion Mt.
+;; Ancestor assertions are NOT duplicated here; see notebook export_inherited().
+;; Selected Mt: #$MathMt
+;; Reachable ancestor targets excluding self; SCC peers included (10):
+;; ancestor: #$BaseKB
+;; ancestor: #$CoreCycLImplementationMt
+;; ancestor: #$CoreCycLMt
+;; ancestor: #$CycAgencyTheoryMt
+;; ancestor: #$CycHistoricalPossibilityTheoryMt
+;; ancestor: #$LogicalTruthImplementationMt
+;; ancestor: #$LogicalTruthMt
+;; ancestor: #$MathVocabularyMt
+;; ancestor: #$UniversalVocabularyImplementationMt
+;; ancestor: #$UniversalVocabularyMt
+;; source_line: 63625
+(#$ist #$MathMt (#$relationAllInstance #$greaterThanOrEqualTo #$PositiveInteger 1))
+;; MALFORMED source_line: 56777; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) ((#$greaterThanOrEqualTo ?var0 ?var1) (#$greaterThanOrEqualTo ?var1 ?var0)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) ((#$greaterThanOrEqualTo ?var0 ?var1) (#$greaterThanOrEqualTo ?var1 ?var0)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) (#$or (#$greaterThanOrEqualTo ?var0 ?var1) (#$greaterThanOrEqualTo ?var1 ?var0)))
+;; MALFORMED source_line: 56778; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) ((#$equals ?var0 ?var1) (#$greaterThan ?var0 ?var1) (#$greaterThan ?var1 ?var0)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) ((#$equals ?var0 ?var1) (#$greaterThan ?var0 ?var1) (#$greaterThan ?var1 ?var0)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber)) (#$or (#$equals ?var0 ?var1) (#$greaterThan ?var0 ?var1) (#$greaterThan ?var1 ?var0)))
+;; MALFORMED source_line: 56779; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$Integer) (#$greaterThanOrEqualTo ?var0 0)) ((#$isa ?var0 #$NonNegativeInteger)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$Integer) (#$greaterThanOrEqualTo ?var0 0)) ((#$isa ?var0 #$NonNegativeInteger)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$Integer) (#$greaterThanOrEqualTo ?var0 0)) (#$isa ?var0 #$NonNegativeInteger))
+;; MALFORMED source_line: 56780; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$Integer) (#$greaterThan ?var0 0)) ((#$isa ?var0 #$PositiveInteger)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$Integer) (#$greaterThan ?var0 0)) ((#$isa ?var0 #$PositiveInteger)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$Integer) (#$greaterThan ?var0 0)) (#$isa ?var0 #$PositiveInteger))
+;; MALFORMED source_line: 56782; hypothesis: add_prefix_restore_NIL
+;; RAW: (#$greaterThan 1 ?var0) (#$isa ?var0 #$PositiveInteger)) NI
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$greaterThan 1 ?var0) (#$isa ?var0 #$PositiveInteger)) NIL)
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$greaterThan 1 ?var0) (#$isa ?var0 #$PositiveInteger)) #$False)
+;; MALFORMED source_line: 59083; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$Integer) (#$evaluate 0 (#$PlusFn ?var0 ?var1))) ((#$isa ?var1 #$Integer)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$Integer) (#$evaluate 0 (#$PlusFn ?var0 ?var1))) ((#$isa ?var1 #$Integer)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$Integer) (#$evaluate 0 (#$PlusFn ?var0 ?var1))) (#$isa ?var1 #$Integer))
+;; MALFORMED source_line: 59085; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var6 ?var7)) (#$evaluate ?var6 (#$TimesFn ?var0 ?var1)) (#$evaluate ?var7 (#$TimesFn ?var0 ?var2))) ((#$equals ?var5 ?var4)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var6 ?var7)) (#$evaluate ?var6 (#$TimesFn ?var0 ?var1)) (#$evaluate ?var7 (#$TimesFn ?var0 ?var2))) ((#$equals ?var5 ?var4)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var6 ?var7)) (#$evaluate ?var6 (#$TimesFn ?var0 ?var1)) (#$evaluate ?var7 (#$TimesFn ?var0 ?var2))) (#$equals ?var5 ?var4))
+;; MALFORMED source_line: 59086; hypothesis: add_two_parens_each_end
+;; RAW: (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var1 (#$TimesFn ?var2 ?var3))) ((#$evaluate ?var2 0) (#$evaluate ?var3 ?var0)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var1 (#$TimesFn ?var2 ?var3))) ((#$evaluate ?var2 0) (#$evaluate ?var3 ?var0)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var1 (#$TimesFn ?var2 ?var3))) (#$or (#$evaluate ?var2 0) (#$evaluate ?var3 ?var0)))
+;; MALFORMED source_line: 59087; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) ((#$isa ?var2 #$RealNumber)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) ((#$isa ?var2 #$RealNumber)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) (#$isa ?var2 #$RealNumber))
+;; MALFORMED source_line: 59088; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$PlusFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var0 ?var1)) (#$evaluate ?var6 (#$PlusFn ?var5 ?var2))) ((#$equals ?var4 ?var6)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$PlusFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var0 ?var1)) (#$evaluate ?var6 (#$PlusFn ?var5 ?var2))) ((#$equals ?var4 ?var6)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$evaluate ?var3 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var4 (#$PlusFn ?var0 ?var3)) (#$evaluate ?var5 (#$PlusFn ?var0 ?var1)) (#$evaluate ?var6 (#$PlusFn ?var5 ?var2))) (#$equals ?var4 ?var6))
+;; MALFORMED source_line: 59090; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$TimesFn ?var0 ?var1))) ((#$isa ?var2 #$Integer)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$TimesFn ?var0 ?var1))) ((#$isa ?var2 #$Integer)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$TimesFn ?var0 ?var1))) (#$isa ?var2 #$Integer))
+;; MALFORMED source_line: 59091; hypothesis: add_two_parens_each_end
+;; RAW: (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var1 (#$DifferenceFn ?var3 ?var2))) ((#$equals ?var3 ?var0)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var1 (#$DifferenceFn ?var3 ?var2))) ((#$equals ?var3 ?var0)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate ?var1 (#$DifferenceFn ?var3 ?var2))) (#$equals ?var3 ?var0))
+;; MALFORMED source_line: 59092; hypothesis: add_two_parens_each_end
+;; RAW: (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var2 (#$QuotientFn ?var3 ?var1))) ((#$equals ?var3 ?var0)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var2 (#$QuotientFn ?var3 ?var1))) ((#$equals ?var3 ?var0)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var2 (#$QuotientFn ?var3 ?var1))) (#$equals ?var3 ?var0))
+;; MALFORMED source_line: 59093; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var4 (#$QuotientFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) ((#$equals ?var0 ?var4)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var4 (#$QuotientFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) ((#$equals ?var0 ?var4)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$TimesFn ?var1 ?var2)) (#$evaluate ?var4 (#$QuotientFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) (#$equals ?var0 ?var4))
+;; MALFORMED source_line: 59094; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var4 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) ((#$equals ?var0 ?var4)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var4 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) ((#$equals ?var0 ?var4)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var4 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) (#$equals ?var0 ?var4))
+;; MALFORMED source_line: 59095; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) ((#$equals ?var0 ?var4)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) ((#$equals ?var0 ?var4)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var0 (#$QuotientFn ?var1 ?var2)) (#$evaluate ?var4 (#$TimesFn ?var1 ?var3)) (#$evaluate 1 (#$TimesFn ?var2 ?var3))) (#$equals ?var0 ?var4))
+;; MALFORMED source_line: 59096; hypothesis: add_two_parens_each_end
+;; RAW: (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var2)) (#$evaluate ?var1 (#$PlusFn ?var3 ?var2))) ((#$equals ?var3 ?var0)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$evaluate ?var0 (#$DifferenceFn ?var1 ?var2)) (#$evaluate ?var1 (#$PlusFn ?var3 ?var2))) ((#$equals ?var3 ?var0)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$evaluate ?var0 (#$DifferenceFn ?var1 ?var2)) (#$evaluate ?var1 (#$PlusFn ?var3 ?var2))) (#$equals ?var3 ?var0))
+;; MALFORMED source_line: 59097; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var4 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) ((#$equals ?var0 ?var4)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var4 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) ((#$equals ?var0 ?var4)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$RealNumber) (#$isa ?var1 #$RealNumber) (#$isa ?var2 #$RealNumber) (#$isa ?var3 #$RealNumber) (#$evaluate ?var4 (#$DifferenceFn ?var1 ?var3)) (#$evaluate ?var0 (#$PlusFn ?var1 ?var2)) (#$evaluate 0 (#$PlusFn ?var3 ?var2))) (#$equals ?var0 ?var4))
+;; MALFORMED source_line: 59098; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) ((#$isa ?var2 #$Integer)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) ((#$isa ?var2 #$Integer)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$Integer) (#$isa ?var1 #$Integer) (#$evaluate ?var2 (#$PlusFn ?var0 ?var1))) (#$isa ?var2 #$Integer))
+;; MALFORMED source_line: 69975; hypothesis: add_two_parens_each_end
+;; RAW: (#$isa ?var0 #$AssociativeRelation) (#$isa ?var0 #$EvaluatableFunction) (#$evaluate ?var1 (?var0 ?var2 (?var0 ?var3 ?var4)))) ((#$evaluate ?var1 (?var0 (?var0 ?var2 ?var3) ?var4))
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$isa ?var0 #$AssociativeRelation) (#$isa ?var0 #$EvaluatableFunction) (#$evaluate ?var1 (?var0 ?var2 (?var0 ?var3 ?var4)))) ((#$evaluate ?var1 (?var0 (?var0 ?var2 ?var3) ?var4))))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$and (#$isa ?var0 #$AssociativeRelation) (#$isa ?var0 #$EvaluatableFunction) (#$evaluate ?var1 (?var0 ?var2 (?var0 ?var3 ?var4)))) (#$evaluate ?var1 (?var0 (?var0 ?var2 ?var3) ?var4)))
+;; MALFORMED source_line: 1098561; hypothesis: add_two_parens_each_end
+;; RAW: (#$ratioOfTo ?var0 ?var1 ?var2)) ((#$ratioOfTo ?var0 ?var2 ?var1)
+;; CANDIDATE CLAUSE (NOT ASSERTED): (((#$ratioOfTo ?var0 ?var1 ?var2)) ((#$ratioOfTo ?var0 ?var2 ?var1)))
+;; CANDIDATE IMPLICATION (NOT ASSERTED): (#$implies (#$ratioOfTo ?var0 ?var1 ?var2) (#$ratioOfTo ?var0 ?var2 ?var1))
